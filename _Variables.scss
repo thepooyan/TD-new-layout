@@ -7,14 +7,27 @@ $headerNavFont: 13px;
 
 $sideTitleColor: pink;
 
-$orangeButton: #ffd53b;
+$orangeButton: #FEC715;
 $orangeButtonText: rgb(74, 74, 228);
 
 
 /*-------------FOOOTER-------------------*/
 $footerBackground: #444444;
-$footerOrangeButton: #ffd53b;
-$footerOrangeLine: #ff9c21;
-$Enamad-wrapper: #3f3f3f;
-$footerWhiteText: rgb(190, 190, 190);
-$footerEmailInputBackground: #e9e9e9;
+$footerOrangeLine: #FF7A18;
+$footerWhiteText: #FFFFED;
+$footerEmailInputBackground: #DEDEDE;
+$footerOrangeText:#FEC715;
+$footerWhiteLine:#FFFFED;
+$footerEmailInputColor:#757575;
+$SHADOWS: 3px 3px 5px rgba(58,57,55,.75);
+
+
+$EnamadShadow: 4px 4px 5px rgba(58,57,55,.75);
+$Enamad-border:#333333;
+
+$fontScale: 2.1;
+
+@function letterSpace($unit) {
+    $result: $unit / 25;
+    @return $result;
+}
