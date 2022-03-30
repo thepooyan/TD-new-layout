@@ -23,14 +23,15 @@
 }
 
 .orangeButton {
-  padding: 6px 0;
+  padding: 7px 0;
   border-radius: 24px;
   border: none;
   background-color: $orangeButton;
   font-family: "main";
   box-shadow: 5px 5px 6px #00000069;
-  width: 142px;
+  width: 133px;
   font-size: 18pt / $fontScale;
+  font-weight: bold;
   &.bt {
     color: $orangeButtonText;
     font-weight: bold;
@@ -106,7 +107,8 @@
 .footer {
   display: grid;
   height: 600px;
-  grid-template-columns: 24% 52% 24%;
+  //grid-template-columns: 24% 52% 24%;
+  grid-template-columns: 26% 49% 25%;
   grid-template-rows: 39% 24% 37%;
   background-color: $footerBackground;
   padding: 20px 10px;
@@ -146,22 +148,27 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      height: 75px;
       .text {
         color: $footerWhiteText;
         font-size: 22pt / $fontScale;
         text-shadow: $SHADOWS;
+        margin-right: 30px;
+        margin-right: 56px;
+        margin-left: 4px;
       }
       .img {
-        width: 113px;
+        width: 120px;
       }
     }
     .inputwrapper {
       position: relative;
+      margin-bottom: 12px;
       .emailInput {
         border-radius: 21px;
-        padding: 8px 16px;
+        padding: 9px 16px;
         border: none;
-        width: 233px;
+        width: 250px;
         background-color: $footerEmailInputBackground;
         box-shadow: 3px 3px 3px #0000006b;
         font-family: main;
@@ -203,13 +210,11 @@
       }
       p.site {
         font-size: 25pt / $fontScale;
-        letter-spacing: letterSpace(100)* 1px;
-
+        letter-spacing: letterSpace(100) * 1px;
       }
       p.num {
         font-size: 20pt / $fontScale;
-        letter-spacing: letterSpace(50)* 1px;
-
+        letter-spacing: letterSpace(50) * 1px;
       }
     }
   }
@@ -228,13 +233,12 @@
         right: 8px;
         text-shadow: $SHADOWS;
         letter-spacing: letterSpace(50) * 1px;
-
       }
       img {
         position: relative;
-    right: 41px;
-    top: 4px;
-    width: 103px;
+        right: 41px;
+        top: 4px;
+        width: 103px;
       }
       .info {
         color: $footerWhiteText;
