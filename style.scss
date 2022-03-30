@@ -28,7 +28,7 @@
   border: none;
   background-color: $orangeButton;
   font-family: "main";
-  box-shadow: 5px 5px 6px #00000069;
+  box-shadow: $SHADOWS;
   width: 133px;
   font-size: 18pt / $fontScale;
   font-weight: bold;
@@ -191,6 +191,10 @@
     }
   }
   .centerTop {
+    img {
+      width: 90px;
+      margin-bottom: 5px;
+    }
     .layer1 {
       display: flex;
       justify-content: center;
