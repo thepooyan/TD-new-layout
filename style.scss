@@ -1,7 +1,7 @@
 @import "./Variables";
 
 .pillButton {
-  color: #6d6dff;
+  color: $themeBlue;
   font-family: main;
   background-color: white;
   border-radius: 15px;
@@ -32,12 +32,12 @@
   border: none;
   background-color: $orangeButton;
   font-family: "main";
-  box-shadow: $SHADOWS;
+  box-shadow: $SHADOW;
   width: 133px;
   font-size: 18pt / $fontScale;
   font-weight: bold;
   &.bt {
-    color: $orangeButtonText;
+    color: $themeBlue;
     font-weight: bold;
   }
   &.pr {
@@ -47,8 +47,8 @@
 
 .header {
   .topBar {
-    background-color: $topMenuColor;
-    padding: 10px 15px;
+    background-color: $themeBlue;
+    padding: 10px 25px;
     padding-right: $sideMenuLength + 15px;
     color: $headerWhiteText;
 
@@ -64,7 +64,10 @@
       gap: 10px;
     }
     .center {
-      gap: 20px;
+      gap: 25px;
+      > * {
+        font-size: 19px;
+      }
     }
     .left {
       .siteGearIcon {
@@ -142,7 +145,7 @@
             background-size: 1380%;
             &.one {
               background-position: -202px -4px;
-            }
+            }            &.one + span { color: $themePurple; }
             &.two {
               background-position: -214px 34.5px;
             }
@@ -157,32 +160,33 @@
             }
           }
           > span {
-            color: $themeDarkenBlue;
+            color: $themeBlue;
             font-weight: bold;
             font-size: 13px;
           }
+
         }
       }
       .inputWrapper {
         position: relative;
         .mainSearch {
-          font-size: 18px;
-          border: 1px solid $inputBlue;
-          box-shadow: $SHADOWS;
+          font-size: 14px;
+          border: 1px solid $themeBlue;
+          box-shadow: $SHADOW-LIGHT;
           border-radius: 25px;
           padding: 5px 20px;
-          direction: ltr;
+          text-indent: 20px;
           font-family: inherit;
+          width: 220px;
           &:focus {
             outline: none;
-            direction: rtl;
           }
         }
         i {
           position: absolute;
           right: 12px;
           top: 13px;
-          color: $inputBlue;
+          color: $themeBlue
         }
       }
     }
@@ -245,7 +249,7 @@
           background-size: 382%;
         }
         .calendarText {
-          color: $calendarText;
+          color: $themeBlueDark;
           font-size: 7px;
           text-align: center;
           font-weight: bold;
@@ -259,7 +263,7 @@
       justify-content: center;
       > h2 {
         text-align: center;
-        color: $sideTitleColor;
+        color: $themePurple;
         font-size: 16px;
         margin: 0;
       }
@@ -268,7 +272,7 @@
       grid-area: navBar;
       nav {
         width: 100%;
-        background-color: $headerNavColor;
+        background-color: $themeBlue;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -300,7 +304,7 @@
       align-items: flex-start;
       > span {
         font-size: 12px;
-        color: #149bd9;
+        color: $themeBlueLight;
         width: 150px;
         text-align: center;
         padding-bottom: 20px;
@@ -357,7 +361,7 @@
       .text {
         color: $footerWhiteText;
         font-size: 22pt / $fontScale;
-        text-shadow: $SHADOWS;
+        text-shadow: $SHADOW;
         margin-right: 30px;
         margin-right: 56px;
         margin-left: 4px;
@@ -448,7 +452,7 @@
         position: absolute;
         top: 0;
         right: 8px;
-        text-shadow: $SHADOWS;
+        text-shadow: $SHADOW;
         letter-spacing: letterSpace(50) * 1px;
       }
       .img {
@@ -465,7 +469,7 @@
       .info {
         color: $footerWhiteText;
         font-size: 20pt / $fontScale;
-        text-shadow: $SHADOWS;
+        text-shadow: $SHADOW;
         letter-spacing: letterSpace(50) * 1px;
       }
     }
@@ -625,7 +629,7 @@
       border: 2px solid $footerWhiteText;
       padding: 4px 18px;
       border-radius: 16px;
-      box-shadow: $SHADOWS;
+      box-shadow: $SHADOW;
       font-size: 25pt / $fontScale;
       margin-right: 25px;
     }

@@ -2,7 +2,7 @@
 /*-------------FOOOTER-------------------*/
 /*-----------------------------------------*/
 .pillButton {
-  color: #6d6dff;
+  color: #1d71b9;
   font-family: main;
   background-color: white;
   border-radius: 15px;
@@ -43,7 +43,7 @@
 }
 
 .orangeButton.bt {
-  color: #4a4ae4;
+  color: #1d71b9;
   font-weight: bold;
 }
 
@@ -52,8 +52,8 @@
 }
 
 .header .topBar {
-  background-color: #2067ff;
-  padding: 10px 15px;
+  background-color: #1d71b9;
+  padding: 10px 25px;
   padding-right: 245px;
   color: #f7f7f7;
   display: -webkit-box;
@@ -84,7 +84,11 @@
 }
 
 .header .topBar .center {
-  gap: 20px;
+  gap: 25px;
+}
+
+.header .topBar .center > * {
+  font-size: 19px;
 }
 
 .header .topBar .left .siteGearIcon {
@@ -223,6 +227,10 @@
   background-position: -202px -4px;
 }
 
+.header .headerContainer .header .layer2 .item > .img.one + span {
+  color: #d50c52;
+}
+
 .header .headerContainer .header .layer2 .item > .img.two {
   background-position: -214px 34.5px;
 }
@@ -239,7 +247,7 @@
 }
 
 .header .headerContainer .header .layer2 .item > span {
-  color: #1178a8;
+  color: #1d71b9;
   font-weight: bold;
   font-size: 13px;
 }
@@ -249,26 +257,26 @@
 }
 
 .header .headerContainer .header .inputWrapper .mainSearch {
-  font-size: 18px;
-  border: 1px solid #23a2d4;
-  -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
-          box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
+  font-size: 14px;
+  border: 1px solid #1d71b9;
+  -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.301);
+          box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.301);
   border-radius: 25px;
   padding: 5px 20px;
-  direction: ltr;
+  text-indent: 20px;
   font-family: inherit;
+  width: 220px;
 }
 
 .header .headerContainer .header .inputWrapper .mainSearch:focus {
   outline: none;
-  direction: rtl;
 }
 
 .header .headerContainer .header .inputWrapper i {
   position: absolute;
   right: 12px;
   top: 13px;
-  color: #23a2d4;
+  color: #1d71b9;
 }
 
 .header .headerContainer .calendar {
@@ -350,7 +358,7 @@
 }
 
 .header .headerContainer .calendar .Circle-3 .calendarText {
-  color: #149bd9;
+  color: #0d72a1;
   font-size: 7px;
   text-align: center;
   font-weight: bold;
@@ -373,7 +381,7 @@
 
 .header .headerContainer .title > h2 {
   text-align: center;
-  color: #e71361;
+  color: #d50c52;
   font-size: 16px;
   margin: 0;
 }
@@ -386,7 +394,7 @@
 
 .header .headerContainer .navBar nav {
   width: 100%;
-  background-color: #3b3bb9;
+  background-color: #1d71b9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
