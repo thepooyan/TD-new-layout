@@ -18,11 +18,11 @@
     position: absolute;
     right: -28px;
     top: 1px;
-    width: 70px;
-    height: 60px;
-    background: url("./data/Header-Footer.png");
-    background-position: -8px -9px;
-    background-size: 740%;
+    width: 78px;
+    height: 54px;
+    background: url(./data/Header-Footer.png);
+    background-position: -5px -9px;
+    background-size: 678%;
   }
 }
 
@@ -54,56 +54,257 @@
 
     display: flex;
     justify-content: space-between;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .right {
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    .center {
+      gap: 20px;
+    }
+    .left {
+      .siteGearIcon {
+        width: 49px;
+        height: 29px;
+        background: url("./data/Header-Footer.png");
+        background-position: -69px -149px;
+        background-size: 1057%;
+      }
+    }
   }
   .headerContainer {
     display: grid;
-    grid-template-columns: $sideMenuLength auto;
+    grid-template-areas:
+      "logo header calendar"
+      "title navBar calendar"
+      "spaceRightSide space calendar"
+      "sideMenu content content";
+    grid-template-columns: $sideMenuLength auto auto;
     > * {
       display: flex;
       justify-content: flex-start;
     }
     .logo {
+      grid-area: logo;
       justify-content: center;
+      align-items: flex-end;
+      .logo {
+        background: url("./data/Header-Footer.png");
+        width: 122px;
+        height: 122px;
+        background-position: 121px 124px;
+        background-size: 355%;
+      }
     }
     .sideMenu {
+      grid-area: sideMenu;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       padding: 0 35px;
-      .sideTitle {
-        font-size: 15px;
-        font-weight: bold;
-        color: $sideTitleColor;
+      gap: 35px;
+      .rightSideImage {
+        width: 180%;
+        position: relative;
+        right: 53px;
+        z-index: -1;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
       }
     }
     .header {
-      .right {
-        width: 100% - $headerCalenderIconWidth;
-        .layer1 {
-          padding: 50px 0;
-        }
-        .layer2 {
-          nav {
-            background-color: $headerNavColor;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 20px;
-            border-radius: 5px;
-            padding: 0 15px;
-            .item {
-              color: $headerWhiteText;
-              font-size: $headerNavFont;
+      grid-area: header;
+      padding: 50px 0;
+      align-items: center;
+      justify-content: space-between;
+      .layer2 {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        .item {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 10px;
+          > .img {
+            width: 33px;
+            height: 33px;
+            background: url("./data/Header-Footer.png");
+            background-size: 1380%;
+            &.one {
+              background-position: -202px -4px;
             }
+            &.two {
+              background-position: -214px 34.5px;
+            }
+            &.three {
+              background-position: -182px 34px;
+              width: 28px;
+              background-size: 1624%;
+            }
+            &.four {
+              background-position: -135.5px 34px;
+              background-size: 1325%;
+            }
+          }
+          > span {
+            color: $themeDarkenBlue;
+            font-weight: bold;
+            font-size: 13px;
           }
         }
       }
-      .left {
-        width: $headerCalenderIconWidth;
-        background-color: black;
+      .inputWrapper {
+        position: relative;
+        .mainSearch {
+          font-size: 18px;
+          border: 1px solid $inputBlue;
+          box-shadow: $SHADOWS;
+          border-radius: 25px;
+          padding: 5px 20px;
+          direction: ltr;
+          font-family: inherit;
+          &:focus {
+            outline: none;
+            direction: rtl;
+          }
+        }
+        i {
+          position: absolute;
+          right: 12px;
+          top: 13px;
+          color: $inputBlue;
+        }
       }
     }
+    .calendar {
+      grid-area: calendar;
+      $scale: -50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .M-50 {
+        margin: 50px;
+      }
+      .CircleBase {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #1d71b8;
+        position: relative;
+        transform: scale(2);
+      }
+      .FatLIne {
+        background-image: linear-gradient(180deg, white 50%, transparent 50%),
+          linear-gradient(-90deg, white 50%, transparent 50%);
+      }
+      .Circle-1 {
+        width: 94px;
+        height: 94px;
+        background-color: transparent;
+        border: 1px solid #1d71b8;
+        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        top: 2px + $scale;
+        left: 2px + $scale;
+      }
+      .Circle-2 {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 6px + $scale;
+        left: 6px + $scale;
+      }
+      .Circle-3 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px + $scale;
+        left: 10px + $scale;
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 20px rgba(200, 200, 200, 0.75);
+        .calendar {
+          background: url(./data/Header-Footer.png);
+          height: 63px;
+          width: 63px;
+          margin: auto;
+          background-position: -354px -21px;
+          background-size: 382%;
+        }
+        .calendarText {
+          color: $calendarText;
+          font-size: 7px;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
+    }
+    .title {
+      grid-area: title;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > h2 {
+        text-align: center;
+        color: $sideTitleColor;
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+    .navBar {
+      grid-area: navBar;
+      nav {
+        width: 100%;
+        background-color: $headerNavColor;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        border-radius: 5px;
+        padding: 0 15px;
+        .item {
+          color: $headerWhiteText;
+          font-size: $headerNavFont;
+        }
+      }
+    }
+    .space {
+      grid-area: space;
+    }
     .content {
+      grid-area: content;
+      margin-left: 5px;
+      .pic {
+        width: 100%;
+        height: 100%;
+        background-color: orange;
+      }
+    }
+    .spaceRightSide {
+      grid-area: spaceRightSide;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      > span {
+        font-size: 12px;
+        color: #149bd9;
+        width: 150px;
+        text-align: center;
+        padding-bottom: 20px;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+/*------------------HEADER-----------------*/
 /*-------------FOOOTER-------------------*/
 /*-----------------------------------------*/
 .pillButton {
@@ -21,11 +22,11 @@
   position: absolute;
   right: -28px;
   top: 1px;
-  width: 70px;
-  height: 60px;
-  background: url("./data/Header-Footer.png");
-  background-position: -8px -9px;
-  background-size: 740%;
+  width: 78px;
+  height: 54px;
+  background: url(./data/Header-Footer.png);
+  background-position: -5px -9px;
+  background-size: 678%;
 }
 
 .orangeButton {
@@ -53,7 +54,7 @@
 .header .topBar {
   background-color: #2067ff;
   padding: 10px 15px;
-  padding-right: 315px;
+  padding-right: 245px;
   color: #f7f7f7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,11 +64,43 @@
           justify-content: space-between;
 }
 
+.header .topBar > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .topBar .right {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+}
+
+.header .topBar .center {
+  gap: 20px;
+}
+
+.header .topBar .left .siteGearIcon {
+  width: 49px;
+  height: 29px;
+  background: url("./data/Header-Footer.png");
+  background-position: -69px -149px;
+  background-size: 1057%;
+}
+
 .header .headerContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px auto;
-      grid-template-columns: 300px auto;
+      grid-template-areas: "logo header calendar" "title navBar calendar" "spaceRightSide space calendar" "sideMenu content content";
+  -ms-grid-columns: 230px auto auto;
+      grid-template-columns: 230px auto auto;
 }
 
 .header .headerContainer > * {
@@ -80,12 +113,29 @@
 }
 
 .header .headerContainer .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header .headerContainer .logo .logo {
+  background: url("./data/Header-Footer.png");
+  width: 122px;
+  height: 122px;
+  background-position: 121px 124px;
+  background-size: 355%;
 }
 
 .header .headerContainer .sideMenu {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: sideMenu;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -97,23 +147,245 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0 35px;
+  gap: 35px;
 }
 
-.header .headerContainer .sideMenu .sideTitle {
-  font-size: 15px;
-  font-weight: bold;
-  color: pink;
+.header .headerContainer .sideMenu .rightSideImage {
+  width: 180%;
+  position: relative;
+  right: 53px;
+  z-index: -1;
 }
 
-.header .headerContainer .header .right {
-  width: 80%;
+.header .headerContainer .sideMenu .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
 }
 
-.header .headerContainer .header .right .layer1 {
+.header .headerContainer .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header;
   padding: 50px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header .headerContainer .header .right .layer2 nav {
+.header .headerContainer .header .layer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 30px;
+}
+
+.header .headerContainer .header .layer2 .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.header .headerContainer .header .layer2 .item > .img {
+  width: 33px;
+  height: 33px;
+  background: url("./data/Header-Footer.png");
+  background-size: 1380%;
+}
+
+.header .headerContainer .header .layer2 .item > .img.one {
+  background-position: -202px -4px;
+}
+
+.header .headerContainer .header .layer2 .item > .img.two {
+  background-position: -214px 34.5px;
+}
+
+.header .headerContainer .header .layer2 .item > .img.three {
+  background-position: -182px 34px;
+  width: 28px;
+  background-size: 1624%;
+}
+
+.header .headerContainer .header .layer2 .item > .img.four {
+  background-position: -135.5px 34px;
+  background-size: 1325%;
+}
+
+.header .headerContainer .header .layer2 .item > span {
+  color: #1178a8;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.header .headerContainer .header .inputWrapper {
+  position: relative;
+}
+
+.header .headerContainer .header .inputWrapper .mainSearch {
+  font-size: 18px;
+  border: 1px solid #23a2d4;
+  -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
+          box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
+  border-radius: 25px;
+  padding: 5px 20px;
+  direction: ltr;
+  font-family: inherit;
+}
+
+.header .headerContainer .header .inputWrapper .mainSearch:focus {
+  outline: none;
+  direction: rtl;
+}
+
+.header .headerContainer .header .inputWrapper i {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  color: #23a2d4;
+}
+
+.header .headerContainer .calendar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: calendar;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .headerContainer .calendar .M-50 {
+  margin: 50px;
+}
+
+.header .headerContainer .calendar .CircleBase {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #1d71b8;
+  position: relative;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.header .headerContainer .calendar .FatLIne {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, transparent)), -webkit-gradient(linear, right top, left top, color-stop(50%, white), color-stop(50%, transparent));
+  background-image: linear-gradient(180deg, white 50%, transparent 50%), linear-gradient(-90deg, white 50%, transparent 50%);
+}
+
+.header .headerContainer .calendar .Circle-1 {
+  width: 94px;
+  height: 94px;
+  background-color: transparent;
+  border: 1px solid #1d71b8;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: -48px;
+  left: -48px;
+}
+
+.header .headerContainer .calendar .Circle-2 {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: -44px;
+  left: -44px;
+}
+
+.header .headerContainer .calendar .Circle-3 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 5px 5px 20px rgba(200, 200, 200, 0.75);
+          box-shadow: 5px 5px 20px rgba(200, 200, 200, 0.75);
+}
+
+.header .headerContainer .calendar .Circle-3 .calendar {
+  background: url(./data/Header-Footer.png);
+  height: 63px;
+  width: 63px;
+  margin: auto;
+  background-position: -354px -21px;
+  background-size: 382%;
+}
+
+.header .headerContainer .calendar .Circle-3 .calendarText {
+  color: #149bd9;
+  font-size: 7px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header .headerContainer .title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .headerContainer .title > h2 {
+  text-align: center;
+  color: #e71361;
+  font-size: 16px;
+  margin: 0;
+}
+
+.header .headerContainer .navBar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: navBar;
+}
+
+.header .headerContainer .navBar nav {
+  width: 100%;
   background-color: #3b3bb9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,14 +401,52 @@
   padding: 0 15px;
 }
 
-.header .headerContainer .header .right .layer2 nav .item {
+.header .headerContainer .navBar nav .item {
   color: #f7f7f7;
   font-size: 13px;
 }
 
-.header .headerContainer .header .left {
-  width: 20%;
-  background-color: black;
+.header .headerContainer .space {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: space;
+}
+
+.header .headerContainer .content {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: content;
+  margin-left: 5px;
+}
+
+.header .headerContainer .content .pic {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}
+
+.header .headerContainer .spaceRightSide {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: spaceRightSide;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header .headerContainer .spaceRightSide > span {
+  font-size: 12px;
+  color: #149bd9;
+  width: 150px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .footer {
