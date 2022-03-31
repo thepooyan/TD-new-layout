@@ -19,6 +19,10 @@
     right: -28px;
     top: 1px;
     width: 70px;
+    height: 60px;
+    background: url('./data/Header-Footer.png');
+    background-position: -8px -9px;
+    background-size: 740%;
   }
 }
 
@@ -238,11 +242,16 @@
         text-shadow: $SHADOWS;
         letter-spacing: letterSpace(50) * 1px;
       }
-      img {
+      .img {
         position: relative;
         right: 41px;
         top: 4px;
-        width: 103px;
+        width: 89px;
+        height: 94px;
+        background: url("./data/Header-Footer.png");
+        background-position: -102px -58px;
+        background-size: 499%;
+        margin-bottom: 6px;
       }
       .info {
         color: $footerWhiteText;
@@ -346,6 +355,34 @@
       > img {
         width: 35px;
       }
+      .footerImage {
+        width: 35px;
+        height: 35px;
+        background: url("./data/Header-Footer.png");
+        background-size: 1182%;
+        background-position-y: 72px;
+        &.one {
+          background-position-x: -1px;
+        }
+        &.two {
+          background-position-x: -38px;
+        }
+        &.three {
+          background-position-x: -76px;
+        }
+        &.four {
+          background-position: -113px 74px;
+        }
+        &.five {
+          background-position: -150px 74px;
+        }
+        &.six {
+          background-position: -186px 74px;
+        }
+        &.seven {
+          background-position: -224px 74px;
+        }
+      }
       display: flex;
       flex-direction: row-reverse;
       gap: 20px;
@@ -353,11 +390,15 @@
     }
   }
   .leftBottom {
-    img {
+    .img {
+      background: url(./data/Header-Footer.png);
+      height: 58px;
       width: 133px;
       position: relative;
       bottom: 9px;
       right: 9px;
+      background-position: -79px -5px;
+      background-size: 367%;
     }
     .telegraph {
       color: $footerWhiteText;
