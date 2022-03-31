@@ -388,12 +388,30 @@
   gap: 10px;
 }
 
-.footer .centerCenter .layer2 .item > img {
+.footer .centerCenter .layer2 .item > .img {
   width: 33px;
+  height: 33px;
+  background: url("./data/Header-Footer.png");
+  background-size: 1380%;
 }
 
-.footer .centerCenter .layer2 .item > img.small {
-  width: 27px;
+.footer .centerCenter .layer2 .item > .img.one {
+  background-position: -103px 34px;
+}
+
+.footer .centerCenter .layer2 .item > .img.two {
+  background-position: -67px 35px;
+}
+
+.footer .centerCenter .layer2 .item > .img.three {
+  background-position: -37px 34px;
+  width: 28px;
+  background-size: 1624%;
+}
+
+.footer .centerCenter .layer2 .item > .img.four {
+  background-position: -1px 34px;
+  background-size: 1325%;
 }
 
 .footer .centerCenter .layer2 .item > span {
