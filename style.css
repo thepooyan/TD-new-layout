@@ -223,6 +223,10 @@
 
 .footer .rightTop .layer .img {
   width: 120px;
+  height: 82px;
+  background: url("./data/Header-Footer.png");
+  background-position: 0px -61px;
+  background-size: 403%;
 }
 
 .footer .rightTop .inputwrapper {
@@ -258,9 +262,13 @@
   border-radius: 50%;
 }
 
-.footer .centerTop img {
+.footer .centerTop .img {
   width: 90px;
+  height: 90px;
   margin-bottom: 5px;
+  background: url("./data/Header-Footer.png");
+  background-position: 90px 0;
+  background-size: 505%;
 }
 
 .footer .centerTop .layer1 {

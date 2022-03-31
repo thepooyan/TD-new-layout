@@ -163,6 +163,10 @@
       }
       .img {
         width: 120px;
+        height: 82px;
+        background: url("./data/Header-Footer.png");
+        background-position: 0px -61px;
+        background-size: 403%;
       }
     }
     .inputwrapper {
@@ -195,9 +199,13 @@
     }
   }
   .centerTop {
-    img {
+    .img {
       width: 90px;
+      height: 90px;
       margin-bottom: 5px;
+      background: url("./data/Header-Footer.png");
+      background-position: 90px 0;
+      background-size: 505%;
     }
     .layer1 {
       display: flex;
@@ -261,8 +269,6 @@
       }
     }
   }
-  .rightCenter {
-  }
   .centerCenter {
     .hr {
       width: 75%;
@@ -313,8 +319,6 @@
         }
       }
     }
-  }
-  .leftCenter {
   }
   .rightBottom {
     .eNamad {
