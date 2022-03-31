@@ -1,12 +1,11 @@
-$orangeButton: #FEC715;
+$coolOrange: #FEC715;
 $orangeButtonText: rgb(74, 74, 228);
+
+$SHADOW: 3px 3px 5px rgba(16 ,16, 16, .75);
+$SHADOW-LIGHT: 3px 3px 5px rgba(16, 16, 16, 0.301);
 /*------------------HEADER-----------------*/
 $sideMenuLength: 230px;
-$topMenuColor: rgb(32, 103, 255);
 $headerWhiteText: rgb(247, 247, 247);
-$headerCalenderIconWidth: 20%;
-$headerNavColor: rgb(59, 59, 185);
-$headerNavFont: 13px;
 
 $themeBlue: #1d71b9;
 $themeBlueLight: #149bd9;
@@ -14,26 +13,13 @@ $themeBlueDark: #0d72a1;
 
 $themePurple: #d50c52;
 
-
-$calendarText: #149bd9;
-$themeTextBlue: #149bd9;
-$themeDarkenBlue: #1178a8;
-
-$inputBlue: rgb(35, 162, 212);
-
-
 /*-------------FOOOTER-------------------*/
 $footerBackground: #444444;
 $footerOrangeLine: #FF7A18;
 $footerWhiteText: #FFFFED;
-$footerEmailInputBackground: #DEDEDE;
-$footerOrangeText:#FEC715;
 $footerWhiteLine:#FFFFED;
+$footerEmailInputBackground: #DEDEDE;
 $footerEmailInputColor:#757575;
-//$SHADOWS: 3px 3px 5px rgba(58,57,55,.75);
-$SHADOW: 3px 3px 5px rgba(16 ,16, 16, .75);
-$SHADOW-LIGHT: 3px 3px 5px rgba(16, 16, 16, 0.301);
-
 
 $EnamadShadow: 4px 4px 5px #3A3937;
 $Enamad-border:#333333;

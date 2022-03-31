@@ -30,7 +30,7 @@
   padding: 7px 0;
   border-radius: 24px;
   border: none;
-  background-color: $orangeButton;
+  background-color: $coolOrange;
   font-family: "main";
   box-shadow: $SHADOW;
   width: 133px;
@@ -281,7 +281,7 @@
         padding: 0 15px;
         .item {
           color: $headerWhiteText;
-          font-size: $headerNavFont;
+          font-size: 13px;
         }
       }
     }
@@ -316,7 +316,6 @@
 .footer {
   display: grid;
   height: 600px;
-  //grid-template-columns: 24% 52% 24%;
   grid-template-columns: 26% 49% 25%;
   grid-template-rows: 39% 24% 37%;
   background-color: $footerBackground;
@@ -324,7 +323,6 @@
   box-sizing: border-box;
   width: 98%;
   margin: auto;
-  //margin-top: 14px;
   margin-top: 50px;
 
   > * {
@@ -570,7 +568,7 @@
         justify-content: center;
         gap: 35px;
         .item {
-          color: $footerOrangeText;
+          color: $coolOrange;
           font-size: 24pt / $fontScale;
         }
       }
