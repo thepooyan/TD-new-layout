@@ -1,0 +1,351 @@
+/* Extra extra large devices (TV, 1300px and down) */
+@media screen and (max-width: 1300px) {
+  .footer {
+    .rightTop {
+      .layer {
+        .text {
+          font-size: 10pt;
+        }
+      }
+    }
+    .rightBottom {
+      .eNamad {
+        // width: 100px;
+        border: 12px solid #333333;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+  .footer {
+    .rightTop {
+      .layer {
+        .text {
+          margin: 0;
+        }
+      }
+      .inputwrapper {
+        .icon {
+          top: 3.15px;
+        }
+        .emailInput {
+          width: 205px;
+          padding: 7px 16px;
+        }
+      }
+    }
+    .rightBottom {
+      .eNamad {
+        width: 110px;
+        position: relative;
+        left: 20px;
+      }
+    }
+    .centerBottom {
+      .wholeNav {
+        .nav1 {
+          gap: 12px;
+          justify-content: space-between;
+          > .item {
+          }
+        }
+      }
+    }
+    .leftBottom {
+      justify-content: center;
+    }
+    .rightBottom {
+      justify-content: center;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+  .footer {
+    $scale: 3;
+    .rightTop {
+        .layer {
+          .text {
+            font-size: 22pt / $scale;
+          }
+        }
+      }
+      
+      .rightTop {
+        .inputwrapper {
+          .emailInput {
+            font-size: 20pt / $scale;
+          }
+        }
+      }
+      
+      .rightTop {
+        .inputwrapper {
+          .icon {
+            font-size: 18pt / $scale;
+          }
+        }
+      }
+      
+      .centerTop {
+        .layer1 {
+          p.title {
+            font-size: 25pt / $scale;
+          }
+          p.address {
+            font-size: 20pt / $scale;
+          }
+          p.site {
+            font-size: 25pt / $scale;
+          }
+          p.num {
+            font-size: 20pt / $scale;
+          }
+        }
+      }
+      
+      .leftTop {
+        .counsel {
+          .number {
+            font-size: 25pt / $scale;
+          }
+        }
+      }
+      
+      .leftTop {
+        .counsel {
+          .info {
+            font-size: 20pt / $scale;
+          }
+        }
+      }
+      
+      .centerCenter {
+        .layer2 {
+          .item {
+            > span {
+              font-size: 18pt / $scale;
+            }
+          }
+        }
+      }
+      
+      .centerBottom {
+        .wholeNav {
+          .nav1 {
+            .item {
+              font-size: 18pt / $scale;
+            }
+          }
+        }
+      }
+      
+      .centerBottom {
+        .wholeNav {
+          .nav2 {
+            .item {
+              font-size: 24pt / $scale;
+            }
+          }
+        }
+      }
+      
+      .leftBottom {
+        .telegraph {
+          font-size: 25pt / $scale;
+        }
+      }
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+}
+
+/* Extra small devices (phones, 320px and down) */
+@media screen and (max-width: 320px) {
+  .footer {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    $fontScaleMobile: 2.5;
+
+    .rightTop {
+      display: none;
+    }
+    .centerTop {
+      .layer1 {
+        p.title {
+          font-size: 25pt / $fontScaleMobile;
+        }
+        p.address {
+          font-size: 20pt / $fontScaleMobile;
+        }
+        p.site {
+          font-size: 25pt / $fontScaleMobile;
+        }
+        p.num {
+          font-size: 20pt / $fontScaleMobile;
+        }
+      }
+    }
+    .leftTop {
+      display: none;
+    }
+    .rightCenter {
+      display: none;
+    }
+    .leftCenter {
+      display: none;
+    }
+    .centerCenter {
+      .layer2 {
+        gap: 19px;
+        .item {
+          > span {
+            font-size: 18pt / $fontScaleMobile;
+          }
+        }
+      }
+    }
+    .rightBottom {
+      .eNamad {
+        width: 100px;
+        margin: 15px 0;
+      }
+    }
+    .centerBottom {
+      .wholeNav {
+        width: 100%;
+        .nav1 {
+          display: none;
+        }
+        .line {
+          margin: 15px auto;
+        }
+        .nav2 {
+          gap: 21px;
+          .item {
+            font-size: 18pt / $fontScaleMobile;
+          }
+        }
+      }
+      .layer3 {
+        margin-bottom: 0;
+        margin-top: 20px;
+        gap: 7px;
+        .footerImage {
+          transform: scale(0.9);
+        }
+      }
+    }
+    .leftBottom {
+      display: none;
+    }
+  }
+}
+/*-------------------FONT SCALE----------------------
+.rightTop {
+  .layer {
+    .text {
+      font-size: 22pt / $scale;
+    }
+  }
+}
+
+.rightTop {
+  .inputwrapper {
+    .emailInput {
+      font-size: 20pt / $scale;
+    }
+  }
+}
+
+.rightTop {
+  .inputwrapper {
+    .icon {
+      font-size: 18pt / $scale;
+    }
+  }
+}
+
+.centerTop {
+  .layer1 {
+    p.title {
+      font-size: 25pt / $scale;
+    }
+    p.address {
+      font-size: 20pt / $scale;
+    }
+    p.site {
+      font-size: 25pt / $scale;
+    }
+    p.num {
+      font-size: 20pt / $scale;
+    }
+  }
+}
+
+.leftTop {
+  .counsel {
+    .number {
+      font-size: 25pt / $scale;
+    }
+  }
+}
+
+.leftTop {
+  .counsel {
+    .info {
+      font-size: 20pt / $scale;
+    }
+  }
+}
+
+.centerCenter {
+  .layer2 {
+    .item {
+      > span {
+        font-size: 18pt / $scale;
+      }
+    }
+  }
+}
+
+.centerBottom {
+  .wholeNav {
+    .nav1 {
+      .item {
+        font-size: 18pt / $scale;
+      }
+    }
+  }
+}
+
+.centerBottom {
+  .wholeNav {
+    .nav2 {
+      .item {
+        font-size: 24pt / $scale;
+      }
+    }
+  }
+}
+
+.leftBottom {
+  .telegraph {
+    font-size: 25pt / $scale;
+  }
+}
+-------------------FONT SCALE----------------------*/

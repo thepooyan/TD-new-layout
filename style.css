@@ -517,6 +517,8 @@
 }
 
 .footer .rightTop .layer {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,13 +536,11 @@
   color: #FFFFED;
   font-size: 10.47619pt;
   text-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
-  margin-right: 30px;
-  margin-right: 56px;
   margin-left: 4px;
 }
 
 .footer .rightTop .layer .img {
-  width: 120px;
+  min-width: 120px;
   height: 82px;
   background: url("./data/Header-Footer.png");
   background-position: 0px -61px;
@@ -762,7 +762,7 @@
 }
 
 .footer .centerBottom .wholeNav {
-  width: 120%;
+  width: 126%;
 }
 
 .footer .centerBottom .wholeNav .nav1 {

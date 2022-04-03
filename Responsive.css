@@ -1,0 +1,268 @@
+/* Extra extra large devices (TV, 1300px and down) */
+@media screen and (max-width: 1300px) {
+  .footer .rightTop .layer .text {
+    font-size: 10pt;
+  }
+  .footer .rightBottom .eNamad {
+    border: 12px solid #333333;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+  .footer .rightTop .layer .text {
+    margin: 0;
+  }
+  .footer .rightTop .inputwrapper .icon {
+    top: 3.15px;
+  }
+  .footer .rightTop .inputwrapper .emailInput {
+    width: 205px;
+    padding: 7px 16px;
+  }
+  .footer .rightBottom .eNamad {
+    width: 110px;
+    position: relative;
+    left: 20px;
+  }
+  .footer .centerBottom .wholeNav .nav1 {
+    gap: 12px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .leftBottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .rightBottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+  .footer .rightTop .layer .text {
+    font-size: 7.33333pt;
+  }
+  .footer .rightTop .inputwrapper .emailInput {
+    font-size: 6.66667pt;
+  }
+  .footer .rightTop .inputwrapper .icon {
+    font-size: 6pt;
+  }
+  .footer .centerTop .layer1 p.title {
+    font-size: 8.33333pt;
+  }
+  .footer .centerTop .layer1 p.address {
+    font-size: 6.66667pt;
+  }
+  .footer .centerTop .layer1 p.site {
+    font-size: 8.33333pt;
+  }
+  .footer .centerTop .layer1 p.num {
+    font-size: 6.66667pt;
+  }
+  .footer .leftTop .counsel .number {
+    font-size: 8.33333pt;
+  }
+  .footer .leftTop .counsel .info {
+    font-size: 6.66667pt;
+  }
+  .footer .centerCenter .layer2 .item > span {
+    font-size: 6pt;
+  }
+  .footer .centerBottom .wholeNav .nav1 .item {
+    font-size: 6pt;
+  }
+  .footer .centerBottom .wholeNav .nav2 .item {
+    font-size: 8pt;
+  }
+  .footer .leftBottom .telegraph {
+    font-size: 8.33333pt;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+/* Medium devices (landscape tablets, 768px and down) */
+/* Extra small devices (phones, 320px and down) */
+@media screen and (max-width: 320px) {
+  .footer {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .footer .rightTop {
+    display: none;
+  }
+  .footer .centerTop .layer1 p.title {
+    font-size: 10pt;
+  }
+  .footer .centerTop .layer1 p.address {
+    font-size: 8pt;
+  }
+  .footer .centerTop .layer1 p.site {
+    font-size: 10pt;
+  }
+  .footer .centerTop .layer1 p.num {
+    font-size: 8pt;
+  }
+  .footer .leftTop {
+    display: none;
+  }
+  .footer .rightCenter {
+    display: none;
+  }
+  .footer .leftCenter {
+    display: none;
+  }
+  .footer .centerCenter .layer2 {
+    gap: 19px;
+  }
+  .footer .centerCenter .layer2 .item > span {
+    font-size: 7.2pt;
+  }
+  .footer .rightBottom .eNamad {
+    width: 100px;
+    margin: 15px 0;
+  }
+  .footer .centerBottom .wholeNav {
+    width: 100%;
+  }
+  .footer .centerBottom .wholeNav .nav1 {
+    display: none;
+  }
+  .footer .centerBottom .wholeNav .line {
+    margin: 15px auto;
+  }
+  .footer .centerBottom .wholeNav .nav2 {
+    gap: 21px;
+  }
+  .footer .centerBottom .wholeNav .nav2 .item {
+    font-size: 7.2pt;
+  }
+  .footer .centerBottom .layer3 {
+    margin-bottom: 0;
+    margin-top: 20px;
+    gap: 7px;
+  }
+  .footer .centerBottom .layer3 .footerImage {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .footer .leftBottom {
+    display: none;
+  }
+}
+
+/*-------------------FONT SCALE----------------------
+.rightTop {
+  .layer {
+    .text {
+      font-size: 22pt / $scale;
+    }
+  }
+}
+
+.rightTop {
+  .inputwrapper {
+    .emailInput {
+      font-size: 20pt / $scale;
+    }
+  }
+}
+
+.rightTop {
+  .inputwrapper {
+    .icon {
+      font-size: 18pt / $scale;
+    }
+  }
+}
+
+.centerTop {
+  .layer1 {
+    p.title {
+      font-size: 25pt / $scale;
+    }
+    p.address {
+      font-size: 20pt / $scale;
+    }
+    p.site {
+      font-size: 25pt / $scale;
+    }
+    p.num {
+      font-size: 20pt / $scale;
+    }
+  }
+}
+
+.leftTop {
+  .counsel {
+    .number {
+      font-size: 25pt / $scale;
+    }
+  }
+}
+
+.leftTop {
+  .counsel {
+    .info {
+      font-size: 20pt / $scale;
+    }
+  }
+}
+
+.centerCenter {
+  .layer2 {
+    .item {
+      > span {
+        font-size: 18pt / $scale;
+      }
+    }
+  }
+}
+
+.centerBottom {
+  .wholeNav {
+    .nav1 {
+      .item {
+        font-size: 18pt / $scale;
+      }
+    }
+  }
+}
+
+.centerBottom {
+  .wholeNav {
+    .nav2 {
+      .item {
+        font-size: 24pt / $scale;
+      }
+    }
+  }
+}
+
+.leftBottom {
+  .telegraph {
+    font-size: 25pt / $scale;
+  }
+}
+-------------------FONT SCALE----------------------*/
+/*# sourceMappingURL=Responsive.css.map */
