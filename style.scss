@@ -46,6 +46,8 @@
 }
 
 .header {
+  margin-bottom: 20px;
+  background-color: $greyMain-background;
   .topBar {
     background-color: $themeBlue;
     padding: 10px 25px;
@@ -125,10 +127,12 @@
       gap: 35px;
       padding-bottom: 25px;
       .rightSideImage {
-        width: 180%;
-        position: relative;
-        right: 53px;
-        z-index: -1;
+        background: url('./images/img/Asset 3-8.png') no-repeat;
+        background-size: 100%;
+        width: 288px;
+        height: 205px;
+
+        z-index: 0;
 
       }
       .buttons {
@@ -311,8 +315,10 @@
       grid-area: space;
     }
     .slider {
+      z-index: 1;
       grid-area: content;
       margin-left: 5px;
+      box-shadow: $slider-shadow;
       .pic {
         width: 100%;
         height: 100%;
@@ -337,6 +343,21 @@
         line-height: 24px;
       }
     }
+  }
+}
+
+.atnaHost {
+  padding:  45px 0;
+  @include flex(c,c);
+  font-size: 29px;
+  background-color: $greyMain-background;
+  color: $atnaHost-blue;
+  > span {
+    color: $atnaHost-orange;
+    margin-right: 5px;
+  }
+  &::before, &::after {
+    content: '☻';
   }
 }
 

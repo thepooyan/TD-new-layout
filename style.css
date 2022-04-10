@@ -1,4 +1,8 @@
+@charset "UTF-8";
 /*------------------HEADER-----------------*/
+/*------------------HEADER-----------------*/
+/*-------------ATNA HOST-----------------*/
+/*-------------ATNA HOST-----------------*/
 /*-------------FOOOTER-------------------*/
 /*-----------------------------------------*/
 .pillButton {
@@ -49,6 +53,11 @@
 
 .orangeButton.pr {
   padding-right: 16px;
+}
+
+.header {
+  margin-bottom: 20px;
+  background-color: #f6f6f6;
 }
 
 .header .topBar {
@@ -183,10 +192,11 @@
 }
 
 .header .headerContainer .sideMenu .rightSideImage {
-  width: 180%;
-  position: relative;
-  right: 53px;
-  z-index: -1;
+  background: url("./images/img/Asset 3-8.png") no-repeat;
+  background-size: 100%;
+  width: 288px;
+  height: 205px;
+  z-index: 0;
 }
 
 .header .headerContainer .sideMenu .buttons {
@@ -456,11 +466,14 @@
 }
 
 .header .headerContainer .slider {
+  z-index: 1;
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: content;
   margin-left: 5px;
+  -webkit-box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
+          box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
 }
 
 .header .headerContainer .slider .pic {
@@ -507,6 +520,35 @@
   text-align: center;
   padding-bottom: 20px;
   line-height: 24px;
+}
+
+.atnaHost {
+  padding: 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 29px;
+  background-color: #f6f6f6;
+  color: #64abe9;
+}
+
+.atnaHost > span {
+  color: #f58232;
+  margin-right: 5px;
+}
+
+.atnaHost::before, .atnaHost::after {
+  content: '☻';
 }
 
 .footer {
