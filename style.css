@@ -629,7 +629,6 @@
   padding: 10px 0;
   -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
           clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-  border-radius: 26px 26px 69px 69px;
 }
 
 .outlet .mainPageSection .flex .box .colored .step {
