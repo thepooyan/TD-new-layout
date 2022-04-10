@@ -56,7 +56,6 @@
 }
 
 .header {
-  margin-bottom: 20px;
   padding-bottom: 50px;
   background-color: #f6f6f6;
 }
@@ -526,6 +525,7 @@
 
 .atnaHost {
   padding: 45px 0;
+  margin: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,11 +553,23 @@
   content: "☻";
 }
 
-.mainPageSection .title {
+.outlet {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 120px;
+}
+
+.outlet .mainPageSection .title {
   margin-bottom: 50px;
 }
 
-.mainPageSection .title .pic {
+.outlet .mainPageSection .title .pic {
   background: url("./images/img/Asset 3-8.png") no-repeat;
   background-size: 100%;
   width: 137.14286px;
@@ -566,7 +578,7 @@
   margin-right: 70px;
 }
 
-.mainPageSection .title .pic .text {
+.outlet .mainPageSection .title .pic .text {
   font-weight: bold;
   position: absolute;
   left: -70px;
@@ -575,7 +587,7 @@
   color: #1d71b9;
 }
 
-.mainPageSection .flex {
+.outlet .mainPageSection .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,7 +604,7 @@
   gap: 85px;
 }
 
-.mainPageSection .flex .box {
+.outlet .mainPageSection .flex .box {
   border-radius: 20px;
   position: relative;
   -webkit-box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
@@ -601,7 +613,7 @@
   height: 200px;
 }
 
-.mainPageSection .flex .box .colored {
+.outlet .mainPageSection .flex .box .colored {
   color: white;
   position: absolute;
   top: -5px;
@@ -616,17 +628,17 @@
   border-radius: 26px 26px 69px 69px;
 }
 
-.mainPageSection .flex .box .colored .step {
+.outlet .mainPageSection .flex .box .colored .step {
   font-size: 15px;
   font-weight: bold;
 }
 
-.mainPageSection .flex .box .colored .step::before {
+.outlet .mainPageSection .flex .box .colored .step::before {
   margin-left: 10px;
   font-size: 17px;
 }
 
-.mainPageSection .flex .box .text {
+.outlet .mainPageSection .flex .box .text {
   position: absolute;
   bottom: 25px;
   text-align: center;
@@ -636,51 +648,51 @@
   font-size: 15px;
 }
 
-.mainPageSection .flex .box.box1 .colored {
+.outlet .mainPageSection .flex .box.box1 .colored {
   background-color: #ffd413;
 }
 
-.mainPageSection .flex .box.box1 .colored .step::before {
+.outlet .mainPageSection .flex .box.box1 .colored .step::before {
   content: "1";
 }
 
-.mainPageSection .flex .box.box1 .text {
+.outlet .mainPageSection .flex .box.box1 .text {
   color: #ffd413;
 }
 
-.mainPageSection .flex .box.box2 .colored {
+.outlet .mainPageSection .flex .box.box2 .colored {
   background-color: #ff9b0f;
 }
 
-.mainPageSection .flex .box.box2 .colored .step::before {
+.outlet .mainPageSection .flex .box.box2 .colored .step::before {
   content: "2";
 }
 
-.mainPageSection .flex .box.box2 .text {
+.outlet .mainPageSection .flex .box.box2 .text {
   color: #ff9b0f;
 }
 
-.mainPageSection .flex .box.box3 .colored {
+.outlet .mainPageSection .flex .box.box3 .colored {
   background-color: #fe3061;
 }
 
-.mainPageSection .flex .box.box3 .colored .step::before {
+.outlet .mainPageSection .flex .box.box3 .colored .step::before {
   content: "3";
 }
 
-.mainPageSection .flex .box.box3 .text {
+.outlet .mainPageSection .flex .box.box3 .text {
   color: #fe3061;
 }
 
-.mainPageSection .flex .box.box4 .colored {
+.outlet .mainPageSection .flex .box.box4 .colored {
   background-color: #02aeba;
 }
 
-.mainPageSection .flex .box.box4 .colored .step::before {
+.outlet .mainPageSection .flex .box.box4 .colored .step::before {
   content: "4";
 }
 
-.mainPageSection .flex .box.box4 .text {
+.outlet .mainPageSection .flex .box.box4 .text {
   color: #02aeba;
 }
 

@@ -46,7 +46,6 @@
 }
 
 .header {
-  margin-bottom: 20px;
   padding-bottom: 50px;
   background-color: $greyMain-background;
   .topBar {
@@ -351,6 +350,7 @@
 
 .atnaHost {
   padding: 45px 0;
+  margin: 40px 0;
   @include flex(c, c);
   font-size: 29px;
   background-color: $greyMain-background;
@@ -365,81 +365,89 @@
   }
 }
 
-.mainPageSection {
-  .title {
-      margin-bottom: 50px;
-      .pic {
-      background: url("./images/img/Asset\ 3-8.png") no-repeat;
-      background-size: 100%;
-      @include scalePics(288px, 205px, 2.1);
-      position: relative;
-      margin-right: 70px;
-      .text {
-        font-weight: bold;
-        position: absolute;
-        left: -70px;
-        bottom: 15px;
-        font-size: 16px;
-        color: $themeBlue
-      }
-    }
-  }
-  .flex {
-    @include flex(c, c);
-    gap: 85px;
-    .box {
-      border-radius: 20px;
-      position: relative;
-      box-shadow: $slider-shadow;
-      @include cube(200px);
-      .colored {
-        color: white;
-        position: absolute;
-        top: -5px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        margin: 0 auto;
-        width: 150px;
-        padding: 10px 0;
-        $polygon-offset: 15%;
-        clip-path: polygon(
-          0 0,
-          100% 0,
-          100-$polygon-offset 100%,
-          $polygon-offset 100%
-        );
-        border-radius: 26px 26px 69px 69px;
-        .step {
-          font-size: 15px;
+.outlet {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+
+  
+  .mainPageSection {
+    .title {
+        margin-bottom: 50px;
+        .pic {
+        background: url("./images/img/Asset\ 3-8.png") no-repeat;
+        background-size: 100%;
+        @include scalePics(288px, 205px, 2.1);
+        position: relative;
+        margin-right: 70px;
+        .text {
           font-weight: bold;
-          &::before {
-            margin-left: 10px;
-            font-size: 17px;
-          }
+          position: absolute;
+          left: -70px;
+          bottom: 15px;
+          font-size: 16px;
+          color: $themeBlue
         }
       }
-      .text {
-        position: absolute;
-        bottom: 25px;
-        text-align: center;
-        left: 0;
-        right: 0;
-        font-weight: bold;
-        font-size: 15px;
-      }
-      $colors: #ffd413, #ff9b0f, #fe3061, #02aeba;
-      @for $index from 1 through length($colors) {
-        $item: nth($colors, $index);
-        &.box#{$index} {
-          & .colored {
-            background-color: $item;
-            & .step::before {
-              content: "#{$index}";
+    }
+    .flex {
+      @include flex(c, c);
+      gap: 85px;
+      .box {
+        border-radius: 20px;
+        position: relative;
+        box-shadow: $slider-shadow;
+        @include cube(200px);
+        .colored {
+          color: white;
+          position: absolute;
+          top: -5px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin: 0 auto;
+          width: 150px;
+          padding: 10px 0;
+          $polygon-offset: 15%;
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100-$polygon-offset 100%,
+            $polygon-offset 100%
+          );
+          border-radius: 26px 26px 69px 69px;
+          .step {
+            font-size: 15px;
+            font-weight: bold;
+            &::before {
+              margin-left: 10px;
+              font-size: 17px;
             }
           }
-          .text {
-            color: $item;
+        }
+        .text {
+          position: absolute;
+          bottom: 25px;
+          text-align: center;
+          left: 0;
+          right: 0;
+          font-weight: bold;
+          font-size: 15px;
+        }
+        $colors: #ffd413, #ff9b0f, #fe3061, #02aeba;
+        @for $index from 1 through length($colors) {
+          $item: nth($colors, $index);
+          &.box#{$index} {
+            & .colored {
+              background-color: $item;
+              & .step::before {
+                content: "#{$index}";
+              }
+            }
+            .text {
+              color: $item;
+            }
           }
         }
       }
