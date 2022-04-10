@@ -553,6 +553,28 @@
   content: "☻";
 }
 
+.mainPageSection .title {
+  margin-bottom: 50px;
+}
+
+.mainPageSection .title .pic {
+  background: url("./images/img/Asset 3-8.png") no-repeat;
+  background-size: 100%;
+  width: 137.14286px;
+  height: 97.61905px;
+  position: relative;
+  margin-right: 70px;
+}
+
+.mainPageSection .title .pic .text {
+  font-weight: bold;
+  position: absolute;
+  left: -70px;
+  bottom: 15px;
+  font-size: 16px;
+  color: #1d71b9;
+}
+
 .mainPageSection .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -567,7 +589,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 50px;
+  gap: 85px;
 }
 
 .mainPageSection .flex .box {

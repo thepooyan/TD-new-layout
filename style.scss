@@ -367,14 +367,26 @@
 
 .mainPageSection {
   .title {
-    .pic {
-    }
-    .text {
+      margin-bottom: 50px;
+      .pic {
+      background: url("./images/img/Asset\ 3-8.png") no-repeat;
+      background-size: 100%;
+      @include scalePics(288px, 205px, 2.1);
+      position: relative;
+      margin-right: 70px;
+      .text {
+        font-weight: bold;
+        position: absolute;
+        left: -70px;
+        bottom: 15px;
+        font-size: 16px;
+        color: $themeBlue
+      }
     }
   }
   .flex {
     @include flex(c, c);
-    gap: 50px;
+    gap: 85px;
     .box {
       border-radius: 20px;
       position: relative;
@@ -391,7 +403,12 @@
         width: 150px;
         padding: 10px 0;
         $polygon-offset: 15%;
-        clip-path: polygon(0 0, 100% 0, 100-$polygon-offset 100%, $polygon-offset 100%);
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100-$polygon-offset 100%,
+          $polygon-offset 100%
+        );
         border-radius: 26px 26px 69px 69px;
         .step {
           font-size: 15px;
@@ -401,7 +418,6 @@
             font-size: 17px;
           }
         }
-      
       }
       .text {
         position: absolute;

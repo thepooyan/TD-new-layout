@@ -60,3 +60,8 @@ $fontScale: 2.1;
     width: $item;
     height: $item;
 }
+
+@mixin scalePics($width, $height, $scale) {
+    width: $width / $scale;
+    height: $height / $scale;
+}
