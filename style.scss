@@ -463,7 +463,14 @@
   * {
     box-sizing: content-box !important;
   }
-
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    transparent,
+    $footerWhiteLine,
+    transparent,
+  );
+  border-image-slice: 1;
   display: grid;
   height: 600px;
   grid-template-columns: 26% 49% 25%;
@@ -471,9 +478,9 @@
   background-color: $footerBackground;
   padding: 20px 10px;
   box-sizing: border-box;
-  width: 98%;
   margin: auto;
   margin-top: 50px;
+  width: 100%;
 
   > * {
     display: flex;

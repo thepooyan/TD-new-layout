@@ -703,6 +703,11 @@
 }
 
 .footer {
+  border-top: 5px solid transparent;
+  -o-border-image: linear-gradient(to right, transparent, #FFFFED, transparent);
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#FFFFED), to(transparent));
+     border-image: linear-gradient(to right, transparent, #FFFFED, transparent);
+  border-image-slice: 1;
   display: -ms-grid;
   display: grid;
   height: 600px;
@@ -714,9 +719,9 @@
   padding: 20px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 98%;
   margin: auto;
   margin-top: 50px;
+  width: 100%;
 }
 
 .footer * {
