@@ -5,6 +5,7 @@
 /*-------------ATNA HOST-----------------*/
 /*-------------FOOOTER-------------------*/
 /*---------------MIXINS & FUNCTIONS--------------------------*/
+/*--------General--------------*/
 .pillButton {
   color: #1d71b9;
   font-family: dark-sans;
@@ -55,6 +56,7 @@
   padding-right: 16px;
 }
 
+/*--------General--------------*/
 .header {
   padding-bottom: 50px;
   background-color: #f6f6f6;
@@ -554,7 +556,7 @@
 }
 
 .outlet {
-  padding: 40px 0;
+  padding: 40px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,7 +577,6 @@
   width: 137.14286px;
   height: 97.61905px;
   position: relative;
-  margin-right: 70px;
 }
 
 .outlet .mainPageSection .title .pic .text {
@@ -694,6 +695,11 @@
 
 .outlet .mainPageSection .flex .box.box4 .text {
   color: #02aeba;
+}
+
+.outlet .mainPageSection .courseSwiper {
+  width: 75%;
+  margin: auto;
 }
 
 .footer {

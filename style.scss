@@ -1,5 +1,5 @@
 @import "./Variables";
-
+/*--------General--------------*/
 .pillButton {
   color: $themeBlue;
   font-family: dark-sans;
@@ -44,6 +44,7 @@
     padding-right: 16px;
   }
 }
+/*--------General--------------*/
 
 .header {
   padding-bottom: 50px;
@@ -366,7 +367,7 @@
 }
 
 .outlet {
-  padding: 40px 0;
+  padding: 40px 70px;
   display: flex;
   flex-direction: column;
   gap: 120px;
@@ -380,7 +381,6 @@
         background-size: 100%;
         @include scalePics(288px, 205px, 2.1);
         position: relative;
-        margin-right: 70px;
         .text {
           font-weight: bold;
           position: absolute;
@@ -451,6 +451,10 @@
           }
         }
       }
+    }
+    .courseSwiper {
+      width: 75%;
+      margin: auto;
     }
   }
 }
