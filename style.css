@@ -4,7 +4,7 @@
 /*-------------ATNA HOST-----------------*/
 /*-------------ATNA HOST-----------------*/
 /*-------------FOOOTER-------------------*/
-/*-----------------------------------------*/
+/*---------------MIXINS & FUNCTIONS--------------------------*/
 .pillButton {
   color: #1d71b9;
   font-family: dark-sans;
@@ -110,7 +110,8 @@
   gap: 4px;
 }
 
-.header .topBar .right .wrap .fa-envelope, .header .topBar .right .wrap .fa-phone {
+.header .topBar .right .wrap .fa-envelope,
+.header .topBar .right .wrap .fa-phone {
   font-size: 19px;
   position: relative;
   bottom: 2px;
@@ -549,7 +550,86 @@
 }
 
 .atnaHost::before, .atnaHost::after {
-  content: '☻';
+  content: "☻";
+}
+
+.mainPageSection .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 50px;
+}
+
+.mainPageSection .flex .box {
+  border: 1px solid black;
+  border-radius: 12px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.mainPageSection .flex .box .colored {
+  border: 1px solid black;
+  color: white;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.mainPageSection .flex .box .colored .step::before {
+  font-size: 18px;
+}
+
+.mainPageSection .flex .box .text {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.mainPageSection .flex .box.box1 .colored {
+  background-color: #ffd413;
+}
+
+.mainPageSection .flex .box.box1 .colored .step::before {
+  content: "1";
+}
+
+.mainPageSection .flex .box.box2 .colored {
+  background-color: #ff9b0f;
+}
+
+.mainPageSection .flex .box.box2 .colored .step::before {
+  content: "2";
+}
+
+.mainPageSection .flex .box.box3 .colored {
+  background-color: #fe3061;
+}
+
+.mainPageSection .flex .box.box3 .colored .step::before {
+  content: "3";
+}
+
+.mainPageSection .flex .box.box4 .colored {
+  background-color: #02aeba;
+}
+
+.mainPageSection .flex .box.box4 .colored .step::before {
+  content: "4";
 }
 
 .footer {

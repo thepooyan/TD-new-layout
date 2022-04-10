@@ -36,11 +36,13 @@ $Enamad-border:#333333;
 
 $fontScale: 2.1;
 
+
+/*---------------MIXINS & FUNCTIONS--------------------------*/
 @function letterSpace($unit) {
     $result: $unit / 25;
     @return $result;
 }
-/*-----------------------------------------*/
+
 @mixin flex ($just, $align, $dir:row){
     display: flex;
         @if $just == c { $just: center; }
@@ -52,4 +54,9 @@ $fontScale: 2.1;
     justify-content: $just;
     align-items: $align;
     flex-direction: $dir;
+}
+
+@mixin cube($item) {
+    width: $item;
+    height: $item;
 }
