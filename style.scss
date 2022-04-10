@@ -376,30 +376,41 @@
     @include flex(c, c);
     gap: 50px;
     .box {
-      border: 1px solid black;
-      border-radius: 12px;
+      border-radius: 20px;
       position: relative;
+      box-shadow: $slider-shadow;
       @include cube(200px);
       .colored {
-        border: 1px solid black;
         color: white;
         position: absolute;
         top: -5px;
         left: 0;
         right: 0;
         text-align: center;
+        margin: 0 auto;
+        width: 150px;
+        padding: 10px 0;
+        $polygon-offset: 15%;
+        clip-path: polygon(0 0, 100% 0, 100-$polygon-offset 100%, $polygon-offset 100%);
+        border-radius: 26px 26px 69px 69px;
         .step {
+          font-size: 15px;
+          font-weight: bold;
           &::before {
-            font-size: 18px;
+            margin-left: 10px;
+            font-size: 17px;
           }
         }
+      
       }
       .text {
         position: absolute;
-        bottom: 0px;
+        bottom: 25px;
         text-align: center;
         left: 0;
         right: 0;
+        font-weight: bold;
+        font-size: 15px;
       }
       $colors: #ffd413, #ff9b0f, #fe3061, #02aeba;
       @for $index from 1 through length($colors) {
@@ -410,6 +421,9 @@
             & .step::before {
               content: "#{$index}";
             }
+          }
+          .text {
+            color: $item;
           }
         }
       }
