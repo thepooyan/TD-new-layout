@@ -59,9 +59,22 @@
       justify-content: center;
       align-items: center;
     }
+
     .right {
       justify-content: flex-start;
-      gap: 10px;
+      gap: 20px;
+      .wrap {
+        @include flex(c,c);
+        gap: 4px;
+        .fa-envelope, .fa-phone {
+          font-size: 19px;
+          position: relative;
+          bottom: 2px;
+        }
+      }
+      > span {
+        font-size: 13px;
+      }
     }
     .center {
       gap: 25px;
