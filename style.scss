@@ -12,7 +12,7 @@
   font-weight: bold;
 }
 
-.signupLayer {
+.signupButtonLayer {
   position: relative;
   .click {
     position: absolute;
@@ -20,7 +20,7 @@
     top: 1px;
     width: 78px;
     height: 54px;
-    background: url(./data/Header-Footer.png);
+    background: url('./images/img/Header-Footer.png');
     background-position: -5px -9px;
     background-size: 678%;
   }
