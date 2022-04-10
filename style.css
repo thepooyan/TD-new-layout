@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*------------------HEADER-----------------*/
 /*------------------HEADER-----------------*/
 /*-------------ATNA HOST-----------------*/
@@ -544,15 +543,18 @@
   font-size: 29px;
   background-color: #f6f6f6;
   color: #64abe9;
+  font-weight: bold;
+  font-size: 31px;
 }
 
 .atnaHost > span {
   color: #f58232;
-  margin-right: 5px;
+  padding-right: 10px;
 }
 
 .atnaHost::before, .atnaHost::after {
-  content: "☻";
+  content: url("./images/img/atna-Host.png");
+  margin: 0 10px;
 }
 
 .outlet {
@@ -580,9 +582,10 @@
 }
 
 .outlet .mainPageSection .title .pic .text {
+  width: 100%;
   font-weight: bold;
   position: absolute;
-  left: -70px;
+  right: 90px;
   bottom: 15px;
   font-size: 16px;
   color: #1d71b9;

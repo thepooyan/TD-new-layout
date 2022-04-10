@@ -356,13 +356,16 @@
   font-size: 29px;
   background-color: $greyMain-background;
   color: $atnaHost-blue;
+  font-weight: bold;
+  font-size: 31px;
   > span {
     color: $atnaHost-orange;
-    margin-right: 5px;
+    padding-right: 10px;
   }
   &::before,
   &::after {
-    content: "☻";
+    content: url("./images/img/atna-Host.png");
+    margin: 0 10px;
   }
 }
 
@@ -372,22 +375,22 @@
   flex-direction: column;
   gap: 120px;
 
-  
   .mainPageSection {
     .title {
-        margin-bottom: 50px;
-        .pic {
+      margin-bottom: 50px;
+      .pic {
         background: url("./images/img/Asset\ 3-8.png") no-repeat;
         background-size: 100%;
         @include scalePics(288px, 205px, 2.1);
         position: relative;
         .text {
+          width: 100%;
           font-weight: bold;
           position: absolute;
-          left: -70px;
+          right: 90px;
           bottom: 15px;
           font-size: 16px;
-          color: $themeBlue
+          color: $themeBlue;
         }
       }
     }
@@ -468,7 +471,7 @@
     to right,
     transparent,
     $footerWhiteLine,
-    transparent,
+    transparent
   );
   border-image-slice: 1;
   display: grid;
