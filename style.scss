@@ -47,6 +47,7 @@
 
 .header {
   margin-bottom: 20px;
+  padding-bottom: 50px;
   background-color: $greyMain-background;
   .topBar {
     background-color: $themeBlue;
@@ -73,10 +74,11 @@
           position: relative;
           bottom: 2px;
         }
+        > span {
+          font-size: 13px;
+        }
       }
-      > span {
-        font-size: 13px;
-      }
+
     }
     .center {
       gap: 25px;

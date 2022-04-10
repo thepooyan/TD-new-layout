@@ -57,6 +57,7 @@
 
 .header {
   margin-bottom: 20px;
+  padding-bottom: 50px;
   background-color: #f6f6f6;
 }
 
@@ -115,7 +116,7 @@
   bottom: 2px;
 }
 
-.header .topBar .right > span {
+.header .topBar .right .wrap > span {
   font-size: 13px;
 }
 
