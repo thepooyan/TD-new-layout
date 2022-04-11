@@ -61,7 +61,7 @@ $fontScale: 2.1;
     flex-direction: $dir;
 }
 
-@mixin cube($item) {
+@mixin square($item) {
     width: $item;
     height: $item;
 }

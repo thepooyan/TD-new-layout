@@ -70,11 +70,17 @@
       .wrap {
         @include flex(c, c);
         gap: 10px;
-        .fa-envelope,
-        .fa-phone {
-          font-size: 19px;
-          position: relative;
-          bottom: 2px;
+        .phone {
+          @include square(25px);
+          background: url("./images/img/Header-Footer.png");
+          background-position: -261px -11px;
+          background-size: 1875%;
+        }
+        .envelope {
+          @include square(25px);
+          background: url("./images/img/Header-Footer.png");
+          background-position: -298px -11px;
+          background-size: 1875%;
         }
         > span {
           font-size: 13px;
@@ -417,7 +423,7 @@
           background: linear-gradient(to right, $fourStepsBoxGradient);
           border-radius: 20px;
           position: relative;
-          @include cube(220px);
+          @include square(220px);
           .coloredWrapper {
             $coloredWidth: 160px;
             $coloredWrapperSize: 5px;
@@ -881,5 +887,3 @@
     }
   }
 }
-
-/*----------STYLE EDIT------------------*/

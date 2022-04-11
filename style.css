@@ -113,11 +113,20 @@
   gap: 10px;
 }
 
-.header .topBar .right .wrap .fa-envelope,
-.header .topBar .right .wrap .fa-phone {
-  font-size: 19px;
-  position: relative;
-  bottom: 2px;
+.header .topBar .right .wrap .phone {
+  width: 25px;
+  height: 25px;
+  background: url("./images/img/Header-Footer.png");
+  background-position: -261px -11px;
+  background-size: 1875%;
+}
+
+.header .topBar .right .wrap .envelope {
+  width: 25px;
+  height: 25px;
+  background: url("./images/img/Header-Footer.png");
+  background-position: -298px -11px;
+  background-size: 1875%;
 }
 
 .header .topBar .right .wrap > span {
@@ -1201,6 +1210,4 @@
   font-size: 11.90476pt;
   margin-right: 25px;
 }
-
-/*----------STYLE EDIT------------------*/
 /*# sourceMappingURL=style.css.map */
