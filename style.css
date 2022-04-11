@@ -2,6 +2,8 @@
 /*------------------HEADER-----------------*/
 /*-------------ATNA HOST-----------------*/
 /*-------------ATNA HOST-----------------*/
+/*--------------OUTLET----------------------*/
+/*--------------OUTLET----------------------*/
 /*-------------FOOOTER-------------------*/
 /*---------------MIXINS & FUNCTIONS--------------------------*/
 /*--------General--------------*/
@@ -64,7 +66,7 @@
 
 .header .topBar {
   background-color: #1d71b9;
-  padding: 10px 25px;
+  padding: 5px 25px;
   padding-right: 215px;
   color: #f7f7f7;
   display: -webkit-box;
@@ -108,7 +110,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 4px;
+  gap: 10px;
 }
 
 .header .topBar .right .wrap .fa-envelope,
@@ -123,11 +125,18 @@
 }
 
 .header .topBar .center {
-  gap: 25px;
+  gap: 15px;
 }
 
 .header .topBar .center > * {
-  font-size: 19px;
+  font-size: 17px;
+  color: white;
+  padding: 5px;
+}
+
+.header .topBar .left {
+  color: white;
+  font-weight: bold;
 }
 
 .header .topBar .left .siteGearIcon {
@@ -206,14 +215,21 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   gap: 20px;
+  padding: 1px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .header .headerContainer .header {
@@ -257,6 +273,10 @@
   gap: 10px;
 }
 
+.header .headerContainer .header .layer2 .item:hover span {
+  text-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
+}
+
 .header .headerContainer .header .layer2 .item > .img {
   width: 33px;
   height: 33px;
@@ -291,6 +311,8 @@
   color: #1d71b9;
   font-weight: bold;
   font-size: 13px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .header .headerContainer .header .inputWrapper {
@@ -545,7 +567,7 @@
   background-color: #f6f6f6;
   color: #64abe9;
   font-weight: bold;
-  font-size: 31px;
+  font-size: 35px;
 }
 
 .atnaHost > span {
@@ -577,18 +599,18 @@
 .outlet .mainPageSection .title .pic {
   background: url("./images/img/Asset 3-8.png") no-repeat;
   background-size: 100%;
-  width: 137.14286px;
-  height: 97.61905px;
+  width: 144px;
+  height: 102.5px;
   position: relative;
 }
 
 .outlet .mainPageSection .title .pic .text {
-  width: 100%;
+  width: 200px;
   font-weight: bold;
   position: absolute;
   right: 90px;
-  bottom: 15px;
-  font-size: 16px;
+  bottom: 20px;
+  font-size: 19px;
   color: #1d71b9;
 }
 
@@ -609,94 +631,122 @@
   gap: 85px;
 }
 
-.outlet .mainPageSection .flex .box {
+.outlet .mainPageSection .flex .boxWrapper {
+  padding: 2px;
   border-radius: 20px;
-  position: relative;
-  -webkit-box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
-          box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
-  width: 200px;
-  height: 200px;
+  background: -webkit-gradient(linear, right top, left top, from(#fbfbfb), to(white));
+  background: linear-gradient(to left, #fbfbfb, white);
+  -webkit-box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.24);
 }
 
-.outlet .mainPageSection .flex .box .colored {
-  color: white;
+.outlet .mainPageSection .flex .boxWrapper .box {
+  background: -webkit-gradient(linear, left top, right top, from(#fbfbfb), to(white));
+  background: linear-gradient(to right, #fbfbfb, white);
+  border-radius: 20px;
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper {
+  background-color: white;
   position: absolute;
-  top: -5px;
+  top: -12px;
   left: 0;
   right: 0;
-  text-align: center;
   margin: 0 auto;
-  width: 150px;
+  width: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper .colored {
+  color: white;
+  text-align: center;
+  width: 160px;
   padding: 10px 0;
   -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
           clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
 }
 
-.outlet .mainPageSection .flex .box .colored .step {
-  font-size: 15px;
+.outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper .colored .step {
+  font-size: 18px;
   font-weight: bold;
 }
 
-.outlet .mainPageSection .flex .box .colored .step::before {
-  margin-left: 10px;
-  font-size: 17px;
+.outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper .colored .step::before {
+  margin-left: 9px;
+  font-size: 24px;
+  position: relative;
+  top: 2px;
 }
 
-.outlet .mainPageSection .flex .box .text {
+.outlet .mainPageSection .flex .boxWrapper .box .text {
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   text-align: center;
   left: 0;
   right: 0;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
 }
 
-.outlet .mainPageSection .flex .box.box1 .colored {
+.outlet .mainPageSection .flex .boxWrapper .box.box1 .colored {
   background-color: #ffd413;
 }
 
-.outlet .mainPageSection .flex .box.box1 .colored .step::before {
+.outlet .mainPageSection .flex .boxWrapper .box.box1 .colored .step::before {
   content: "1";
 }
 
-.outlet .mainPageSection .flex .box.box1 .text {
+.outlet .mainPageSection .flex .boxWrapper .box.box1 .text {
   color: #ffd413;
 }
 
-.outlet .mainPageSection .flex .box.box2 .colored {
+.outlet .mainPageSection .flex .boxWrapper .box.box2 .colored {
   background-color: #ff9b0f;
 }
 
-.outlet .mainPageSection .flex .box.box2 .colored .step::before {
+.outlet .mainPageSection .flex .boxWrapper .box.box2 .colored .step::before {
   content: "2";
 }
 
-.outlet .mainPageSection .flex .box.box2 .text {
+.outlet .mainPageSection .flex .boxWrapper .box.box2 .text {
   color: #ff9b0f;
 }
 
-.outlet .mainPageSection .flex .box.box3 .colored {
+.outlet .mainPageSection .flex .boxWrapper .box.box3 .colored {
   background-color: #fe3061;
 }
 
-.outlet .mainPageSection .flex .box.box3 .colored .step::before {
+.outlet .mainPageSection .flex .boxWrapper .box.box3 .colored .step::before {
   content: "3";
 }
 
-.outlet .mainPageSection .flex .box.box3 .text {
+.outlet .mainPageSection .flex .boxWrapper .box.box3 .text {
   color: #fe3061;
 }
 
-.outlet .mainPageSection .flex .box.box4 .colored {
+.outlet .mainPageSection .flex .boxWrapper .box.box4 .colored {
   background-color: #02aeba;
 }
 
-.outlet .mainPageSection .flex .box.box4 .colored .step::before {
+.outlet .mainPageSection .flex .boxWrapper .box.box4 .colored .step::before {
   content: "4";
 }
 
-.outlet .mainPageSection .flex .box.box4 .text {
+.outlet .mainPageSection .flex .boxWrapper .box.box4 .text {
   color: #02aeba;
 }
 
@@ -1151,4 +1201,6 @@
   font-size: 11.90476pt;
   margin-right: 25px;
 }
+
+/*----------STYLE EDIT------------------*/
 /*# sourceMappingURL=style.css.map */
