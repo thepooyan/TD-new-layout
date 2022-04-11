@@ -6,10 +6,44 @@
 /*--------------OUTLET----------------------*/
 /*-------------FOOOTER-------------------*/
 /*---------------MIXINS & FUNCTIONS--------------------------*/
+@font-face {
+  font-family: iranSansnormal;
+  src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum).ttf");
+}
+
+@font-face {
+  font-family: iranSansblack;
+  src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Black.ttf");
+}
+
+@font-face {
+  font-family: iranSansbold;
+  src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Bold.ttf");
+}
+
+@font-face {
+  font-family: iranSanslight;
+  src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Light.ttf");
+}
+
+@font-face {
+  font-family: iranSansmedium;
+  src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Medium.ttf");
+}
+
+@font-face {
+  font-family: iranSansUltraLight;
+  src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_UltraLight.ttf");
+}
+
+body {
+  font-family: iranSansnormal;
+}
+
 /*--------General--------------*/
 .pillButton {
   color: #1d71b9;
-  font-family: dark-sans;
+  font-family: iranSansnormal;
   background-color: white;
   border-radius: 15px;
   border: none;
@@ -41,11 +75,11 @@
   border-radius: 24px;
   border: none;
   background-color: #FEC715;
-  font-family: dark-sans;
+  font-family: iranSansnormal;
   -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
           box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
   width: 133px;
-  font-size: 8.57143pt;
+  font-size: 9pt;
   font-weight: bold;
 }
 
@@ -286,11 +320,18 @@
   text-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
 }
 
+.header .headerContainer .header .layer2 .item:hover .img {
+  -webkit-filter: drop-shadow(3px 3px 5px rgba(16, 16, 16, 0.75));
+          filter: drop-shadow(3px 3px 5px rgba(16, 16, 16, 0.75));
+}
+
 .header .headerContainer .header .layer2 .item > .img {
   width: 33px;
   height: 33px;
   background: url("./images/img/Header-Footer.png");
   background-size: 1380%;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .header .headerContainer .header .layer2 .item > .img.one {
@@ -312,7 +353,8 @@
 }
 
 .header .headerContainer .header .layer2 .item > .img.four {
-  background-position: -135.5px 34px;
+  width: 34px;
+  background-position: -139.5px 34px;
   background-size: 1325%;
 }
 
@@ -337,7 +379,7 @@
   padding: 5px 20px;
   text-indent: 20px;
   font-family: inherit;
-  width: 220px;
+  width: 270px;
 }
 
 .header .headerContainer .header .inputWrapper .mainSearch:focus {
@@ -457,8 +499,9 @@
 .header .headerContainer .title > h2 {
   text-align: center;
   color: #d50c52;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
+  font-family: iranSansBlack;
 }
 
 .header .headerContainer .navBar {
@@ -553,7 +596,9 @@
   width: 150px;
   text-align: center;
   padding-bottom: 20px;
-  line-height: 24px;
+  line-height: 23px;
+  font-family: 'iranSansmedium';
+  width: 58%;
 }
 
 .atnaHost {
@@ -582,6 +627,7 @@
 .atnaHost > span {
   color: #f58232;
   padding-right: 10px;
+  font-family: iranSansmedium;
 }
 
 .atnaHost::before, .atnaHost::after {
@@ -851,7 +897,7 @@
 
 .footer .rightTop .layer .text {
   color: #FFFFED;
-  font-size: 10.47619pt;
+  font-size: 11pt;
   text-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
   margin-left: 4px;
 }
@@ -877,8 +923,8 @@
   background-color: #DEDEDE;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.419);
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.419);
-  font-family: Dark-sans;
-  font-size: 9.52381pt;
+  font-family: iranSansnormal;
+  font-size: 10pt;
   color: #757575;
 }
 
@@ -930,22 +976,25 @@
 }
 
 .footer .centerTop .layer1 p.title {
-  font-size: 11.90476pt;
+  font-size: 12.5pt;
   letter-spacing: 4px;
+  font-family: iranSanslight;
 }
 
 .footer .centerTop .layer1 p.address {
-  font-size: 9.52381pt;
+  font-size: 10pt;
 }
 
 .footer .centerTop .layer1 p.site {
-  font-size: 11.90476pt;
+  font-size: 12.5pt;
   letter-spacing: 4px;
+  font-family: iranSanslight;
 }
 
 .footer .centerTop .layer1 p.num {
-  font-size: 9.52381pt;
+  font-size: 10pt;
   letter-spacing: 2px;
+  font-family: iranSanslight;
 }
 
 .footer .leftTop {
@@ -967,7 +1016,7 @@
 }
 
 .footer .leftTop .counsel .number {
-  font-size: 11.90476pt;
+  font-size: 12.5pt;
   color: #FFFFED;
   position: absolute;
   top: 0;
@@ -990,9 +1039,9 @@
 
 .footer .leftTop .counsel .info {
   color: #FFFFED;
-  font-size: 9.52381pt;
+  font-size: 10pt;
   text-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .footer .centerCenter .hr {
@@ -1060,7 +1109,7 @@
 
 .footer .centerCenter .layer2 .item > a {
   color: #FFFFED;
-  font-size: 8.57143pt;
+  font-size: 9pt;
 }
 
 .footer .rightBottom .eNamad {
@@ -1104,7 +1153,7 @@
 
 .footer .centerBottom .wholeNav .nav1 > .item {
   color: #FFFFED;
-  font-size: 8.57143pt;
+  font-size: 9pt;
 }
 
 .footer .centerBottom .wholeNav .line {
@@ -1134,7 +1183,7 @@
 
 .footer .centerBottom .wholeNav .nav2 .item {
   color: #FEC715;
-  font-size: 11.42857pt;
+  font-size: 12pt;
 }
 
 .footer .centerBottom .layer3 {
@@ -1207,7 +1256,7 @@
   border-radius: 16px;
   -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
           box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
-  font-size: 11.90476pt;
+  font-size: 12.5pt;
   margin-right: 25px;
 }
 /*# sourceMappingURL=style.css.map */
