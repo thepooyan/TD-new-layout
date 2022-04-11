@@ -20,11 +20,12 @@
 
 .signupButtonLayer {
   position: relative;
+  padding-right: 26px;
 }
 
 .signupButtonLayer .click {
   position: absolute;
-  right: -28px;
+  right: -2px;
   top: 1px;
   width: 78px;
   height: 54px;
@@ -64,7 +65,7 @@
 .header .topBar {
   background-color: #1d71b9;
   padding: 10px 25px;
-  padding-right: 245px;
+  padding-right: 215px;
   color: #f7f7f7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,8 +142,8 @@
   display: -ms-grid;
   display: grid;
       grid-template-areas: "logo header calendar" "title navBar calendar" "spaceRightSide space calendar" "sideMenu content content";
-  -ms-grid-columns: 230px auto auto;
-      grid-template-columns: 230px auto auto;
+  -ms-grid-columns: 200px auto auto;
+      grid-template-columns: 200px auto auto;
 }
 
 .header .headerContainer > * {
