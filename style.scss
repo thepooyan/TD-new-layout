@@ -128,6 +128,7 @@ body {
       "spaceRightSide space calendar"
       "sideMenu content content";
     grid-template-columns: $sideMenuLength auto auto;
+    padding-left: 5px;
     > * {
       display: flex;
       justify-content: flex-start;
@@ -173,77 +174,82 @@ body {
       grid-area: header;
       padding: 50px 0;
       align-items: center;
-      justify-content: space-between;
-      .layer2 {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-        .item {
+      justify-content: flex-start;
+      gap: 20px;
+      .rest {
+        @include flex(space-between, c);
+        width: 100%;
+        .layer2 {
           display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 10px;
-          &:hover span {
-            text-shadow: $SHADOW;
+          flex-direction: row;
+          gap: 30px;
+          .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            &:hover span {
+              text-shadow: $SHADOW;
+            }
+            &:hover .img {
+              filter: drop-shadow($SHADOW);
+            }
+            > .img {
+              width: 33px;
+              height: 33px;
+              background: url("./images/img/Header-Footer.png");
+              background-size: 1380%;
+              transition: 0.2s;
+              &.one {
+                background-position: -202px -4px;
+              }
+              &.one + span {
+                color: $themePurple;
+              }
+              &.two {
+                background-position: -214px 34.5px;
+              }
+              &.three {
+                background-position: -182px 34px;
+                width: 28px;
+                background-size: 1624%;
+              }
+              &.four {
+                width: 34px;
+                background-position: -139.5px 34px;
+                background-size: 1325%;
+              }
+            }
+            > span {
+              color: $themeBlue;
+              font-weight: bold;
+              font-size: 13px;
+              transition: 0.2s;
+            }
           }
-          &:hover .img {
-            filter: drop-shadow($SHADOW);
-          }
-          > .img {
-            width: 33px;
-            height: 33px;
-            background: url("./images/img/Header-Footer.png");
-            background-size: 1380%;
-            transition: 0.2s;
-            &.one {
-              background-position: -202px -4px;
-            }
-            &.one + span {
-              color: $themePurple;
-            }
-            &.two {
-              background-position: -214px 34.5px;
-            }
-            &.three {
-              background-position: -182px 34px;
-              width: 28px;
-              background-size: 1624%;
-            }
-            &.four {
-              width: 34px;
-              background-position: -139.5px 34px;
-              background-size: 1325%;
+        }
+        .inputWrapper {
+          position: relative;
+          .mainSearch {
+            font-size: 14px;
+            border: 1px solid $themeBlue;
+            box-shadow: $SHADOW-LIGHT;
+            border-radius: 25px;
+            padding: 5px 20px;
+            text-indent: 20px;
+            font-family: inherit;
+            width: 270px;
+            &:focus {
+              outline: none;
             }
           }
-          > span {
+          i {
+            position: absolute;
+            right: 12px;
+            top: 13px;
             color: $themeBlue;
-            font-weight: bold;
-            font-size: 13px;
-            transition: 0.2s;
           }
-        }
-      }
-      .inputWrapper {
-        position: relative;
-        .mainSearch {
-          font-size: 14px;
-          border: 1px solid $themeBlue;
-          box-shadow: $SHADOW-LIGHT;
-          border-radius: 25px;
-          padding: 5px 20px;
-          text-indent: 20px;
-          font-family: inherit;
-          width: 270px;
-          &:focus {
-            outline: none;
-          }
-        }
-        i {
-          position: absolute;
-          right: 12px;
-          top: 13px;
-          color: $themeBlue;
         }
       }
     }
@@ -332,7 +338,9 @@ body {
     nav.navBar {
       grid-area: navBar;
       margin: 0;
+      position: static;
       > ul.mainNav {
+        height: 52px;
         position: relative;
         width: 100%;
         background-color: $themeBlue;
@@ -447,7 +455,6 @@ body {
     .slider {
       z-index: 1;
       grid-area: content;
-      margin-left: 5px;
       box-shadow: $slider-shadow;
       .pic {
         width: 100%;

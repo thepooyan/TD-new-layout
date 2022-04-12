@@ -1,4 +1,4 @@
-/* Extra extra large devices (TV, 1300px and down) */
+/* Extra extra large devices (TV, 1300px till 1201 and down) */
 @media screen and (max-width: 1300px) {
   .footer {
     .rightTop {
@@ -17,8 +17,49 @@
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and down) */
+/* Extra large devices (large laptops and desktops, 1200px till 993 and down) */
 @media only screen and (max-width: 1200px) {
+  .header {
+    .topBar {
+      padding-right: 170px;
+    }
+    .headerContainer {
+      grid-template-areas:
+        "logo header calendar"
+        "title header calendar"
+        "spaceRightSide navBar navBar"
+        "sideMenu content content";
+      grid-template-columns: 170px auto auto;
+      .header {
+        padding: 0;
+        justify-content: center;
+        .rest {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      .space {
+        display: none;
+      }
+      .spaceRightSide {
+        span {
+          width: 80%;
+        }
+      }
+      .calendar {
+        .FatLIne {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+  .outlet {
+    .mainPageSection {
+      .flex {
+        flex-direction: column;
+      }
+    }
+  }
   .footer {
     .rightTop {
       .layer {
@@ -62,111 +103,111 @@
   }
 }
 
-/* Large devices (laptops/desktops, 992px and down) */
+/* Large devices (laptops/desktops, 992px till 767 and down) */
 @media only screen and (max-width: 992px) {
   .footer {
     $scale: 3;
     .rightTop {
-        .layer {
-          .text {
-            font-size: 22pt / $scale;
-          }
+      .layer {
+        .text {
+          font-size: 22pt / $scale;
         }
       }
-      
-      .rightTop {
-        .inputwrapper {
-          .emailInput {
-            font-size: 20pt / $scale;
-          }
+    }
+
+    .rightTop {
+      .inputwrapper {
+        .emailInput {
+          font-size: 20pt / $scale;
         }
       }
-      
-      .rightTop {
-        .inputwrapper {
-          .icon {
+    }
+
+    .rightTop {
+      .inputwrapper {
+        .icon {
+          font-size: 18pt / $scale;
+        }
+      }
+    }
+
+    .centerTop {
+      .layer1 {
+        p.title {
+          font-size: 25pt / $scale;
+        }
+        p.address {
+          font-size: 20pt / $scale;
+        }
+        p.site {
+          font-size: 25pt / $scale;
+        }
+        p.num {
+          font-size: 20pt / $scale;
+        }
+      }
+    }
+
+    .leftTop {
+      .counsel {
+        .number {
+          font-size: 25pt / $scale;
+        }
+      }
+    }
+
+    .leftTop {
+      .counsel {
+        .info {
+          font-size: 20pt / $scale;
+        }
+      }
+    }
+
+    .centerCenter {
+      .layer2 {
+        .item {
+          > span {
             font-size: 18pt / $scale;
           }
         }
       }
-      
-      .centerTop {
-        .layer1 {
-          p.title {
-            font-size: 25pt / $scale;
-          }
-          p.address {
-            font-size: 20pt / $scale;
-          }
-          p.site {
-            font-size: 25pt / $scale;
-          }
-          p.num {
-            font-size: 20pt / $scale;
-          }
-        }
-      }
-      
-      .leftTop {
-        .counsel {
-          .number {
-            font-size: 25pt / $scale;
-          }
-        }
-      }
-      
-      .leftTop {
-        .counsel {
-          .info {
-            font-size: 20pt / $scale;
-          }
-        }
-      }
-      
-      .centerCenter {
-        .layer2 {
+    }
+
+    .centerBottom {
+      .wholeNav {
+        .nav1 {
           .item {
-            > span {
-              font-size: 18pt / $scale;
-            }
+            font-size: 18pt / $scale;
           }
         }
       }
-      
-      .centerBottom {
-        .wholeNav {
-          .nav1 {
-            .item {
-              font-size: 18pt / $scale;
-            }
+    }
+
+    .centerBottom {
+      .wholeNav {
+        .nav2 {
+          .item {
+            font-size: 24pt / $scale;
           }
         }
       }
-      
-      .centerBottom {
-        .wholeNav {
-          .nav2 {
-            .item {
-              font-size: 24pt / $scale;
-            }
-          }
-        }
+    }
+
+    .leftBottom {
+      .telegraph {
+        font-size: 25pt / $scale;
       }
-      
-      .leftBottom {
-        .telegraph {
-          font-size: 25pt / $scale;
-        }
-      }
+    }
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Medium devices (landscape tablets, 768px till 599 and down) */
+@media only screen and (max-width: 768px) {
 }
 
-/* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) {
+/* Small devices (portrait tablets and large phones, 600px till and down) */
+@media only screen and (max-width: 600px) {
 }
 
 /* Extra small devices (phones, 320px and down) */
@@ -255,6 +296,7 @@
     }
   }
 }
+
 /*-------------------FONT SCALE----------------------
 .rightTop {
   .layer {

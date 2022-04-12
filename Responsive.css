@@ -1,4 +1,4 @@
-/* Extra extra large devices (TV, 1300px and down) */
+/* Extra extra large devices (TV, 1300px till 1201 and down) */
 @media screen and (max-width: 1300px) {
   .footer .rightTop .layer .text {
     font-size: 10pt;
@@ -8,8 +8,45 @@
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and down) */
+/* Extra large devices (large laptops and desktops, 1200px till 993 and down) */
 @media only screen and (max-width: 1200px) {
+  .header .topBar {
+    padding-right: 170px;
+  }
+  .header .headerContainer {
+        grid-template-areas: "logo header calendar" "title header calendar" "spaceRightSide navBar navBar" "sideMenu content content";
+    -ms-grid-columns: 170px auto auto;
+        grid-template-columns: 170px auto auto;
+  }
+  .header .headerContainer .header {
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .headerContainer .header .rest {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .header .headerContainer .space {
+    display: none;
+  }
+  .header .headerContainer .spaceRightSide span {
+    width: 80%;
+  }
+  .header .headerContainer .calendar .FatLIne {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .outlet .mainPageSection .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .footer .rightTop .layer .text {
     margin: 0;
   }
@@ -43,7 +80,7 @@
   }
 }
 
-/* Large devices (laptops/desktops, 992px and down) */
+/* Large devices (laptops/desktops, 992px till 767 and down) */
 @media only screen and (max-width: 992px) {
   .footer .rightTop .layer .text {
     font-size: 7.33333pt;
@@ -86,8 +123,8 @@
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and down) */
-/* Medium devices (landscape tablets, 768px and down) */
+/* Medium devices (landscape tablets, 768px till 599 and down) */
+/* Small devices (portrait tablets and large phones, 600px till and down) */
 /* Extra small devices (phones, 320px and down) */
 @media screen and (max-width: 320px) {
   .footer {

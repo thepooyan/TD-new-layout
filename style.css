@@ -211,6 +211,7 @@ body {
       grid-template-areas: "logo header calendar" "title navBar calendar" "spaceRightSide space calendar" "sideMenu content content";
   -ms-grid-columns: 200px auto auto;
       grid-template-columns: 200px auto auto;
+  padding-left: 5px;
 }
 
 .header .headerContainer > * {
@@ -298,12 +299,30 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
+}
+
+.header .headerContainer .header .rest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
 }
 
-.header .headerContainer .header .layer2 {
+.header .headerContainer .header .rest .layer2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +333,7 @@ body {
   gap: 30px;
 }
 
-.header .headerContainer .header .layer2 .item {
+.header .headerContainer .header .rest .layer2 .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,16 +350,16 @@ body {
   gap: 10px;
 }
 
-.header .headerContainer .header .layer2 .item:hover span {
+.header .headerContainer .header .rest .layer2 .item:hover span {
   text-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
 }
 
-.header .headerContainer .header .layer2 .item:hover .img {
+.header .headerContainer .header .rest .layer2 .item:hover .img {
   -webkit-filter: drop-shadow(3px 3px 5px rgba(16, 16, 16, 0.75));
           filter: drop-shadow(3px 3px 5px rgba(16, 16, 16, 0.75));
 }
 
-.header .headerContainer .header .layer2 .item > .img {
+.header .headerContainer .header .rest .layer2 .item > .img {
   width: 33px;
   height: 33px;
   background: url("./images/img/Header-Footer.png");
@@ -349,31 +368,31 @@ body {
   transition: 0.2s;
 }
 
-.header .headerContainer .header .layer2 .item > .img.one {
+.header .headerContainer .header .rest .layer2 .item > .img.one {
   background-position: -202px -4px;
 }
 
-.header .headerContainer .header .layer2 .item > .img.one + span {
+.header .headerContainer .header .rest .layer2 .item > .img.one + span {
   color: #d50c52;
 }
 
-.header .headerContainer .header .layer2 .item > .img.two {
+.header .headerContainer .header .rest .layer2 .item > .img.two {
   background-position: -214px 34.5px;
 }
 
-.header .headerContainer .header .layer2 .item > .img.three {
+.header .headerContainer .header .rest .layer2 .item > .img.three {
   background-position: -182px 34px;
   width: 28px;
   background-size: 1624%;
 }
 
-.header .headerContainer .header .layer2 .item > .img.four {
+.header .headerContainer .header .rest .layer2 .item > .img.four {
   width: 34px;
   background-position: -139.5px 34px;
   background-size: 1325%;
 }
 
-.header .headerContainer .header .layer2 .item > span {
+.header .headerContainer .header .rest .layer2 .item > span {
   color: #1d71b9;
   font-weight: bold;
   font-size: 13px;
@@ -381,11 +400,11 @@ body {
   transition: 0.2s;
 }
 
-.header .headerContainer .header .inputWrapper {
+.header .headerContainer .header .rest .inputWrapper {
   position: relative;
 }
 
-.header .headerContainer .header .inputWrapper .mainSearch {
+.header .headerContainer .header .rest .inputWrapper .mainSearch {
   font-size: 14px;
   border: 1px solid #1d71b9;
   -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.301);
@@ -397,11 +416,11 @@ body {
   width: 270px;
 }
 
-.header .headerContainer .header .inputWrapper .mainSearch:focus {
+.header .headerContainer .header .rest .inputWrapper .mainSearch:focus {
   outline: none;
 }
 
-.header .headerContainer .header .inputWrapper i {
+.header .headerContainer .header .rest .inputWrapper i {
   position: absolute;
   right: 12px;
   top: 13px;
@@ -524,9 +543,11 @@ body {
   -ms-grid-column: 2;
   grid-area: navBar;
   margin: 0;
+  position: static;
 }
 
 .header .headerContainer nav.navBar > ul.mainNav {
+  height: 52px;
   position: relative;
   width: 100%;
   background-color: #1d71b9;
@@ -675,7 +696,6 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: content;
-  margin-left: 5px;
   -webkit-box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
           box-shadow: 0px 0px 41px rgba(0, 0, 0, 0.38);
 }
