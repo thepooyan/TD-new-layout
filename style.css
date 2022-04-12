@@ -70,6 +70,27 @@ body {
   background-size: 678%;
 }
 
+.signupButtonLayer .orangeButton {
+  font-size: 15px;
+  height: 33px;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  padding: 0;
+  padding-right: 25px;
+}
+
+.signupButtonLayer .orangeButton.alt {
+  color: #1d71b9;
+  font-weight: bold;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.signupButtonLayer .orangeButton.alt:hover {
+  -webkit-box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
+          box-shadow: 3px 3px 5px rgba(16, 16, 16, 0.75);
+}
+
 .orangeButton {
   padding: 7px 0;
   border-radius: 24px;
@@ -81,15 +102,8 @@ body {
   width: 133px;
   font-size: 9pt;
   font-weight: bold;
-}
-
-.orangeButton.bt {
-  color: #1d71b9;
-  font-weight: bold;
-}
-
-.orangeButton.pr {
-  padding-right: 16px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 /*--------General--------------*/
@@ -330,8 +344,8 @@ body {
   height: 33px;
   background: url("./images/img/Header-Footer.png");
   background-size: 1380%;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .header .headerContainer .header .layer2 .item > .img.one {
@@ -597,7 +611,7 @@ body {
   text-align: center;
   padding-bottom: 20px;
   line-height: 23px;
-  font-family: 'iranSansmedium';
+  font-family: "iranSansmedium";
   width: 58%;
 }
 
@@ -696,6 +710,7 @@ body {
 }
 
 .outlet .mainPageSection .flex .boxWrapper .box {
+  padding: 60px 15px;
   background: -webkit-gradient(linear, left top, right top, from(#fbfbfb), to(white));
   background: linear-gradient(to right, #fbfbfb, white);
   border-radius: 20px;
@@ -755,6 +770,17 @@ body {
   right: 0;
   font-weight: bold;
   font-size: 20px;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box .hover {
+  font-family: iranSansBold;
+  line-height: 19px;
+  text-align: justify;
+  display: none;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box:hover .hover {
+  display: block;
 }
 
 .outlet .mainPageSection .flex .boxWrapper .box.box1 .colored {
