@@ -654,6 +654,13 @@ body {
   font-size: 13px;
   font-family: "iranSanslight";
   padding: 3px 15px;
+  position: relative;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul.CommonNav li a::after {
+  content: attr(data-count);
+  position: absolute;
+  left: 10px;
 }
 
 .header .headerContainer .space {
