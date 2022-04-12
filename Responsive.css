@@ -47,11 +47,8 @@
   .header .headerContainer nav.navBar ul.mainNav ul.CommonNav {
     width: 818px;
   }
-  .outlet .mainPageSection .flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .outlet .mainPageSection .courseSwiper {
+    width: 635px;
   }
   .footer .rightTop .layer .text {
     margin: 0;

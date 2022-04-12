@@ -440,7 +440,7 @@ body {
               padding: 3px 15px;
               position: relative;
               &::after {
-                content:attr(data-count);
+                content: attr(data-count);
                 position: absolute;
                 left: 10px;
               }
@@ -532,8 +532,8 @@ body {
       }
     }
     .flex {
-      @include flex(c, c);
-      gap: 85px;
+      @include flex(sa, c);
+      gap: 16px;
       .boxWrapper {
         padding: 2px;
         border-radius: 20px;
@@ -627,7 +627,7 @@ body {
       }
     }
     .courseSwiper {
-      width: 75%;
+      width: 956px;
       margin: auto;
     }
   }
