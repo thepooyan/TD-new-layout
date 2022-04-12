@@ -527,6 +527,7 @@ body {
 }
 
 .header .headerContainer nav.navBar > ul.mainNav {
+  position: relative;
   width: 100%;
   background-color: #1d71b9;
   display: -webkit-box;
@@ -543,10 +544,6 @@ body {
   padding: 0 15px;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav .item {
-  position: relative;
-}
-
 .header .headerContainer nav.navBar > ul.mainNav .item > a {
   color: #f7f7f7;
   font-size: 13px;
@@ -554,11 +551,26 @@ body {
   padding: 10px 0;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav .item:hover > ul {
+.header .headerContainer nav.navBar > ul.mainNav .item:hover ul.CourseNav {
   display: block;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul {
+.header .headerContainer nav.navBar > ul.mainNav .item:hover ul.CommonNav {
+  display: -ms-grid;
+  display: grid;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav .item .expandable::after {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: relative;
+  left: -4px;
+  top: 2px;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul {
   width: 330px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,6 +580,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
+  right: 0;
   z-index: 2;
   background-color: #808080f2;
   color: white;
@@ -575,25 +588,30 @@ body {
   display: none;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li {
   position: relative;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li:hover {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li:hover,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li:hover {
   background-color: #727272;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li:hover > ul {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li:hover > ul,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li:hover > ul {
   display: block;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li a {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li a,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li a {
   font-size: 13px;
   font-family: "iranSanslight";
   padding: 3px 15px;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li::after {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li::after,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
@@ -603,14 +621,39 @@ body {
   font-size: 11px;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li ul.courseNav {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li ul.InnerNav,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li ul.InnerNav {
   right: 100%;
   top: 0;
   width: 450px;
 }
 
-.header .headerContainer nav.navBar > ul.mainNav ul li ul.courseNav > li::after {
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav li ul.InnerNav > li::after,
+.header .headerContainer nav.navBar > ul.mainNav ul.CourseNav ul li ul.InnerNav > li::after {
   content: none;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul.CommonNav {
+  display: none;
+  width: 900px;
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  background-color: #808080f2;
+  color: white;
+  text-align: right;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul.CommonNav li:hover {
+  background-color: #727272;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul.CommonNav li a {
+  font-size: 13px;
+  font-family: "iranSanslight";
+  padding: 3px 15px;
 }
 
 .header .headerContainer .space {

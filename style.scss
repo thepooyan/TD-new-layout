@@ -333,6 +333,7 @@ body {
       grid-area: navBar;
       margin: 0;
       > ul.mainNav {
+        position: relative;
         width: 100%;
         background-color: $themeBlue;
         display: flex;
@@ -342,22 +343,37 @@ body {
         border-radius: 5px;
         padding: 0 15px;
         .item {
-          position: relative;
           > a {
             color: $headerWhiteText;
             font-size: 13px;
             margin: 0;
             padding: 10px 0;
           }
-          &:hover > ul {
-            display: block;
+          &:hover {
+            ul.CourseNav {
+              display: block;
+            }
+            ul.CommonNav {
+              display: grid;
+            }
+          }
+          & .expandable::after {
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: relative;
+            left: -4px;
+            top: 2px;
           }
         }
-        ul {
+
+        ul.CourseNav,
+        ul.CourseNav ul {
           width: 330px;
           display: flex;
           flex-direction: column;
           position: absolute;
+          right: 0;
           z-index: 2;
           background-color: #808080f2;
           color: white;
@@ -369,7 +385,7 @@ body {
               background-color: #727272;
               & > ul {
                 display: block;
-              } 
+              }
             }
             a {
               font-size: 13px;
@@ -385,11 +401,35 @@ body {
               top: 2px;
               font-size: 11px;
             }
-            ul.courseNav {
+            ul.InnerNav {
               right: 100%;
               top: 0;
               width: 450px;
-              > li::after {content: none;}
+              > li::after {
+                content: none;
+              }
+            }
+          }
+        }
+
+        ul.CommonNav {
+          display: none;
+          width: 900px;
+          position: absolute;
+          right: 0px;
+          z-index: 2;
+          grid-template-columns: 33% 33% 33%;
+          background-color: #808080f2;
+          color: white;
+          text-align: right;
+          li {
+            &:hover {
+              background-color: #727272;
+            }
+            a {
+              font-size: 13px;
+              font-family: "iranSanslight";
+              padding: 3px 15px;
             }
           }
         }
