@@ -51,6 +51,16 @@
           transform: scale(1.5);
         }
       }
+      nav.navBar {
+        ul.mainNav {
+          ul.CourseNav {
+            width: 290px;
+          }
+          ul.CommonNav {
+            width: 818px;
+          }
+        }
+      }
     }
   }
   .outlet {

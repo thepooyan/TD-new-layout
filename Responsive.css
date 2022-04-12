@@ -41,6 +41,12 @@
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
+  .header .headerContainer nav.navBar ul.mainNav ul.CourseNav {
+    width: 290px;
+  }
+  .header .headerContainer nav.navBar ul.mainNav ul.CommonNav {
+    width: 818px;
+  }
   .outlet .mainPageSection .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
