@@ -117,14 +117,14 @@
 @media only screen and (max-width: 992px) {
   .header {
     .topBar {
-      padding-right:25px ;
+      padding-right: 25px;
     }
     .headerContainer {
       grid-template-areas:
-      "logo header calendar"
-      "title header calendar"
-      "navBar navBar navBar"
-      "sideMenu content content";
+        "logo header calendar"
+        "title header calendar"
+        "navBar navBar navBar"
+        "sideMenu content content";
       .header {
         .signupButtonLayer {
           display: none;
@@ -144,7 +144,10 @@
   .outlet {
     .mainPageSection {
       .flex {
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 60px;
       }
     }
   }

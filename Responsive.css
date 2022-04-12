@@ -106,10 +106,16 @@
             justify-content: center;
   }
   .outlet .mainPageSection .flex {
-    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 60px;
   }
   .footer .rightTop .layer .text {
     font-size: 7.33333pt;
