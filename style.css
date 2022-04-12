@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------HEADER-----------------*/
 /*------------------HEADER-----------------*/
 /*-------------ATNA HOST-----------------*/
@@ -518,15 +519,14 @@ body {
   font-family: iranSansBlack;
 }
 
-.header .headerContainer .navBar {
+.header .headerContainer nav.navBar {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: navBar;
+  margin: 0;
 }
 
-.header .headerContainer .navBar nav {
-  position: static;
-  margin: 0;
+.header .headerContainer nav.navBar > ul.mainNav {
   width: 100%;
   background-color: #1d71b9;
   display: -webkit-box;
@@ -543,11 +543,74 @@ body {
   padding: 0 15px;
 }
 
-.header .headerContainer .navBar nav .item {
+.header .headerContainer nav.navBar > ul.mainNav .item {
+  position: relative;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav .item > a {
   color: #f7f7f7;
   font-size: 13px;
   margin: 0;
   padding: 10px 0;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav .item:hover > ul {
+  display: block;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul {
+  width: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  background-color: #808080f2;
+  color: white;
+  text-align: right;
+  display: none;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li {
+  position: relative;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li:hover {
+  background-color: #727272;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li:hover > ul {
+  display: block;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li a {
+  font-size: 13px;
+  font-family: "iranSanslight";
+  padding: 3px 15px;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  font-size: 11px;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li ul.courseNav {
+  right: 100%;
+  top: 0;
+  width: 450px;
+}
+
+.header .headerContainer nav.navBar > ul.mainNav ul li ul.courseNav > li::after {
+  content: none;
 }
 
 .header .headerContainer .space {

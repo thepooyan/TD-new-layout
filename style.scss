@@ -329,11 +329,10 @@ body {
         font-family: iranSansBlack;
       }
     }
-    .navBar {
+    nav.navBar {
       grid-area: navBar;
-      nav {
-        position: static;
-        margin: 0;
+      margin: 0;
+      > ul.mainNav {
         width: 100%;
         background-color: $themeBlue;
         display: flex;
@@ -343,10 +342,56 @@ body {
         border-radius: 5px;
         padding: 0 15px;
         .item {
-          color: $headerWhiteText;
-          font-size: 13px;
-          margin: 0;
-          padding: 10px 0;
+          position: relative;
+          > a {
+            color: $headerWhiteText;
+            font-size: 13px;
+            margin: 0;
+            padding: 10px 0;
+          }
+          &:hover > ul {
+            display: block;
+          }
+        }
+        ul {
+          width: 330px;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          z-index: 2;
+          background-color: #808080f2;
+          color: white;
+          text-align: right;
+          display: none;
+          li {
+            position: relative;
+            &:hover {
+              background-color: #727272;
+              & > ul {
+                display: block;
+              } 
+            }
+            a {
+              font-size: 13px;
+              font-family: "iranSanslight";
+              padding: 3px 15px;
+            }
+            &::after {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "";
+              position: absolute;
+              left: 10px;
+              top: 2px;
+              font-size: 11px;
+            }
+            ul.courseNav {
+              right: 100%;
+              top: 0;
+              width: 450px;
+              > li::after {content: none;}
+            }
+          }
         }
       }
     }
