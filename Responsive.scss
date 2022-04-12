@@ -115,6 +115,39 @@
 
 /* Large devices (laptops/desktops, 992px till 767 and down) */
 @media only screen and (max-width: 992px) {
+  .header {
+    .topBar {
+      padding-right:25px ;
+    }
+    .headerContainer {
+      grid-template-areas:
+      "logo header calendar"
+      "title header calendar"
+      "navBar navBar navBar"
+      "sideMenu content content";
+      .header {
+        .signupButtonLayer {
+          display: none;
+        }
+      }
+      .spaceRightSide {
+        display: none;
+      }
+      nav.navBar {
+        margin-bottom: 10px;
+        ul.mainNav {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .outlet {
+    .mainPageSection {
+      .flex {
+        flex-direction: column;
+      }
+    }
+  }
   .footer {
     $scale: 3;
     .rightTop {

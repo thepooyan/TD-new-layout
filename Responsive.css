@@ -85,6 +85,32 @@
 
 /* Large devices (laptops/desktops, 992px till 767 and down) */
 @media only screen and (max-width: 992px) {
+  .header .topBar {
+    padding-right: 25px;
+  }
+  .header .headerContainer {
+        grid-template-areas: "logo header calendar" "title header calendar" "navBar navBar navBar" "sideMenu content content";
+  }
+  .header .headerContainer .header .signupButtonLayer {
+    display: none;
+  }
+  .header .headerContainer .spaceRightSide {
+    display: none;
+  }
+  .header .headerContainer nav.navBar {
+    margin-bottom: 10px;
+  }
+  .header .headerContainer nav.navBar ul.mainNav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .outlet .mainPageSection .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .footer .rightTop .layer .text {
     font-size: 7.33333pt;
   }

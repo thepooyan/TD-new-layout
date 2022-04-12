@@ -539,6 +539,7 @@ body {
 }
 
 .header .headerContainer nav.navBar {
+  width: 100%;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: navBar;
