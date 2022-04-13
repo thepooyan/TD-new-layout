@@ -293,6 +293,13 @@
       }
     }
   }
+  .atnaHost {
+    &::before , &::after {
+      background-size: 75%;
+      background-position: center;
+    }
+    font-size: 29px;
+  }
   .outlet {
     .mainPageSection {
       .courseSwiper {

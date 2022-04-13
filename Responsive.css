@@ -199,6 +199,13 @@
   .header .headerContainer nav.navBar ul.mainNav .item > a {
     font-size: 12px;
   }
+  .atnaHost {
+    font-size: 29px;
+  }
+  .atnaHost::before, .atnaHost::after {
+    background-size: 75%;
+    background-position: center;
+  }
   .outlet .mainPageSection .courseSwiper {
     display: none;
   }

@@ -780,8 +780,11 @@ body {
 }
 
 .atnaHost::before, .atnaHost::after {
-  content: url("./images/img/atna-Host.png");
+  content: '';
+  background: url("./images/img/atna-Host.png") no-repeat;
   margin: 0 10px;
+  width: 88px;
+  height: 72px;
 }
 
 .outlet {
