@@ -656,10 +656,13 @@ body {
 }
 
 .header .headerContainer nav.navBar > ul.mainNav ul.CommonNav {
+  max-width: 800px;
   display: none;
-  width: 900px;
+  width: 100%;
   position: absolute;
   right: 0px;
+  left: 0px;
+  margin: auto;
   z-index: 2;
   -ms-grid-columns: 33% 33% 33%;
       grid-template-columns: 33% 33% 33%;

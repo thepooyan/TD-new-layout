@@ -423,10 +423,13 @@ body {
         }
 
         ul.CommonNav {
+          max-width: 800px;
           display: none;
-          width: 900px;
+          width: 100%;
           position: absolute;
           right: 0px;
+          left: 0px;
+          margin: auto;
           z-index: 2;
           grid-template-columns: 33% 33% 33%;
           background-color: #808080f2;

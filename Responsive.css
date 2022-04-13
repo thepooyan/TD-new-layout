@@ -44,9 +44,6 @@
   .header .headerContainer nav.navBar ul.mainNav ul.CourseNav {
     width: 290px;
   }
-  .header .headerContainer nav.navBar ul.mainNav ul.CommonNav {
-    width: 818px;
-  }
   .outlet .mainPageSection .courseSwiper {
     width: 635px;
   }
@@ -107,9 +104,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .header .headerContainer nav.navBar ul.mainNav ul.CommonNav {
-    width: 762px;
   }
   .outlet .mainPageSection .flex {
     -webkit-box-pack: center;
@@ -198,6 +192,12 @@
   }
   .header .headerContainer nav.navBar ul.mainNav .item > a {
     font-size: 12px;
+  }
+  .header .headerContainer nav.navBar ul.mainNav .item .CourseNav {
+    width: 220px;
+  }
+  .header .headerContainer nav.navBar ul.mainNav .item .CourseNav .InnerNav {
+    width: 300px;
   }
   .atnaHost {
     font-size: 29px;

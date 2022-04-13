@@ -56,9 +56,6 @@
           ul.CourseNav {
             width: 290px;
           }
-          ul.CommonNav {
-            width: 818px;
-          }
         }
       }
     }
@@ -140,9 +137,7 @@
         margin-bottom: 10px;
         ul.mainNav {
           justify-content: center;
-          ul.CommonNav {
-            width: 762px;
-          }
+
         }
       }
     }
@@ -289,6 +284,12 @@
           .item > a {
             font-size: 12px;
           }
+          .item .CourseNav {
+            width: 220px;
+            .InnerNav {
+              width: 300px;
+            }
+          } 
         }
       }
     }
