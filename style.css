@@ -566,11 +566,16 @@ body {
   padding: 0 15px;
 }
 
+.header .headerContainer nav.navBar > ul.mainNav .item {
+  text-align: center;
+}
+
 .header .headerContainer nav.navBar > ul.mainNav .item > a {
   color: #f7f7f7;
   font-size: 13px;
   margin: 0;
   padding: 10px 0;
+  line-height: 17px;
 }
 
 .header .headerContainer nav.navBar > ul.mainNav .item:hover ul.CourseNav {

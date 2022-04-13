@@ -353,11 +353,13 @@ body {
         border-radius: 5px;
         padding: 0 15px;
         .item {
+          text-align: center;
           > a {
             color: $headerWhiteText;
             font-size: 13px;
             margin: 0;
             padding: 10px 0;
+            line-height: 17px;
           }
           &:hover {
             ul.CourseNav {

@@ -231,6 +231,11 @@
   .header .headerContainer nav.navBar ul.mainNav .item ul.CourseNav ul.InnerNav {
     width: 275px;
   }
+  .header .headerContainer nav.navBar ul.mainNav {
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 /* Extra small devices (phones, 480px till 320 and down) */
