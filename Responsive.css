@@ -1,3 +1,11 @@
+/*------------------HEADER-----------------*/
+/*------------------HEADER-----------------*/
+/*-------------ATNA HOST-----------------*/
+/*-------------ATNA HOST-----------------*/
+/*--------------OUTLET----------------------*/
+/*--------------OUTLET----------------------*/
+/*-------------FOOOTER-------------------*/
+/*---------------MIXINS & FUNCTIONS--------------------------*/
 /* Extra extra large devices (TV, 1300px till 1201 and down) */
 @media screen and (max-width: 1300px) {
   .footer .rightTop .layer .text {
@@ -245,6 +253,9 @@
 
 /* Extra small devices (phones, 480px till 320 and down) */
 @media screen and (max-width: 480px) {
+  .header {
+    background-color: white;
+  }
   .header .topBar {
     height: 40px;
   }
@@ -261,6 +272,10 @@
   }
   .header .topBar span.menu:hover {
     cursor: pointer;
+  }
+  .header .headerContainer {
+    margin-top: 45px;
+    border-top: 10px solid #ededed;
   }
   .header .headerContainer > *,
   .header .headerContainer .calendar {

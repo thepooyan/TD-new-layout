@@ -1,3 +1,4 @@
+@import './Variables';
 /* Extra extra large devices (TV, 1300px till 1201 and down) */
 @media screen and (max-width: 1300px) {
   .footer {
@@ -367,6 +368,7 @@
 /* Extra small devices (phones, 480px till 320 and down) */
 @media screen and (max-width: 480px) {
   .header {
+    background-color: white;
     .topBar {
       height: 40px;
       .left,
@@ -385,6 +387,8 @@
       }
     }
     .headerContainer {
+      margin-top: 45px;
+      border-top: 10px solid $greyDark-background;
       > *,
       .calendar {
         display: none;
@@ -405,6 +409,8 @@
           border-radius: 50%;
           border: 5px solid white;
         }
+      }
+      .header {
       }
     }
   }
