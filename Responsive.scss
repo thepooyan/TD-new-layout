@@ -296,8 +296,7 @@
   }
   .atnaHost {
     &::before , &::after {
-      background-size: 75%;
-      background-position: center;
+      width: 80px;
     }
     font-size: 29px;
   }
@@ -354,6 +353,12 @@
           padding-right: 10px;
         }
       }
+    }
+  }
+  .atnaHost {
+    font-size: 24px;
+    &::after, &::before {
+      width: 48px;
     }
   }
 }

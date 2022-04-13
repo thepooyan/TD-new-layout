@@ -203,8 +203,7 @@
     font-size: 29px;
   }
   .atnaHost::before, .atnaHost::after {
-    background-size: 75%;
-    background-position: center;
+    width: 80px;
   }
   .outlet .mainPageSection .courseSwiper {
     display: none;
@@ -235,6 +234,12 @@
     gap: 10px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .atnaHost {
+    font-size: 24px;
+  }
+  .atnaHost::after, .atnaHost::before {
+    width: 48px;
   }
 }
 
