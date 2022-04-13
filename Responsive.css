@@ -244,6 +244,50 @@
 }
 
 /* Extra small devices (phones, 480px till 320 and down) */
+@media screen and (max-width: 480px) {
+  .header .topBar {
+    height: 40px;
+  }
+  .header .topBar .left,
+  .header .topBar .right,
+  .header .topBar .center {
+    display: none;
+  }
+  .header .topBar span.menu {
+    display: block;
+    font-size: 25px;
+    position: relative;
+    top: 3px;
+  }
+  .header .topBar span.menu:hover {
+    cursor: pointer;
+  }
+  .header .headerContainer > *,
+  .header .headerContainer .calendar {
+    display: none;
+  }
+  .header .headerContainer .logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .header .headerContainer .logo a.logo {
+    max-width: 81px;
+    max-height: 80px;
+    background-position: 70px 70px;
+    background-size: 346%;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+  .outlet {
+    display: none;
+  }
+}
+
 /*-----Footer mobile
   .footer {
     display: block;

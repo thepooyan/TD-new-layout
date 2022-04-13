@@ -58,8 +58,60 @@ body {
   font-weight: bold;
   transition: 0.2s;
 }
+.hollowButton {
+  color: black;
+  border: 2px solid black;
+  border-radius: 24px;
+  background-color: transparent;
+  width: 133px;
+  height: 26px;
+  box-sizing: content-box;
+  @include flex(c,c);
+  font-family: iranSansMedium;
+}
 /*--------General--------------*/
-
+#resMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  color: red;
+  transition: .4s;
+  z-index: 5;
+  @include flex(c,c);
+  .fa-times {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    padding: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .content {
+    .mainNav {
+      @include flex(c,c,column);
+      .item {
+        a {}
+        .collapsible::after {
+          content: "\f107";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: relative;
+          left: -4px;
+          top: 2px;
+        }
+        .content {
+          display: none;
+        }
+      }
+    }
+  }
+}
 .header {
   padding-bottom: 50px;
   background-color: $greyMain-background;
@@ -77,6 +129,9 @@ body {
       align-items: center;
     }
 
+    .menu {
+      display: none;
+    }
     .right {
       justify-content: flex-start;
       gap: 20px;

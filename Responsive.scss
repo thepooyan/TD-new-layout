@@ -137,7 +137,6 @@
         margin-bottom: 10px;
         ul.mainNav {
           justify-content: center;
-
         }
       }
     }
@@ -264,10 +263,11 @@
     }
     .headerContainer {
       grid-template-columns: auto auto;
-      grid-template-areas: " header calendar"
-      " header calendar"
-      " navBar navBar"
-      " content content";
+      grid-template-areas:
+        " header calendar"
+        " header calendar"
+        " navBar navBar"
+        " content content";
       .logo {
         display: none;
       }
@@ -289,13 +289,14 @@
             .InnerNav {
               width: 300px;
             }
-          } 
+          }
         }
       }
     }
   }
   .atnaHost {
-    &::before , &::after {
+    &::before,
+    &::after {
       width: 80px;
     }
     font-size: 29px;
@@ -317,7 +318,7 @@
   .header {
     .topBar {
       .right {
-        .wrap.email{
+        .wrap.email {
           display: none;
         }
       }
@@ -342,10 +343,9 @@
           ul.CourseNav {
             width: 200px;
             ul.InnerNav {
-            width: 275px;
+              width: 275px;
+            }
           }
-        }
-
         }
         ul.mainNav {
           gap: 10px;
@@ -357,7 +357,8 @@
   }
   .atnaHost {
     font-size: 24px;
-    &::after, &::before {
+    &::after,
+    &::before {
       width: 48px;
     }
   }
@@ -365,6 +366,51 @@
 
 /* Extra small devices (phones, 480px till 320 and down) */
 @media screen and (max-width: 480px) {
+  .header {
+    .topBar {
+      height: 40px;
+      .left,
+      .right,
+      .center {
+        display: none;
+      }
+      span.menu {
+        display: block;
+        font-size: 25px;
+        position: relative;
+        top: 3px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .headerContainer {
+      > *,
+      .calendar {
+        display: none;
+      }
+      .logo {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        a.logo {
+          max-width: 81px;
+          max-height: 80px;
+          background-position: 70px 70px;
+          background-size: 346%;
+          background-color: white;
+          border-radius: 50%;
+          border: 5px solid white;
+        }
+      }
+    }
+  }
+  .outlet {
+    display: none;
+  }
 }
 
 /*-----Footer mobile
