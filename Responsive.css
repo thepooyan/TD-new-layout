@@ -105,6 +105,9 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .header .headerContainer nav.navBar ul.mainNav ul.CommonNav {
+    width: 762px;
+  }
   .outlet .mainPageSection .flex {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
