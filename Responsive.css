@@ -88,6 +88,9 @@
   .header .topBar {
     padding-right: 25px;
   }
+  .header .topBar .center {
+    width: 23%;
+  }
   .header .headerContainer {
         grid-template-areas: "logo header calendar" "title header calendar" "navBar navBar navBar" "sideMenu content content";
   }
@@ -162,6 +165,48 @@
 }
 
 /* Medium devices (landscape tablets, 768px till 599 and down) */
+@media only screen and (max-width: 768px) {
+  .header .topBar {
+    padding: 5px 10px;
+  }
+  .header .topBar .right {
+    gap: 0px;
+  }
+  .header .topBar .center {
+    gap: 0px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .header .headerContainer {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: " header calendar" " header calendar" " navBar navBar" " content content";
+  }
+  .header .headerContainer .logo {
+    display: none;
+  }
+  .header .headerContainer .title {
+    display: none;
+  }
+  .header .headerContainer .sideMenu {
+    display: none;
+  }
+  .header .headerContainer nav.navBar ul.mainNav {
+    padding: 0;
+    gap: 12px;
+  }
+  .header .headerContainer nav.navBar ul.mainNav .item > a {
+    font-size: 12px;
+  }
+  .outlet .mainPageSection .courseSwiper {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 600px till and down) */
 /* Extra small devices (phones, 320px and down) */
 @media screen and (max-width: 320px) {

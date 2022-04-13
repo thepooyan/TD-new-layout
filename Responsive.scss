@@ -118,6 +118,9 @@
   .header {
     .topBar {
       padding-right: 25px;
+      .center {
+        width: 23%;
+      }
     }
     .headerContainer {
       grid-template-areas:
@@ -253,6 +256,53 @@
 
 /* Medium devices (landscape tablets, 768px till 599 and down) */
 @media only screen and (max-width: 768px) {
+  .header {
+    .topBar {
+      padding: 5px 10px;
+      .right {
+        gap: 0px;
+      }
+      .center {
+        gap: 0px;
+        justify-content: space-evenly;
+      }
+    }
+    .headerContainer {
+      grid-template-columns: auto auto;
+      grid-template-areas: " header calendar"
+      " header calendar"
+      " navBar navBar"
+      " content content";
+      .logo {
+        display: none;
+      }
+      .title {
+        display: none;
+      }
+      .sideMenu {
+        display: none;
+      }
+      nav.navBar {
+        ul.mainNav {
+          padding: 0;
+          gap: 12px;
+          .item > a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .outlet {
+    .mainPageSection {
+      .courseSwiper {
+        display: none;
+      }
+    }
+  }
+  .footer {
+    display: none;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px till and down) */
