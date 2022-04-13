@@ -254,6 +254,7 @@
 /* Extra small devices (phones, 480px till 320 and down) */
 @media screen and (max-width: 480px) {
   .header {
+    padding: 0;
     background-color: white;
   }
   .header .topBar {
@@ -276,6 +277,19 @@
   .header .headerContainer {
     margin-top: 45px;
     border-top: 10px solid #ededed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .header .headerContainer > *,
   .header .headerContainer .calendar {
@@ -297,6 +311,38 @@
     background-color: white;
     border-radius: 50%;
     border: 5px solid white;
+  }
+  .header .headerContainer .header {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 40px;
+  }
+  .header .headerContainer .header .signupButtonLayer {
+    display: block;
+  }
+  .header .headerContainer .header .rest .layer2 .item:not(.four) {
+    display: none;
+  }
+  .header .headerContainer .header .rest .inputWrapper {
+    display: none;
+  }
+  .atnaHost {
+    margin: 40px 0;
+    font-size: 17px;
+    padding: 0;
+  }
+  .atnaHost > span {
+    padding: 0;
+  }
+  .atnaHost::before, .atnaHost::after {
+    width: 45px;
+    margin: 2px;
   }
   .outlet {
     display: none;

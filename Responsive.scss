@@ -1,4 +1,4 @@
-@import './Variables';
+@import "./Variables";
 /* Extra extra large devices (TV, 1300px till 1201 and down) */
 @media screen and (max-width: 1300px) {
   .footer {
@@ -368,6 +368,7 @@
 /* Extra small devices (phones, 480px till 320 and down) */
 @media screen and (max-width: 480px) {
   .header {
+    padding: 0;
     background-color: white;
     .topBar {
       height: 40px;
@@ -389,6 +390,10 @@
     .headerContainer {
       margin-top: 45px;
       border-top: 10px solid $greyDark-background;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
       > *,
       .calendar {
         display: none;
@@ -411,7 +416,33 @@
         }
       }
       .header {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 40px;
+
+        .signupButtonLayer {
+          display: block;
+        }
+        .rest .layer2 .item:not(.four) {
+          display: none;
+        }
+        .rest .inputWrapper {
+          display: none;
+        }
       }
+    }
+  }
+  .atnaHost {
+    margin: 40px 0;
+    font-size: 17px;
+    padding: 0;
+    > span {
+      padding: 0;
+    }
+    &::before, &::after {
+      width: 45px;
+      margin: 2px;
     }
   }
   .outlet {
