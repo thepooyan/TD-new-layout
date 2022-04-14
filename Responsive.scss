@@ -434,14 +434,15 @@
     }
   }
   .atnaHost {
-    margin: 40px 0;
     font-size: 17px;
-    padding: 0;
+    border-radius: 15px;
+    margin: 40px 8px;
+    padding: 0 5px;
     > span {
       padding: 0;
     }
     &::before, &::after {
-      width: 45px;
+      width: 32px;
       margin: 2px;
     }
   }
@@ -476,7 +477,7 @@
             .hover {
               display: block;
               order: 3;
-              font-size: 14px;
+              font-size: 15px;
               font-family: iranSansNormal;
               padding: 30px 15px;
             }

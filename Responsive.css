@@ -333,15 +333,16 @@
     display: none;
   }
   .atnaHost {
-    margin: 40px 0;
     font-size: 17px;
-    padding: 0;
+    border-radius: 15px;
+    margin: 40px 8px;
+    padding: 0 5px;
   }
   .atnaHost > span {
     padding: 0;
   }
   .atnaHost::before, .atnaHost::after {
-    width: 45px;
+    width: 32px;
     margin: 2px;
   }
   .outlet {
@@ -385,7 +386,7 @@
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    font-size: 14px;
+    font-size: 15px;
     font-family: iranSansNormal;
     padding: 30px 15px;
   }
