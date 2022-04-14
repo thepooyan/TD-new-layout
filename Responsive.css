@@ -345,7 +345,49 @@
     margin: 2px;
   }
   .outlet {
-    display: none;
+    padding: 40px 0;
+  }
+  .outlet .mainPageSection .title .pic {
+    position: relative;
+    right: 30px;
+  }
+  .outlet .mainPageSection .flex .boxWrapper {
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+  }
+  .outlet .mainPageSection .flex .boxWrapper .box {
+    background: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper {
+    position: static;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .outlet .mainPageSection .flex .boxWrapper .box .text {
+    position: static;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .outlet .mainPageSection .flex .boxWrapper .box .hover {
+    display: block;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    font-size: 14px;
+    font-family: iranSansNormal;
+    padding: 30px 15px;
   }
 }
 

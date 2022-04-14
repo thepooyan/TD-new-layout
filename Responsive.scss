@@ -446,7 +446,44 @@
     }
   }
   .outlet {
-    display: none;
+    padding: 40px 0;
+    .mainPageSection {
+      .title {
+        .pic {
+          position: relative;
+          right: 30px;
+        }
+      }
+      .flex {
+        .boxWrapper {
+          background: none;
+          box-shadow: none;
+          width: 100%;
+          .box {
+            background: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .coloredWrapper {
+              position: static;
+              order: 1;
+            }
+            .text {
+              position: static;
+              order: 2;
+
+            }
+            .hover {
+              display: block;
+              order: 3;
+              font-size: 14px;
+              font-family: iranSansNormal;
+              padding: 30px 15px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
