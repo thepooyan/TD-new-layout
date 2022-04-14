@@ -399,6 +399,7 @@
     width: 100%;
   }
   .outlet .mainPageSection .flex .boxWrapper .box {
+    padding: 0 15px;
     background: none;
     display: -webkit-box;
     display: -ms-flexbox;
