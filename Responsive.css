@@ -290,6 +290,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 20px;
   }
   .header .headerContainer > *,
   .header .headerContainer .calendar {
@@ -332,6 +333,13 @@
   .header .headerContainer .header .rest .inputWrapper {
     display: none;
   }
+  .header .headerContainer .slider {
+    display: block;
+    width: 95%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0 10px;
+  }
   .atnaHost {
     font-size: 17px;
     border-radius: 15px;
@@ -344,6 +352,38 @@
   .atnaHost::before, .atnaHost::after {
     width: 32px;
     margin: 2px;
+  }
+  #resItemBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 8px;
+    padding: 0 20px;
+  }
+  #resItemBar > a {
+    padding: 5px;
+    border: 2px solid #f9c21f;
+    width: 30%;
+    color: #ec0e00;
+    border-radius: 12px;
+    height: 70px;
+    text-align: center;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: iranSansBlack;
   }
   .outlet {
     padding: 40px 0;

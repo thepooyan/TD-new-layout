@@ -394,6 +394,7 @@
       justify-content: flex-start;
       align-items: center;
       flex-direction: column;
+      gap: 20px;
       > *,
       .calendar {
         display: none;
@@ -431,6 +432,12 @@
           display: none;
         }
       }
+      .slider {
+        display: block;
+        width: 95%;
+        box-shadow: none;
+        margin: 0 10px;
+      }
     }
   }
   .atnaHost {
@@ -441,9 +448,31 @@
     > span {
       padding: 0;
     }
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 32px;
       margin: 2px;
+    }
+  }
+  #resItemBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 20px;
+    > a {
+      padding: 5px;
+      border: 2px solid #f9c21f;
+      width: 30%;
+      color: #ec0e00;
+      border-radius: 12px;
+      height: 70px;
+      text-align: center;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: iranSansBlack;
     }
   }
   .outlet {
@@ -472,7 +501,6 @@
             .text {
               position: static;
               order: 2;
-
             }
             .hover {
               display: block;
