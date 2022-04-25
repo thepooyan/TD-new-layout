@@ -66,7 +66,7 @@ body {
   width: 133px;
   height: 26px;
   box-sizing: content-box;
-  @include flex(c,c);
+  @include flex(c, c);
   font-family: iranSansMedium;
 }
 /*--------General--------------*/
@@ -78,9 +78,9 @@ body {
   background-color: white;
   overflow: hidden;
   color: red;
-  transition: .4s;
+  transition: 0.4s;
   z-index: 5;
-  @include flex(c,c);
+  @include flex(c, c);
   .fa-times {
     color: black;
     position: absolute;
@@ -94,9 +94,10 @@ body {
   }
   .content {
     .mainNav {
-      @include flex(c,c,column);
+      @include flex(c, c, column);
       .item {
-        a {}
+        a {
+        }
         .collapsible::after {
           content: "\f107";
           font-family: "Font Awesome 5 Free";
@@ -211,7 +212,7 @@ body {
       gap: 35px;
       padding-bottom: 25px;
       .rightSideImage {
-        background: url("./images/img/Asset 3-8.png") no-repeat;
+        background: url("./images/img/Asset\ 27.svg") no-repeat;
         background-size: 100%;
         width: 288px;
         height: 205px;
@@ -618,6 +619,7 @@ body {
           border-radius: 20px;
           position: relative;
           @include square(220px);
+          @include flex(c, c);
           .coloredWrapper {
             $coloredWidth: 160px;
             $coloredWrapperSize: 5px;
@@ -665,7 +667,7 @@ body {
           }
           .text {
             position: absolute;
-            bottom: 40px;
+            bottom: 25px;
             text-align: center;
             left: 0;
             right: 0;
@@ -675,11 +677,26 @@ body {
           .hover {
             font-family: iranSansBold;
             line-height: 19px;
-            text-align: justify;
-            display: none;
+            text-align: center;
+            opacity: 0;
+            transition: .4s;
+            position: absolute;
+            width: 90%;
           }
-          &:hover .hover {
-            display: block;
+          .image {
+            @include square(60px);
+            background: url("./images/img/FourSteps.png") no-repeat;
+            background-size: 416%;
+            opacity: 100%;
+            transition: .2s;
+          }
+          &:hover {
+            .hover {
+              opacity: 100%;
+            }
+            .image {
+              opacity: 0%;
+            }
           }
           $colors: #ffd413, #ff9b0f, #fe3061, #02aeba;
           @for $index from 1 through length($colors) {
@@ -695,6 +712,21 @@ body {
                 color: $item;
               }
             }
+          }
+          $box-pos: -1px 0px, -137px 0px, -81.8px 0px, -193px 0px;
+          @for $index from 1 through length($box-pos) {
+            $item: nth($box-pos, $index);
+            &.box#{$index} .image {
+              background-position: $item;
+            }
+          }
+          &.box2 .image {
+            width: 54px;
+            background-size: 456%;
+          }
+          &.box1 .image {
+            width: 85px;
+            background-size: 311%;
           }
         }
       }

@@ -8,27 +8,27 @@
 /*-------------FOOOTER-------------------*/
 /*---------------MIXINS & FUNCTIONS--------------------------*/
 @font-face {
-  font-family: iranSansnormal;
+  font-family: iranSansNormal;
   src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum).ttf");
 }
 
 @font-face {
-  font-family: iranSansblack;
+  font-family: iranSansBlack;
   src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Black.ttf");
 }
 
 @font-face {
-  font-family: iranSansbold;
+  font-family: iranSansBold;
   src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Bold.ttf");
 }
 
 @font-face {
-  font-family: iranSanslight;
+  font-family: iranSansLight;
   src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Light.ttf");
 }
 
 @font-face {
-  font-family: iranSansmedium;
+  font-family: iranSansMedium;
   src: url("./0Font/IRANSansWeb/IRANSansWeb(FaNum)_Medium.ttf");
 }
 
@@ -141,8 +141,8 @@ body {
   background-color: white;
   overflow: hidden;
   color: red;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,7 +360,7 @@ body {
 }
 
 .header .headerContainer .sideMenu .rightSideImage {
-  background: url("./images/img/Asset 3-8.png") no-repeat;
+  background: url("./images/img/Asset 27.svg") no-repeat;
   background-size: 100%;
   width: 288px;
   height: 205px;
@@ -965,6 +965,19 @@ body {
   position: relative;
   width: 220px;
   height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper {
@@ -1012,7 +1025,7 @@ body {
 
 .outlet .mainPageSection .flex .boxWrapper .box .text {
   position: absolute;
-  bottom: 40px;
+  bottom: 25px;
   text-align: center;
   left: 0;
   right: 0;
@@ -1023,12 +1036,30 @@ body {
 .outlet .mainPageSection .flex .boxWrapper .box .hover {
   font-family: iranSansBold;
   line-height: 19px;
-  text-align: justify;
-  display: none;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  position: absolute;
+  width: 90%;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box .image {
+  width: 60px;
+  height: 60px;
+  background: url("./images/img/FourSteps.png") no-repeat;
+  background-size: 416%;
+  opacity: 100%;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .outlet .mainPageSection .flex .boxWrapper .box:hover .hover {
-  display: block;
+  opacity: 100%;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box:hover .image {
+  opacity: 0%;
 }
 
 .outlet .mainPageSection .flex .boxWrapper .box.box1 .colored {
@@ -1077,6 +1108,32 @@ body {
 
 .outlet .mainPageSection .flex .boxWrapper .box.box4 .text {
   color: #02aeba;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box.box1 .image {
+  background-position: -1px 0px;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box.box2 .image {
+  background-position: -137px 0px;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box.box3 .image {
+  background-position: -81.8px 0px;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box.box4 .image {
+  background-position: -193px 0px;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box.box2 .image {
+  width: 54px;
+  background-size: 456%;
+}
+
+.outlet .mainPageSection .flex .boxWrapper .box.box1 .image {
+  width: 85px;
+  background-size: 311%;
 }
 
 .outlet .mainPageSection .courseSwiper {
