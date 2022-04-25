@@ -138,6 +138,9 @@ body {
     .right {
       justify-content: flex-start;
       gap: 20px;
+      > span, .wrap {
+        font-size: 13px;
+      }
       .wrap {
         @include flex(c, c);
         gap: 10px;
@@ -153,9 +156,6 @@ body {
           background: url("./images/img/Header-Footer.png");
           background-position: -298px -11px;
           background-size: 1875%;
-        }
-        > span {
-          font-size: 13px;
         }
       }
     }

@@ -242,6 +242,10 @@ body {
   gap: 20px;
 }
 
+.header .topBar .right > span, .header .topBar .right .wrap {
+  font-size: 13px;
+}
+
 .header .topBar .right .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,10 +277,6 @@ body {
   background: url("./images/img/Header-Footer.png");
   background-position: -298px -11px;
   background-size: 1875%;
-}
-
-.header .topBar .right .wrap > span {
-  font-size: 13px;
 }
 
 .header .topBar .center {
