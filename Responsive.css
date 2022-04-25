@@ -229,22 +229,26 @@
   .header .topBar .right .wrap.email {
     display: none;
   }
+  .header .topBar span.menu {
+    display: block;
+    font-size: 25px;
+    position: relative;
+    top: 3px;
+  }
+  .header .topBar span.menu:hover {
+    cursor: pointer;
+  }
   .header .headerContainer .header .rest .layer2 a.item span {
     font-size: 11px;
   }
   .header .headerContainer .calendar .FatLIne {
     margin: 34px 25px;
   }
-  .header .headerContainer nav.navBar ul.mainNav .item ul.CourseNav {
-    width: 200px;
+  .header .headerContainer nav.navBar {
+    display: none;
   }
-  .header .headerContainer nav.navBar ul.mainNav .item ul.CourseNav ul.InnerNav {
-    width: 275px;
-  }
-  .header .headerContainer nav.navBar ul.mainNav {
-    gap: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+  .header .headerContainer .slider {
+    margin-top: 20px;
   }
   .atnaHost {
     font-size: 24px;
@@ -267,15 +271,6 @@
   .header .topBar .right,
   .header .topBar .center {
     display: none;
-  }
-  .header .topBar span.menu {
-    display: block;
-    font-size: 25px;
-    position: relative;
-    top: 3px;
-  }
-  .header .topBar span.menu:hover {
-    cursor: pointer;
   }
   .header .headerContainer {
     margin-top: 45px;

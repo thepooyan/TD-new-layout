@@ -330,6 +330,15 @@
           display: none;
         }
       }
+      span.menu {
+        display: block;
+        font-size: 25px;
+        position: relative;
+        top: 3px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
     .headerContainer {
       .header {
@@ -347,19 +356,23 @@
         }
       }
       nav.navBar {
-        ul.mainNav .item {
-          ul.CourseNav {
-            width: 200px;
-            ul.InnerNav {
-              width: 275px;
-            }
-          }
-        }
-        ul.mainNav {
-          gap: 10px;
-          padding-left: 10px;
-          padding-right: 10px;
-        }
+        // ul.mainNav .item {
+        //   ul.CourseNav {
+        //     width: 200px;
+        //     ul.InnerNav {
+        //       width: 275px;
+        //     }
+        //   }
+        // }
+        // ul.mainNav {
+        //   gap: 10px;
+        //   padding-left: 10px;
+        //   padding-right: 10px;
+        // }
+        display: none;
+      }
+      .slider {
+        margin-top: 20px;
       }
     }
   }
@@ -383,15 +396,6 @@
       .right,
       .center {
         display: none;
-      }
-      span.menu {
-        display: block;
-        font-size: 25px;
-        position: relative;
-        top: 3px;
-        &:hover {
-          cursor: pointer;
-        }
       }
     }
     .headerContainer {
