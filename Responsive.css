@@ -102,7 +102,10 @@
   .header .headerContainer {
         grid-template-areas: "logo header calendar" "title header calendar" "navBar navBar navBar" "sideMenu content content";
   }
-  .header .headerContainer .header .signupButtonLayer {
+  .header .headerContainer .header {
+    gap: 0;
+  }
+  .header .headerContainer .header .rest .layer2 .item.four {
     display: none;
   }
   .header .headerContainer .spaceRightSide {
@@ -240,6 +243,14 @@
   }
   .header .headerContainer .header .rest .layer2 a.item span {
     font-size: 11px;
+  }
+  .header .headerContainer .header .rest .layer2 .item.four {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .headerContainer .header .signupButtonLayer {
+    display: none;
   }
   .header .headerContainer .calendar .FatLIne {
     margin: 34px 25px;

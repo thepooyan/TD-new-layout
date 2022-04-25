@@ -134,7 +134,8 @@
         "navBar navBar navBar"
         "sideMenu content content";
       .header {
-        .signupButtonLayer {
+    gap: 0;
+    .rest .layer2 .item.four {
           display: none;
         }
       }
@@ -347,7 +348,13 @@
             a.item span {
               font-size: 11px;
             }
+            .item.four {
+              display: flex;
+            }
           }
+        }
+        .signupButtonLayer {
+          display: none;
         }
       }
       .calendar {

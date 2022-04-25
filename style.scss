@@ -58,6 +58,7 @@ body {
   font-weight: bold;
   transition: 0.2s;
 }
+
 .hollowButton {
   color: black;
   border: 2px solid black;
@@ -317,9 +318,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      $CalendarMargin: 30px;
       .M-50 {
-        margin: 50px;
+        margin: $CalendarMargin;
       }
+      $CalendarScale: -$CalendarMargin;
       .CircleBase {
         width: 100px;
         height: 100px;
@@ -340,8 +343,8 @@ body {
         border-radius: 50%;
         background-color: transparent;
         position: absolute;
-        top: 2px + $scale;
-        left: 2px + $scale;
+        top: 2px + $CalendarScale;
+        left: 2px + $CalendarScale;
       }
       .Circle-2 {
         width: 88px;
@@ -349,16 +352,16 @@ body {
         border-radius: 50%;
         background-color: white;
         position: absolute;
-        top: 6px + $scale;
-        left: 6px + $scale;
+        top: 6px + $CalendarScale;
+        left: 6px + $CalendarScale;
       }
       .Circle-3 {
         width: 80px;
         height: 80px;
         border-radius: 50%;
         position: absolute;
-        top: 10px + $scale;
-        left: 10px + $scale;
+        top: 10px + $CalendarScale;
+        left: 10px + $CalendarScale;
         background-color: whitesmoke;
         box-shadow: 5px 5px 20px rgba(200, 200, 200, 0.75);
         .calendar {
