@@ -590,9 +590,9 @@ body {
     .title {
       margin-bottom: 50px;
       .pic {
-        background: url("./images/img/Asset\ 3-8.png") no-repeat;
+        background: url("./images/img/Asset\ 26.svg") no-repeat;
         background-size: 100%;
-        @include scalePics(288px, 205px, 2);
+        @include scalePics(288px, 206px, 2);
         position: relative;
         .text {
           width: 200px;
