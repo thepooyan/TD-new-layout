@@ -923,7 +923,7 @@ body {
 }
 
 .outlet .mainPageSection .title .pic .text {
-  width: 200px;
+  white-space: nowrap;
   font-weight: bold;
   position: absolute;
   right: 90px;

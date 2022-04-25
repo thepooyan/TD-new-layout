@@ -595,7 +595,7 @@ body {
         @include scalePics(288px, 206px, 2);
         position: relative;
         .text {
-          width: 200px;
+          white-space: nowrap;
           font-weight: bold;
           position: absolute;
           right: 90px;
