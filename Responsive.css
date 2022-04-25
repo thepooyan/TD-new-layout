@@ -399,7 +399,7 @@
     width: 100%;
   }
   .outlet .mainPageSection .flex .boxWrapper .box {
-    padding: 0 15px;
+    padding: 0;
     background: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -409,6 +409,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    height: auto;
   }
   .outlet .mainPageSection .flex .boxWrapper .box .coloredWrapper {
     position: static;
@@ -421,15 +422,31 @@
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    font-size: 24px;
+    padding-top: 10px;
   }
   .outlet .mainPageSection .flex .boxWrapper .box .hover {
-    display: block;
+    opacity: 100%;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
     font-size: 15px;
     font-family: iranSansNormal;
     padding: 30px 15px;
+    position: static;
+    width: 100%;
+    padding: 30px 10px;
+    color: #898989;
+    line-height: 27px;
+    font-size: 18px;
+  }
+  .outlet .mainPageSection .flex .boxWrapper .box .image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    min-height: 60px;
+    margin-top: 25px;
+    opacity: 100% !important;
   }
 }
 
