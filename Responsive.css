@@ -448,6 +448,8 @@
     color: #898989;
     line-height: 27px;
     font-size: 18px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   .outlet .mainPageSection .flex .boxWrapper .box .image {
     -webkit-box-ordinal-group: 3;

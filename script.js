@@ -7,9 +7,7 @@ function openResMenu() {
   }
 
 var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
+for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
@@ -19,4 +17,21 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
+
+let courseL1 = document.getElementsByClassName("courseSelector");
+
+for (let i = 0; i < courseL1.length; i++) {
+  courseL1[i].addEventListener("click", function() {
+    document.getElementById(this.dataset.linkto).classList.toggle('noDisplay');
+    document.getElementsByClassName("OriginContent")[0].classList.add("out");
+    document.getElementsByClassName("crossContent")[0].classList.add("in");
+  });
+}
+
+function navigateBackToRes() {
+  let courseL2 = document.querySelector('.crossContent ul:not(.noDisplay)');
+  courseL2.classList.add('noDisplay');
+  document.getElementsByClassName("OriginContent")[0].classList.remove("out");
+  document.getElementsByClassName("crossContent")[0].classList.remove("in");
 }

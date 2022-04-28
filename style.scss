@@ -70,6 +70,9 @@ body {
   @include flex(c, c);
   font-family: iranSansMedium;
 }
+.noDisplay {
+  display: none;
+}
 /*--------General--------------*/
 #resMenu {
   height: 100%;
@@ -81,7 +84,10 @@ body {
   color: red;
   transition: 0.4s;
   z-index: 5;
-  @include flex(c, c);
+  overflow-y: scroll;
+  @include flex(s, c, column);
+  padding-top: 100px;
+  font-size: 15px;
   .fa-times {
     color: black;
     position: absolute;
@@ -93,24 +99,78 @@ body {
       cursor: pointer;
     }
   }
-  .content {
+  .OriginContent {
+    transition: 0.3s;
     .mainNav {
+      padding-top: 20px;
       @include flex(c, c, column);
       .item {
         a {
         }
-        .collapsible::after {
-          content: "\f107";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          position: relative;
-          left: -4px;
-          top: 2px;
+        .courseSelector {
+          color: #727272;
+          &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "";
+            font-size: 12px;
+          }
+        }
+        .collapsible {
+          color: #42515a;
+          text-align: center;
+          &::after {
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: relative;
+            left: -4px;
+            top: 2px;
+            display: inline-block;
+            transition: 0.3s;
+          }
+          &.active {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
         }
         .content {
-          display: none;
+          max-height: 0;
+          overflow: hidden;
+          transition: 0.3s;
+          .InnerNav {
+            display: none;
+          }
         }
       }
+    }
+    &.out {
+      opacity: 0;
+    }
+  }
+  .crossContent {
+    i {
+      position: absolute;
+      right: -49px;
+      top: -92px;
+      width: min-content;
+      font-size: 25px;
+      color: black;
+      padding: 10px;
+    }
+    width: max-content;
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+    margin: auto;
+    transition: 0.6s;
+    @include flex(c, c);
+
+    &.in {
+      left: 0;
+      right: 0;
+      opacity: 100%;
     }
   }
 }
@@ -138,7 +198,8 @@ body {
     .right {
       justify-content: flex-start;
       gap: 20px;
-      > span, .wrap {
+      > span,
+      .wrap {
         font-size: 13px;
       }
       .wrap {
@@ -682,20 +743,22 @@ body {
             line-height: 19px;
             text-align: center;
             opacity: 0;
-            transition: .4s;
+            transition: 0.3s;
             position: absolute;
             width: 90%;
+            transform: scale(0.6);
           }
           .image {
             @include square(60px);
             background: url("./images/img/FourSteps.png") no-repeat;
             background-size: 416%;
             opacity: 100%;
-            transition: .2s;
+            transition: 0.2s;
           }
           &:hover {
             .hover {
               opacity: 100%;
+              transform: scale(1);
             }
             .image {
               opacity: 0%;
