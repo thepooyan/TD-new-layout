@@ -90,7 +90,7 @@ body {
   font-size: 15px;
   .logo {
     @include square(110px);
-    background: url('./images/img/Header-Footer.png');
+    background: url("./images/img/Header-Footer.png");
     background-position: 108px 110px;
     background-size: 350%;
     margin: auto;
@@ -179,7 +179,7 @@ body {
         white-space: nowrap;
       }
       .icons {
-        @include flex(c,c);
+        @include flex(c, c);
         gap: 55px;
         a {
           font-size: 27px;
@@ -270,12 +270,39 @@ body {
     .left {
       color: white;
       font-weight: bold;
+      position: relative;
       .siteGearIcon {
         min-width: 49px;
         height: 29px;
         background: url("./images/img/Header-Footer.png");
         background-position: -69px -149px;
         background-size: 1057%;
+      }
+      .content {
+        position: absolute;
+        top: 36px;
+        background-color: $themeBlue;
+        z-index: 20;
+        left: -5px;
+        width: 117px;
+        height: 0;
+        overflow: hidden;
+        transition: .4s;
+        opacity: 0;
+
+        a {
+          color: white;
+          display: block;
+        }
+      }
+      &.active .content {
+        height: auto;
+        padding: 10px;
+        opacity: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
   }
@@ -1170,7 +1197,7 @@ body {
         height: 35px;
         background: url("./images/img/Header-Footer.png");
         background-size: 1182%;
-        background-position-y: 72px;
+        background-position-y: 73px;
 
         &.one {
           background-position-x: -1px;

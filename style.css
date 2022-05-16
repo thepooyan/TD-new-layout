@@ -446,6 +446,7 @@ body {
 .header .topBar .left {
   color: white;
   font-weight: bold;
+  position: relative;
 }
 
 .header .topBar .left .siteGearIcon {
@@ -454,6 +455,35 @@ body {
   background: url("./images/img/Header-Footer.png");
   background-position: -69px -149px;
   background-size: 1057%;
+}
+
+.header .topBar .left .content {
+  position: absolute;
+  top: 36px;
+  background-color: #1d71b9;
+  z-index: 20;
+  left: -5px;
+  width: 117px;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+}
+
+.header .topBar .left .content a {
+  color: white;
+  display: block;
+}
+
+.header .topBar .left.active .content {
+  height: auto;
+  padding: 10px;
+  opacity: 100%;
+}
+
+.header .topBar .left:hover {
+  cursor: pointer;
 }
 
 .header .headerContainer {
@@ -1698,7 +1728,7 @@ body {
   height: 35px;
   background: url("./images/img/Header-Footer.png");
   background-size: 1182%;
-  background-position-y: 72px;
+  background-position-y: 73px;
 }
 
 .footer .centerBottom .layer3 .footerImage.one {

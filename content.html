@@ -1,5 +1,5 @@
 <div id="resMenu">
-    <i class="fas fa-times" onclick="closeResMenu()"></i>
+    <i class="fas fa-times" id="resClose"></i>
     <div class="OriginContent">
         <div class="logo"></div>
         <ul class="mainNav">
@@ -199,7 +199,7 @@
         </div>
     </div>
     <div class="crossContent">
-        <i class="fas fa-arrow-right" onclick="navigateBackToRes()"></i>
+        <i class="fas fa-arrow-right" id="backToRes"></i>
         <ul class="InnerNav noDisplay" id="course1">
             <li><a href="#">نمونه دوره لایه دو 1</a></li>
             <li><a href="#">نمونه دوره لایه دو 1</a></li>
@@ -250,7 +250,7 @@
 
 <header class="header">
     <div class="topBar">
-        <span class="menu" onclick="openResMenu()">☰</span>
+        <span class="menu" id="resOpen">☰</span>
         <div class="right">
             <span>021-88146330</span>
             <div class="wrap">
@@ -270,10 +270,15 @@
             <a href="#" class="fab fa-twitter"></a>
 
         </div>
-        <a href="#" class="left">
+        <div class="left" data-onClick="active">
             <div class="siteGearIcon"></div>
             ابزار سایت
-        </a>
+            <div class="content">
+                <a href="#">برسی سئو</a>
+                <a href="#">ساخت استایل</a>
+                <a href="#">فشرده ساز</a>
+            </div>
+        </div>
     </div>
 
     <div class="headerContainer">
