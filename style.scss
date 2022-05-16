@@ -86,8 +86,16 @@ body {
   z-index: 5;
   overflow-y: scroll;
   @include flex(s, c, column);
-  padding-top: 100px;
+  padding-top: 40px;
   font-size: 15px;
+  .logo {
+    @include square(110px);
+    background: url('./images/img/Header-Footer.png');
+    background-position: 108px 110px;
+    background-size: 350%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
   .fa-times {
     color: black;
     position: absolute;
@@ -101,12 +109,10 @@ body {
   }
   .OriginContent {
     transition: 0.3s;
+    margin-bottom: 20px;
     .mainNav {
-      padding-top: 20px;
       @include flex(c, c, column);
       .item {
-        a {
-        }
         .courseSelector {
           color: #727272;
           &::after {
@@ -143,17 +149,49 @@ body {
             display: none;
           }
         }
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
     &.out {
       opacity: 0;
     }
+    .line {
+      height: 1px;
+      width: 100%;
+      background-color: #42515a;
+      margin: 25px 0;
+    }
+    .hollowButton {
+      margin: auto;
+      border: 0;
+      background-color: $themeBlue;
+      color: white;
+      font-family: iransanslight;
+    }
+    .social {
+      margin-top: 25px;
+      span {
+        display: block;
+        color: #42515a;
+        margin-bottom: 10px;
+        white-space: nowrap;
+      }
+      .icons {
+        @include flex(c,c);
+        gap: 55px;
+        a {
+          font-size: 27px;
+        }
+      }
+    }
   }
   .crossContent {
     i {
       position: absolute;
-      right: -49px;
-      top: -92px;
+      right: -90px;
+      top: -90px;
       width: min-content;
       font-size: 25px;
       color: black;
@@ -168,6 +206,7 @@ body {
     @include flex(c, c);
 
     &.in {
+      top: 100px;
       left: 0;
       right: 0;
       opacity: 100%;
@@ -294,15 +333,16 @@ body {
       grid-area: header;
       padding: 50px 0;
       align-items: center;
-      justify-content: flex-start;
-      gap: 20px;
+      justify-content: space-between;
       .rest {
         @include flex(space-between, c);
         width: 100%;
         .layer2 {
           display: flex;
           flex-direction: row;
-          gap: 30px;
+          gap: 15px;
+          width: 100%;
+          justify-content: center;
           .item {
             display: flex;
             flex-direction: column;

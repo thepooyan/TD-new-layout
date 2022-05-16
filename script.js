@@ -1,5 +1,5 @@
 function openResMenu() {
-    document.getElementById("resMenu").style.width = "250px";
+    document.getElementById("resMenu").style.width = "320px";
   }
   
   function closeResMenu() {

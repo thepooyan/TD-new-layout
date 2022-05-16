@@ -134,8 +134,8 @@
         "navBar navBar navBar"
         "sideMenu content content";
       .header {
-    gap: 0;
-    .rest .layer2 .item.four {
+        gap: 0;
+        .rest .layer2 .item.four {
           display: none;
         }
       }
@@ -348,9 +348,6 @@
             a.item span {
               font-size: 11px;
             }
-            .item.four {
-              display: flex;
-            }
           }
         }
         .signupButtonLayer {
@@ -408,15 +405,7 @@
     .headerContainer {
       margin-top: 45px;
       border-top: 10px solid $greyDark-background;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-direction: column;
-      gap: 20px;
-      > *,
-      .calendar {
-        display: none;
-      }
+      display: block;
       .logo {
         display: block;
         position: absolute;
@@ -436,17 +425,39 @@
       }
       .header {
         margin-top: 20px;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 40px;
-
+        float: right;
         .signupButtonLayer {
           display: block;
+          margin: 45px 0;
+          margin-right: 10px;
         }
-        .rest .layer2 .item:not(.four) {
+        .rest {
           display: none;
         }
-        .rest .inputWrapper {
+      }
+      .calendar {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: url(./images/img/Header-Footer.png);
+        height: 94.5px;
+        width: 94.5px;
+        margin: auto;
+        background-position: -527px -31px;
+        background-size: 381%;
+        margin: 25px;
+        transform: scale(1.3);
+        margin-bottom: 65px;
+
+        &::before {
+          content: "تقویم آموزشی";
+          position: absolute;
+          bottom: -22px;
+          color: #0d72a1;
+          font-size: 11px;
+          font-weight: bold;
+        }
+        .FatLIne {
           display: none;
         }
       }
@@ -465,6 +476,7 @@
     padding: 0 5px;
     > span {
       padding: 0;
+      font-size: 15px;
     }
     &::before,
     &::after {
