@@ -364,6 +364,7 @@ body {
   padding: 5px 25px;
   padding-right: 215px;
   color: #f7f7f7;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,7 +447,6 @@ body {
 .header .topBar .left {
   color: white;
   font-weight: bold;
-  position: relative;
 }
 
 .header .topBar .left .siteGearIcon {
@@ -459,16 +459,18 @@ body {
 
 .header .topBar .left .content {
   position: absolute;
-  top: 36px;
-  background-color: #1d71b9;
+  top: 100%;
+  background-color: #149bd9;
   z-index: 20;
-  left: -5px;
+  left: 0;
   width: 117px;
   height: 0;
   overflow: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   opacity: 0;
+  font-family: iransansultralight;
+  font-size: 13px;
 }
 
 .header .topBar .left .content a {

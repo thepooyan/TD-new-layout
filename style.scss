@@ -222,6 +222,7 @@ body {
     padding: 5px 25px;
     padding-right: $sideMenuLength + 15px;
     color: $headerWhiteText;
+    position: relative;
 
     display: flex;
     justify-content: space-between;
@@ -270,7 +271,6 @@ body {
     .left {
       color: white;
       font-weight: bold;
-      position: relative;
       .siteGearIcon {
         min-width: 49px;
         height: 29px;
@@ -280,15 +280,17 @@ body {
       }
       .content {
         position: absolute;
-        top: 36px;
-        background-color: $themeBlue;
+        top: 100%;
+        background-color: #149bd9;
         z-index: 20;
-        left: -5px;
+        left: 0;
         width: 117px;
         height: 0;
         overflow: hidden;
         transition: 0.4s;
         opacity: 0;
+        font-family: iransansultralight;
+        font-size: 13px;
 
         a {
           color: white;
