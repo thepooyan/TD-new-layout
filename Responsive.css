@@ -481,11 +481,17 @@
     display: none;
   }
   .header .headerContainer .slider {
-    display: block;
-    width: 95%;
+    width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
     margin: 0 10px;
+  }
+  .header .headerContainer .slider #slider .dots > * {
+    width: 10px;
+    height: 10px;
+  }
+  .header .headerContainer .slider #slider #sliderNext, .header .headerContainer .slider #slider #sliderPre {
+    padding: 10px 7px;
   }
   .atnaHost {
     font-size: 17px;

@@ -501,10 +501,18 @@
         }
       }
       .slider {
-        display: block;
-        width: 95%;
+        width: 100%;
         box-shadow: none;
         margin: 0 10px;
+        #slider {
+          .dots > * {
+            @include square(10px);
+          }
+          #sliderNext, #sliderPre {
+          padding: 10px 7px;
+
+          }
+        }
       }
     }
   }
