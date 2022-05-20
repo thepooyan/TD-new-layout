@@ -500,10 +500,9 @@ body {
   z-index: 20;
   left: 0;
   width: 117px;
-  height: 0;
   overflow: hidden;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: .4s;
+  transition: .4s;
   opacity: 0;
   font-family: iransansultralight;
   font-size: 13px;
@@ -515,7 +514,7 @@ body {
 }
 
 .header .topBar .left.active .content {
-  height: auto;
+  max-height: 1000px;
   padding: 10px;
   opacity: 100%;
 }

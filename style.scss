@@ -318,9 +318,8 @@ body {
         z-index: 20;
         left: 0;
         width: 117px;
-        height: 0;
         overflow: hidden;
-        transition: 0.4s;
+        transition: .4s;
         opacity: 0;
         font-family: iransansultralight;
         font-size: 13px;
@@ -331,7 +330,7 @@ body {
         }
       }
       &.active .content {
-        height: auto;
+        max-height: 1000px;
         padding: 10px;
         opacity: 100%;
       }
