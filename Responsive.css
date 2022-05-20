@@ -7,19 +7,6 @@
 /*--------------OUTLET----------------------*/
 /*-------------FOOOTER-------------------*/
 /*---------------MIXINS & FUNCTIONS--------------------------*/
-/* Extra extra large devices (TV, 1300px till 1201 and down) */
-@media screen and (max-width: 1300px) {
-  .footer .rightTop .layer .text {
-    font-size: 10pt;
-  }
-  .footer .rightBottom .eNamad {
-    border: 12px solid #333333;
-  }
-  .outlet .mainPageSection .courseSwiper {
-    width: 960px;
-  }
-}
-
 /* Extra large devices (large laptops and desktops, 1200px till 993 and down) */
 @media only screen and (max-width: 1200px) {
   .header .topBar {
@@ -107,6 +94,9 @@
     gap: 0;
   }
   .header .headerContainer .header .rest .layer2 .item.four {
+    display: none;
+  }
+  .header .headerContainer .header .Cooperation {
     display: none;
   }
   .header .headerContainer .spaceRightSide {
@@ -307,6 +297,9 @@
   }
   .header .topBar span.menu:hover {
     cursor: pointer;
+  }
+  .header .headerContainer .header .rest .layer2 {
+    width: 130%;
   }
   .header .headerContainer .header .rest .layer2 a.item span {
     font-size: 11px;

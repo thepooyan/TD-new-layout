@@ -286,7 +286,7 @@ body {
         left: 0;
         width: 117px;
         overflow: hidden;
-        transition: .4s;
+        transition: 0.4s;
         opacity: 0;
         font-family: iransansultralight;
         font-size: 13px;
@@ -314,8 +314,8 @@ body {
       "title navBar calendar"
       "spaceRightSide space calendar"
       "sideMenu content content";
-    grid-template-columns: $sideMenuLength auto auto;
-    padding-left: 5px;
+    grid-template-columns: $sideMenuLength 65% auto;
+    padding-left: 10px;
     > * {
       display: flex;
       justify-content: flex-start;
@@ -373,7 +373,8 @@ body {
       }
       .rest {
         @include flex(space-between, c);
-        width: 100%;
+        font-family: iransansmedium;
+        width: 65%;
         .layer2 {
           display: flex;
           flex-direction: row;
@@ -431,7 +432,7 @@ body {
             padding: 5px 20px;
             text-indent: 20px;
             font-family: inherit;
-            width: 270px;
+            width: 235px;
             &:focus {
               outline: none;
             }
@@ -441,6 +442,27 @@ body {
             right: 12px;
             top: 13px;
             color: $themeBlue;
+          }
+        }
+      }
+      .Cooperation {
+        svg {
+          width: 115px;
+          .cls-1 {
+            transition: 0.1s;
+          }
+        }
+        @include flex(c, c, column);
+        gap: 4px;
+        color: $themePurple;
+        font-size: 16px;
+        font-family: iransansbold;
+
+        &:hover {
+          color: $themeBlue;
+          cursor: pointer;
+          svg .cls-1 {
+            fill: $themeBlue;
           }
         }
       }
@@ -659,30 +681,33 @@ body {
       #slider {
         position: relative;
         z-index: 1;
-        margin-left: 10px;
-  
+
         &.single {
-          #sliderNext, #sliderPre, .dots {
+          #sliderNext,
+          #sliderPre,
+          .dots {
             display: none;
           }
         }
-  
+
         &.none {
-          #sliderNext, #sliderPre, .dots {
+          #sliderNext,
+          #sliderPre,
+          .dots {
             display: none;
           }
           .images {
             background-color: grey;
             width: 1105px;
             height: 383px;
-            @include flex(c,c);
+            @include flex(c, c);
             &::before {
-              content: 'تصویر پیدا نشد :/';
+              content: "تصویر پیدا نشد :/";
               color: white;
             }
           }
         }
-  
+
         @keyframes sliderFade {
           from {
             opacity: 0;
@@ -706,7 +731,7 @@ body {
             }
           }
         }
-  
+
         #sliderNext,
         #sliderPre {
           position: absolute;
@@ -717,7 +742,7 @@ body {
           background-color: #00000012;
           margin: auto;
           height: max-content;
-  
+
           &:hover {
             background-color: #00000030;
             cursor: pointer;
@@ -750,7 +775,7 @@ body {
             border-radius: 50%;
             display: inline-block;
             transition: background-color 0.3s ease;
-  
+
             &:hover,
             &.active {
               background-color: #717171;
