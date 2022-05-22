@@ -1114,16 +1114,91 @@ body {
   height: min-content;
 }
 
-.header .headerContainer .slider #slider .images img {
+.header .headerContainer .slider #slider .images .img {
   opacity: 0;
   position: absolute;
-  display: block;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   top: 0;
 }
 
-.header .headerContainer .slider #slider .images img.active {
+.header .headerContainer .slider #slider .images .img .title,
+.header .headerContainer .slider #slider .images .img .des,
+.header .headerContainer .slider #slider .images .img .button {
+  position: absolute;
+}
+
+.header .headerContainer .slider #slider .images .img .title {
+  top: 70px;
+  left: 20px;
+  display: block;
+  font-size: 62px;
+  font-family: iransansblack;
+  text-align: center;
+  width: 480px;
+}
+
+.header .headerContainer .slider #slider .images .img .title.purple {
+  color: #951a82;
+}
+
+.header .headerContainer .slider #slider .images .img .title.orange {
+  color: #e84e1a;
+}
+
+.header .headerContainer .slider #slider .images .img .title.green {
+  color: #3aaa35;
+}
+
+.header .headerContainer .slider #slider .images .img .title.yellow {
+  color: #feb52c;
+}
+
+.header .headerContainer .slider #slider .images .img .title.long {
+  font-size: 49px;
+}
+
+.header .headerContainer .slider #slider .images .img .title.lightBlue {
+  color: #63daf9;
+}
+
+.header .headerContainer .slider #slider .images .img .title.tooLong {
+  font-size: 45px;
+}
+
+.header .headerContainer .slider #slider .images .img .title::before {
+  content: "آموزشگاه تحلیل داده";
+  display: block;
+  font-size: 21px;
+  margin-bottom: 33px;
+}
+
+.header .headerContainer .slider #slider .images .img .des {
+  top: 200px;
+  left: 26px;
+  font-size: 41px;
+  font-family: iransansblack;
+  width: 500px;
+  text-align: center;
+  line-height: 55px;
+}
+
+.header .headerContainer .slider #slider .images .img .button {
+  left: 30px;
+  bottom: 30px;
+  background-color: #e84e1a;
+  color: white;
+  padding: 9px 43px;
+  font-size: 34px;
+  border-radius: 29px;
+  font-family: iransansmedium;
+}
+
+.header .headerContainer .slider #slider .images .img img {
+  display: block;
+}
+
+.header .headerContainer .slider #slider .images .img.active {
   opacity: 100;
   position: static;
 }

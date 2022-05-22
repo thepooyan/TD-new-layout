@@ -47,7 +47,7 @@ for (let i = 0; i < clicker.length; i++) {
 }
 
 //*-------------------------------- slider
-let sliderImages = document.querySelectorAll("#slider .images img");
+let sliderImages = document.querySelectorAll("#slider .images .img");
 let sliderTimeout = document.getElementById('slider').getAttribute('data-timeout');
 let sliderIndex;
 sliderImages.forEach((item, index) => {
@@ -124,6 +124,10 @@ function noActive() {
   sliderImages[0].classList.add('active');
 }
 
+document.querySelectorAll('#slider .images .img .title').forEach(item=>{
+  if (item.innerHTML.length > 16) item.classList.add('long')
+  if (item.innerHTML.length > 20) item.classList.add('tooLong')
+})
 if (sliderImages.length > 1) {
   var sliderInterval = setInterval(function(){
     sliderNext();
