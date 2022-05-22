@@ -1050,6 +1050,7 @@ body {
 .header .headerContainer .slider #slider {
   position: relative;
   z-index: 1;
+  font-size: 1rem;
 }
 
 .header .headerContainer .slider #slider.single #sliderNext,
@@ -1132,7 +1133,7 @@ body {
   top: 18%;
   left: 2%;
   display: block;
-  font-size: 62px;
+  font-size: 3.44em;
   font-family: iransansblack;
   text-align: center;
   width: 39%;
@@ -1155,7 +1156,7 @@ body {
 }
 
 .header .headerContainer .slider #slider .images .img .title.long {
-  font-size: 49px;
+  font-size: 2.72em;
 }
 
 .header .headerContainer .slider #slider .images .img .title.lightBlue {
@@ -1163,20 +1164,20 @@ body {
 }
 
 .header .headerContainer .slider #slider .images .img .title.tooLong {
-  font-size: 45px;
+  font-size: 2.5em;
 }
 
 .header .headerContainer .slider #slider .images .img .title::before {
   content: "آموزشگاه تحلیل داده";
   display: block;
   font-size: 21px;
-  margin-bottom: 33px;
+  margin-bottom: 1.16rem;
 }
 
 .header .headerContainer .slider #slider .images .img .des {
   top: 48%;
   left: 2%;
-  font-size: 41px;
+  font-size: 2.27em;
   font-family: iransansblack;
   width: 39%;
   text-align: center;
@@ -1189,7 +1190,7 @@ body {
   background-color: #e84e1a;
   color: white;
   padding: 9px 43px;
-  font-size: 34px;
+  font-size: 1.88em;
   border-radius: 29px;
   font-family: iransansmedium;
 }

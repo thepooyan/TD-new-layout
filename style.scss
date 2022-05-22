@@ -681,6 +681,7 @@ body {
       #slider {
         position: relative;
         z-index: 1;
+        font-size: 1rem;
 
         &.single {
           #sliderNext,
@@ -689,7 +690,6 @@ body {
             display: none;
           }
         }
-
         &.none {
           #sliderNext,
           #sliderPre,
@@ -707,7 +707,6 @@ body {
             }
           }
         }
-
         @keyframes sliderFade {
           from {
             opacity: 0;
@@ -733,7 +732,7 @@ body {
               top: 18%;
               left: 2%;
               display: block;
-              font-size: 62px;
+              font-size: 3.44em;
               font-family: iransansblack;
               text-align: center;
               width: 39%;
@@ -750,26 +749,26 @@ body {
                 color: #feb52c;
               }
               &.long {
-                font-size: 49px;
+                font-size: 2.72em;
               }
               &.lightBlue {
                 color: #63daf9;
               }
               &.tooLong {
-                font-size: 45px;
+                font-size: 2.5em;
               }
 
               &::before {
                 content: "آموزشگاه تحلیل داده";
                 display: block;
                 font-size: 21px;
-                margin-bottom: 33px;
+                margin-bottom: 1.16rem;
               }
             }
             .des {
               top: 48%;
               left: 2%;
-              font-size: 41px;
+              font-size: 2.27em;
               font-family: iransansblack;
               width: 39%;
               text-align: center;
@@ -781,7 +780,7 @@ body {
               background-color: #e84e1a;
               color: white;
               padding: 9px 43px;
-              font-size: 34px;
+              font-size: 1.88em;
               border-radius: 29px;
               font-family: iransansmedium;
             }
@@ -794,7 +793,6 @@ body {
             }
           }
         }
-
         #sliderNext,
         #sliderPre {
           position: absolute;
