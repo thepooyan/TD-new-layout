@@ -1129,13 +1129,13 @@ body {
 }
 
 .header .headerContainer .slider #slider .images .img .title {
-  top: 70px;
-  left: 20px;
+  top: 18%;
+  left: 2%;
   display: block;
   font-size: 62px;
   font-family: iransansblack;
   text-align: center;
-  width: 480px;
+  width: 39%;
 }
 
 .header .headerContainer .slider #slider .images .img .title.purple {
@@ -1174,18 +1174,18 @@ body {
 }
 
 .header .headerContainer .slider #slider .images .img .des {
-  top: 200px;
-  left: 26px;
+  top: 48%;
+  left: 2%;
   font-size: 41px;
   font-family: iransansblack;
-  width: 500px;
+  width: 39%;
   text-align: center;
   line-height: 55px;
 }
 
 .header .headerContainer .slider #slider .images .img .button {
-  left: 30px;
-  bottom: 30px;
+  left: 2%;
+  bottom: 5%;
   background-color: #e84e1a;
   color: white;
   padding: 9px 43px;
