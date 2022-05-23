@@ -43,6 +43,9 @@
   .header .headerContainer nav.navBar ul.mainNav ul.CourseNav {
     width: 290px;
   }
+  .header .headerContainer .slider #slider {
+    font-size: 14px;
+  }
   .outlet .mainPageSection .courseSwiper {
     width: 635px;
   }
@@ -110,6 +113,9 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .header .headerContainer .slider #slider {
+    font-size: 10px;
+  }
   .outlet .mainPageSection .flex {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -158,6 +164,7 @@
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
         grid-template-areas: " header calendar" " header calendar" " navBar navBar" " content content";
+    padding-left: 0;
   }
   .header .headerContainer .logo {
     display: none;
@@ -315,6 +322,9 @@
   }
   .header .headerContainer .slider {
     margin-top: 20px;
+  }
+  .header .headerContainer .slider #slider {
+    font-size: 7.5px;
   }
   .atnaHost {
     font-size: 24px;
@@ -474,22 +484,13 @@
     display: none;
   }
   .header .headerContainer .slider {
-    width: 100%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    margin: 0 10px;
-  }
-  .header .headerContainer .slider #slider .dots > * {
-    width: 10px;
-    height: 10px;
-  }
-  .header .headerContainer .slider #slider #sliderNext, .header .headerContainer .slider #slider #sliderPre {
-    padding: 10px 7px;
+    display: none;
   }
   .atnaHost {
     font-size: 17px;
     border-radius: 15px;
     margin: 40px 8px;
+    margin-top: 190px;
     padding: 0 5px;
   }
   .atnaHost > span {

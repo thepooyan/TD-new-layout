@@ -728,41 +728,32 @@ body {
             .button {
               position: absolute;
             }
-            .title {
+            .institute::before {
+              content: "آموزشگاه تحلیل داده";
+              display: block;
+              font-size: 1.16em;
+              margin-bottom: 33px;
+              font-family: iransansblack;
+              text-align: center;
+              width: 39%;
               top: 18%;
+              left: 2%;
+              position: absolute;
+            }
+            .title {
+              top: 32%;
               left: 2%;
               display: block;
               font-size: 3.44em;
               font-family: iransansblack;
               text-align: center;
               width: 39%;
-              &.purple {
-                color: #951a82;
-              }
-              &.orange {
-                color: #e84e1a;
-              }
-              &.green {
-                color: #3aaa35;
-              }
-              &.yellow {
-                color: #feb52c;
-              }
+
               &.long {
                 font-size: 2.72em;
               }
-              &.lightBlue {
-                color: #63daf9;
-              }
               &.tooLong {
                 font-size: 2.5em;
-              }
-
-              &::before {
-                content: "آموزشگاه تحلیل داده";
-                display: block;
-                font-size: 21px;
-                margin-bottom: 1.16rem;
               }
             }
             .des {
@@ -772,14 +763,14 @@ body {
               font-family: iransansblack;
               width: 39%;
               text-align: center;
-              line-height: 55px;
+              line-height: 1.2em;
             }
             .button {
               left: 2%;
               bottom: 5%;
               background-color: #e84e1a;
               color: white;
-              padding: 9px 43px;
+              padding: 0.3em 1.2em;
               font-size: 1.88em;
               border-radius: 29px;
               font-family: iransansmedium;
@@ -790,6 +781,32 @@ body {
             &.active {
               opacity: 100;
               position: static;
+            }
+
+            &.purple {
+              .title, .institute {
+              color: #951a82;
+              }
+            }
+            &.orange {
+              .title, .institute {
+              color: #e84e1a;
+              }
+            }
+            &.lightGreen {
+              .title, .institute {
+              color: #3aaa35;
+              }
+            }
+            &.yellow {
+              .title, .institute {
+              color: #feb52c;
+              }
+            }
+            &.lightBlue {
+              .title, .institute {
+              color: #63daf9;
+              }
             }
           }
         }

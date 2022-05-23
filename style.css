@@ -1129,8 +1129,21 @@ body {
   position: absolute;
 }
 
-.header .headerContainer .slider #slider .images .img .title {
+.header .headerContainer .slider #slider .images .img .institute::before {
+  content: "آموزشگاه تحلیل داده";
+  display: block;
+  font-size: 1.16em;
+  margin-bottom: 33px;
+  font-family: iransansblack;
+  text-align: center;
+  width: 39%;
   top: 18%;
+  left: 2%;
+  position: absolute;
+}
+
+.header .headerContainer .slider #slider .images .img .title {
+  top: 32%;
   left: 2%;
   display: block;
   font-size: 3.44em;
@@ -1139,39 +1152,12 @@ body {
   width: 39%;
 }
 
-.header .headerContainer .slider #slider .images .img .title.purple {
-  color: #951a82;
-}
-
-.header .headerContainer .slider #slider .images .img .title.orange {
-  color: #e84e1a;
-}
-
-.header .headerContainer .slider #slider .images .img .title.green {
-  color: #3aaa35;
-}
-
-.header .headerContainer .slider #slider .images .img .title.yellow {
-  color: #feb52c;
-}
-
 .header .headerContainer .slider #slider .images .img .title.long {
   font-size: 2.72em;
 }
 
-.header .headerContainer .slider #slider .images .img .title.lightBlue {
-  color: #63daf9;
-}
-
 .header .headerContainer .slider #slider .images .img .title.tooLong {
   font-size: 2.5em;
-}
-
-.header .headerContainer .slider #slider .images .img .title::before {
-  content: "آموزشگاه تحلیل داده";
-  display: block;
-  font-size: 21px;
-  margin-bottom: 1.16rem;
 }
 
 .header .headerContainer .slider #slider .images .img .des {
@@ -1181,7 +1167,7 @@ body {
   font-family: iransansblack;
   width: 39%;
   text-align: center;
-  line-height: 55px;
+  line-height: 1.2em;
 }
 
 .header .headerContainer .slider #slider .images .img .button {
@@ -1189,7 +1175,7 @@ body {
   bottom: 5%;
   background-color: #e84e1a;
   color: white;
-  padding: 9px 43px;
+  padding: 0.3em 1.2em;
   font-size: 1.88em;
   border-radius: 29px;
   font-family: iransansmedium;
@@ -1202,6 +1188,26 @@ body {
 .header .headerContainer .slider #slider .images .img.active {
   opacity: 100;
   position: static;
+}
+
+.header .headerContainer .slider #slider .images .img.purple .title, .header .headerContainer .slider #slider .images .img.purple .institute {
+  color: #951a82;
+}
+
+.header .headerContainer .slider #slider .images .img.orange .title, .header .headerContainer .slider #slider .images .img.orange .institute {
+  color: #e84e1a;
+}
+
+.header .headerContainer .slider #slider .images .img.lightGreen .title, .header .headerContainer .slider #slider .images .img.lightGreen .institute {
+  color: #3aaa35;
+}
+
+.header .headerContainer .slider #slider .images .img.yellow .title, .header .headerContainer .slider #slider .images .img.yellow .institute {
+  color: #feb52c;
+}
+
+.header .headerContainer .slider #slider .images .img.lightBlue .title, .header .headerContainer .slider #slider .images .img.lightBlue .institute {
+  color: #63daf9;
 }
 
 .header .headerContainer .slider #slider #sliderNext,

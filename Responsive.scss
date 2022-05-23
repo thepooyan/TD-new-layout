@@ -41,6 +41,11 @@
           }
         }
       }
+      .slider {
+        #slider {
+          font-size: 14px;
+        }
+      }
     }
   }
   .outlet {
@@ -126,6 +131,11 @@
           justify-content: center;
         }
       }
+      .slider {
+        #slider {
+          font-size: 10px;
+        }
+      }
     }
   }
   .outlet {
@@ -186,6 +196,7 @@
         " header calendar"
         " navBar navBar"
         " content content";
+      padding-left: 0;
       .logo {
         display: none;
       }
@@ -345,6 +356,9 @@
       }
       .slider {
         margin-top: 20px;
+        #slider {
+          font-size: 7.5px;
+        }
       }
     }
   }
@@ -480,18 +494,7 @@
         }
       }
       .slider {
-        width: 100%;
-        box-shadow: none;
-        margin: 0 10px;
-        #slider {
-          .dots > * {
-            @include square(10px);
-          }
-          #sliderNext, #sliderPre {
-          padding: 10px 7px;
-
-          }
-        }
+        display: none;
       }
     }
   }
@@ -499,6 +502,7 @@
     font-size: 17px;
     border-radius: 15px;
     margin: 40px 8px;
+    margin-top: 190px;
     padding: 0 5px;
     > span {
       padding: 0;

@@ -128,9 +128,9 @@ document.querySelectorAll('#slider .images .img .title').forEach(item=>{
   if (item.innerHTML.length > 16) item.classList.add('long')
   if (item.innerHTML.length > 20) item.classList.add('tooLong')
 })
-if (sliderImages.length > 1) {
-  var sliderInterval = setInterval(function(){
-    sliderNext();
-  }, sliderTimeout)
-}
+// if (sliderImages.length > 1) {
+//   var sliderInterval = setInterval(function(){
+//     sliderNext();
+//   }, sliderTimeout)
+// }
 //*-------------------------------- slider
