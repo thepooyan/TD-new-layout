@@ -1606,17 +1606,30 @@ a#attention {
           }
         }
 
+        hr {
+          width: 87%;
+          height: 0.1em;
+          background-color: #bbb;
+          margin: auto;
+          margin-top: 3em;
+        }
 
-        button {
-          background-color: purple;
-          color: white;
-          padding: 1.2em 4em;
-          border-radius: 40px;
-          margin-right: 5%;
-          margin-top: 1em;
-          font-weight: 500;
-          font-size: 1.3;
-          cursor: pointer;
+        .buttons {
+          @include flex(c,c);
+          gap: 2em;
+
+          button {
+            background-color: white;
+            padding: .8em 3em;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 0 0px 35px 35px;
+            font-size: 14px;
+            color: #494949;
+            &.close {
+              display: none;
+            }
+          }
         }
       }
 
