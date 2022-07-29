@@ -9,8 +9,9 @@
     .headerContainer {
       grid-template-areas:
         "logo header calendar"
-        "title header calendar"
-        "spaceRightSide navBar navBar"
+        "logo header calendar"
+        "title navBar navBar"
+        "spaceRightSide content content"
         "sideMenu content content";
       grid-template-columns: 170px auto auto;
       .header {

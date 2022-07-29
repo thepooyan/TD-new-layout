@@ -13,7 +13,7 @@
     padding-right: 170px;
   }
   .header .headerContainer {
-        grid-template-areas: "logo header calendar" "title header calendar" "spaceRightSide navBar navBar" "sideMenu content content";
+        grid-template-areas: "logo header calendar" "logo header calendar" "title navBar navBar" "spaceRightSide content content" "sideMenu content content";
     -ms-grid-columns: 170px auto auto;
         grid-template-columns: 170px auto auto;
   }
