@@ -2012,6 +2012,7 @@ a#attention .courseName {
   background: linear-gradient(90deg, #1c43c2 32%, #19cde8 71%) !important;
   cursor: pointer;
   margin-right: auto;
+  font-family: iransansx;
 }
 
 .outlet .mainPageSection.Qcomment p.success {
@@ -2287,6 +2288,8 @@ a#attention .courseName {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 2em;
+  position: relative;
+  overflow: visible;
 }
 
 .outlet .mainPageSection.Qcomment .contain .buttons button {
@@ -2300,10 +2303,29 @@ a#attention .courseName {
   color: #333;
   font-weight: 700;
   font-family: iransansx;
+  opacity: 100;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 5;
 }
 
 .outlet .mainPageSection.Qcomment .contain .buttons button.close {
-  display: none;
+  opacity: 0;
+  z-index: 2;
+}
+
+.outlet .mainPageSection.Qcomment .contain .buttons.twoButtons .more {
+  right: -13em;
+}
+
+.outlet .mainPageSection.Qcomment .contain .buttons.twoButtons .close {
+  left: -13em;
+  opacity: 100;
 }
 
 .outlet .mainPageSection.Qcomment .replyModal {
@@ -2377,6 +2399,7 @@ a#attention .courseName {
 .outlet .mainPageSection.Qcomment .replyModal .content button {
   float: left;
   margin-left: 4%;
+  margin-top: 4%;
 }
 
 .outlet .mainPageSection.Qcomment.minimal .contain button {

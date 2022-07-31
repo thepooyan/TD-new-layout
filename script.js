@@ -330,12 +330,12 @@ $(function () {
     //*button event handler
     function addCommentButtonEvt() {
       buttons[0].addEventListener('click', function (e) {
+        document.querySelector('.mainPageSection.Qcomment .buttons').classList.add('twoButtons')
         openComments();
-        buttons[1].classList.remove('close');
       })
       buttons[1].addEventListener('click', function () {
+        document.querySelector('.mainPageSection.Qcomment .buttons').classList.remove('twoButtons')
         QCsection.classList.add('fast');
-        buttons[1].classList.add('close');
         closeComments().then(() => {
           QCsection.classList.remove('fast');
         })
