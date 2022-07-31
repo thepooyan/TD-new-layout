@@ -1805,6 +1805,253 @@ a#attention .courseName {
   --admin-sig: purple;
   --quers-sig: #0097f3;
   --ans-sig: green;
+  --comment-blue: #1d3bbb;
+}
+
+.outlet .mainPageSection.Qcomment .question,
+.outlet .mainPageSection.Qcomment .answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: fs;
+      -ms-flex-pack: fs;
+          justify-content: fs;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  gap: 2em;
+  padding-bottom: 1em;
+  font-size: 11px;
+  --icon-width: 6em;
+}
+
+.outlet .mainPageSection.Qcomment .question > span,
+.outlet .mainPageSection.Qcomment .answer > span {
+  background-color: white;
+  max-width: calc(100% - 15.2em);
+  padding: .6em 1.3em;
+  border-radius: 25px 25px 0 25px;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin: 1em 0;
+  position: relative;
+}
+
+.outlet .mainPageSection.Qcomment .question > span span,
+.outlet .mainPageSection.Qcomment .answer > span span {
+  position: absolute;
+  bottom: -2.2em;
+  right: 1em;
+  direction: ltr;
+  font-size: 13px;
+}
+
+.outlet .mainPageSection.Qcomment .question > span span::before,
+.outlet .mainPageSection.Qcomment .answer > span span::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  padding-right: .2em;
+}
+
+.outlet .mainPageSection.Qcomment .question > span span:nth-child(1)::before,
+.outlet .mainPageSection.Qcomment .answer > span span:nth-child(1)::before {
+  content: attr(data-date) " ";
+}
+
+.outlet .mainPageSection.Qcomment .question > span span:nth-child(2),
+.outlet .mainPageSection.Qcomment .answer > span span:nth-child(2) {
+  right: 10em;
+}
+
+.outlet .mainPageSection.Qcomment .question > span span:nth-child(2)::before,
+.outlet .mainPageSection.Qcomment .answer > span span:nth-child(2)::before {
+  content: attr(data-time) " ";
+}
+
+.outlet .mainPageSection.Qcomment .question > span i::before,
+.outlet .mainPageSection.Qcomment .answer > span i::before {
+  content: '\f3e5';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  font-style: normal;
+  position: absolute;
+  bottom: -1.6em;
+  left: 1em;
+  font-size: 1.2em;
+  color: var(--ans-sig);
+  cursor: pointer;
+}
+
+.outlet .mainPageSection.Qcomment .question .icon,
+.outlet .mainPageSection.Qcomment .answer .icon {
+  background: url("./images/img/Asset 4.png");
+  width: var(--icon-width);
+  height: var(--icon-width);
+  border-radius: 50%;
+  background-size: 100%;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 var(--icon-width);
+          flex: 0 0 var(--icon-width);
+}
+
+.outlet .mainPageSection.Qcomment .question .icon::before,
+.outlet .mainPageSection.Qcomment .answer .icon::before {
+  content: 'Q';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  background-color: var(--quers-sig);
+  position: absolute;
+  top: -.5em;
+  right: -.5em;
+  z-index: 2;
+  border-radius: 50%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 1.8em;
+  padding: 0.1em 0.5em;
+}
+
+.outlet .mainPageSection.Qcomment .question .icon[data-admin]::after,
+.outlet .mainPageSection.Qcomment .answer .icon[data-admin]::after {
+  content: attr(data-admin);
+}
+
+.outlet .mainPageSection.Qcomment .question .icon[data-user]::after,
+.outlet .mainPageSection.Qcomment .answer .icon[data-user]::after {
+  content: attr(data-user);
+}
+
+.outlet .mainPageSection.Qcomment .question .icon::after,
+.outlet .mainPageSection.Qcomment .answer .icon::after {
+  position: absolute;
+  right: calc(var(--icon-width) / 2.8);
+  bottom: -2em;
+  width: 0;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 800;
+  font-size: 1.4em;
+}
+
+.outlet .mainPageSection.Qcomment .question:last-child,
+.outlet .mainPageSection.Qcomment .answer:last-child {
+  padding-bottom: 3em;
+}
+
+.outlet .mainPageSection.Qcomment .question:nth-child(6),
+.outlet .mainPageSection.Qcomment .answer:nth-child(6) {
+  padding-bottom: 3em;
+}
+
+.outlet .mainPageSection.Qcomment .validationMsg {
+  color: red;
+  font-weight: 700;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: none;
+}
+
+.outlet .mainPageSection.Qcomment .validationMsg.show {
+  display: block;
+}
+
+.outlet .mainPageSection.Qcomment input,
+.outlet .mainPageSection.Qcomment textarea {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 1.3em;
+}
+
+.outlet .mainPageSection.Qcomment label {
+  position: absolute;
+  top: -1.3em;
+  right: 2em;
+  background-color: white;
+  padding: .2em .4em;
+  color: var(--comment-blue);
+  font-weight: 800;
+  height: 2em;
+}
+
+.outlet .mainPageSection.Qcomment button[type=submit] {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: commentButton;
+  width: 8em;
+  height: 3em;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  background: #1c43c2;
+  background: -webkit-gradient(linear, left top, right top, color-stop(32%, #1c43c2), color-stop(71%, #19cde8)) !important;
+  background: linear-gradient(90deg, #1c43c2 32%, #19cde8 71%) !important;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.outlet .mainPageSection.Qcomment p.success {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: confirmation;
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  color: var(--comment-blue);
+  font-weight: 700;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: .4em;
+  font-size: 1.2em;
+}
+
+.outlet .mainPageSection.Qcomment p.success i {
+  font-size: 1.3em;
+  color: green;
+}
+
+.outlet .mainPageSection.Qcomment p.success.show {
+  max-height: 3em;
+  opacity: 100;
 }
 
 .outlet .mainPageSection.Qcomment .contain {
@@ -1857,6 +2104,71 @@ a#attention .courseName {
   left: 2em;
 }
 
+.outlet .mainPageSection.Qcomment .contain .forms {
+  width: 91%;
+  margin: auto;
+  overflow: visible;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .formTab {
+  margin-right: 6em;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .formTab span {
+  background-color: #d5d5d5;
+  border-radius: 10px 10px 0 0;
+  padding: .1em 2em;
+  cursor: pointer;
+  font-size: 1.3em;
+  display: inline-block;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .formTab span.active {
+  background-color: white;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .send {
+  -webkit-box-shadow: 0px 0px 5px #68686854;
+          box-shadow: 0px 0px 5px #68686854;
+  background-color: white;
+  border-radius: 15px;
+  padding: 3em 6em;
+  padding-bottom: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 83% auto;
+      grid-template-columns: 83% auto;
+      grid-template-areas: "confirmation confirmation" "commentTitle commentButton" "comment comment";
+  gap: 2em 0;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .send .commentTitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: commentTitle;
+  position: relative;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .send .commentTitle input {
+  width: 100%;
+  height: 50px;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .send .comment {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: comment;
+  position: relative;
+}
+
+.outlet .mainPageSection.Qcomment .contain .forms .send .comment textarea {
+  width: 100%;
+  height: 10em;
+}
+
 .outlet .mainPageSection.Qcomment .contain > div {
   overflow-Y: hidden;
 }
@@ -1870,150 +2182,8 @@ a#attention .courseName {
 }
 
 .outlet .mainPageSection.Qcomment .contain > div section.fast {
-  -webkit-transition: .1s;
-  transition: .1s;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: fs;
-      -ms-flex-pack: fs;
-          justify-content: fs;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-  gap: 2em;
-  padding-bottom: 1em;
-  font-size: 11px;
-  --icon-width: 6em;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span {
-  background-color: white;
-  max-width: calc(100% - 15.2em);
-  padding: .6em 1.3em;
-  border-radius: 25px 25px 0 25px;
-  font-size: 1.3em;
-  font-weight: 500;
-  margin-bottom: 1em;
-  position: relative;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span span {
-  position: absolute;
-  bottom: -2.2em;
-  right: 1em;
-  direction: ltr;
-  font-size: 13px;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span span::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  padding-right: .2em;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span span:nth-child(1)::before {
-  content: attr(data-date) " ";
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span span:nth-child(2) {
-  right: 10em;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span span:nth-child(2)::before {
-  content: attr(data-time) " ";
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * > span i::before {
-  content: '\f3e5';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 800;
-  font-style: normal;
-  position: absolute;
-  bottom: -1.6em;
-  left: 1em;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * .icon {
-  background: url("./images/img/Asset 4.png");
-  width: var(--icon-width);
-  height: var(--icon-width);
-  border-radius: 50%;
-  background-size: 100%;
-  position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 var(--icon-width);
-          flex: 0 0 var(--icon-width);
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * .icon::before {
-  content: 'Q';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  background-color: var(--quers-sig);
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  border-radius: 50%;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 1.8em;
-  padding: 0.1em 0.5em;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * .icon[data-admin]::after {
-  content: attr(data-admin);
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * .icon[data-user]::after {
-  content: attr(data-user);
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > * .icon::after {
-  position: absolute;
-  right: calc(var(--icon-width) / 2.8);
-  bottom: -2em;
-  width: 0;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 800;
-  font-size: 1.4em;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > *:last-child {
-  padding-bottom: 3em;
-}
-
-.outlet .mainPageSection.Qcomment .contain > div section > *:nth-child(6) {
-  padding-bottom: 3em;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .outlet .mainPageSection.Qcomment .contain > div section .answer {
@@ -2025,7 +2195,7 @@ a#attention .courseName {
 
 .outlet .mainPageSection.Qcomment .contain > div section .answer .icon::before {
   content: 'A';
-  left: 0;
+  left: -.5em;
   right: unset;
   background-color: var(--ans-sig);
 }
@@ -2054,6 +2224,15 @@ a#attention .courseName {
 
 .outlet .mainPageSection.Qcomment .contain > div section .answer > span i::before {
   display: none;
+}
+
+.outlet .mainPageSection.Qcomment .contain > div section .question::before {
+  content: attr(data-title);
+  position: absolute;
+  right: 8em;
+  top: -1em;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 .outlet .mainPageSection.Qcomment .contain > div section .answer + .answer.combine,
@@ -2111,17 +2290,93 @@ a#attention .courseName {
 }
 
 .outlet .mainPageSection.Qcomment .contain .buttons button {
-  background-color: white;
   padding: .8em 3em;
   font-weight: 500;
   cursor: pointer;
   border-radius: 0 0px 35px 35px;
   font-size: 14px;
-  color: #494949;
+  background: -webkit-gradient(linear, left top, right top, color-stop(32%, #fe8622), color-stop(71%, #feab21));
+  background: linear-gradient(90deg, #fe8622 32%, #feab21 71%);
+  color: #333;
+  font-weight: 700;
+  font-family: iransansx;
 }
 
 .outlet .mainPageSection.Qcomment .contain .buttons button.close {
   display: none;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal.active {
+  display: block;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: #8080807a;
+  cursor: pointer;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content {
+  width: 80%;
+  margin: auto;
+  background-color: #e7e7e7;
+  padding: 3em;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 12px;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content i.fa-times {
+  position: absolute;
+  left: 1em;
+  top: 1em;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content .question {
+  padding-bottom: 4em;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content .question span i {
+  display: none;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content .reply {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content .reply label {
+  border-radius: 10px 10px 0 0;
+  padding: 0 0.8em;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content .reply textarea {
+  width: 100%;
+  height: 9em;
+}
+
+.outlet .mainPageSection.Qcomment .replyModal .content button {
+  float: left;
+  margin-left: 4%;
 }
 
 .outlet .mainPageSection.Qcomment.minimal .contain button {

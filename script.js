@@ -217,28 +217,88 @@ document.querySelectorAll('.homeVideo .videoTab button').forEach(item => {
   })
 })
 
+//*my validation
+//*set validation
+function setValidations() {
+  document.querySelectorAll('[data-validate]').forEach(item => {
+    let validation = JSON.parse(item.dataset.validate);
+    let msgBox = item.nextElementSibling;
+    if (!msgBox.classList.contains('validationMsg')) {
+      console.log(item)
+      console.log(`above logged input has no validation box. please add a span with "validationMsg" classname next to it!`)
+      return;
+    }
+
+    validation.forEach(vali => {
+      switch (vali) {
+        case 'notEmpty':
+          item.addEventListener('keyup', function (e) {
+            if (e.target.value === '') {
+              msgBox.innerHTML = 'لطفا کادر را خالی نگذارید!';
+              msgBox.classList.add('show');
+            } else {
+              msgBox.classList.remove('show');
+            }
+          })
+          break;
+      }
+    })
+
+
+  })
+}
+
+//*validate section
+function validateSection(form) {
+  return new Promise((resolve, reject) => {
+
+    form.querySelectorAll('[data-validate]').forEach(item => {
+      let validation = JSON.parse(item.dataset.validate);
+      let msgBox = item.nextElementSibling;
+      if (!msgBox.classList.contains('validationMsg')) return;
+
+      validation.forEach(vali => {
+        switch (vali) {
+          case 'notEmpty':
+            if (item.value === '') {
+              msgBox.innerHTML = 'لطفا کادر را خالی نگذارید!';
+              msgBox.classList.add('show');
+              reject()
+            }
+            break;
+        }
+      })
+    })
+    resolve();
+
+  })
+}
+
+setValidations();
 
 //*Qcomment
 $(function () {
   setTimeout(() => {
+    let form = document.querySelector('.mainPageSection.Qcomment form');
+    let submitMsg = document.querySelector('.mainPageSection.Qcomment form p');
     let QCsection = document.querySelector('.mainPageSection.Qcomment section');
     let comments = QCsection.querySelectorAll('.question, .answer');
-    let button = document.querySelector('.mainPageSection.Qcomment button');
-
-    if (comments.length < 6) {
-      minimalComments();
-    } else {
-      closeComments();
-      addCommentButtonEvt();
-    }
+    let buttons = document.querySelectorAll('.mainPageSection.Qcomment .buttons button');
+    let modal = document.querySelector('.mainPageSection.Qcomment .replyModal');
+    let overlay = modal.querySelector('.overlay');
 
     function closeComments() {
-      commentsHeight = 0;
-      for (let i = 0; i < 6; i++) {
-        commentsHeight += comments[i].clientHeight;
-      }
-      QCsection.style.maxHeight = `${commentsHeight}px`;
-      button.innerHTML = 'موارد بیشتری رو ببین!'
+      return new Promise((resolve, reject) => {
+        commentsHeight = 0;
+        for (let i = 0; i < 6; i++) {
+          commentsHeight += comments[i].clientHeight;
+        }
+        QCsection.style.maxHeight = `${commentsHeight}px`;
+
+        QCsection.addEventListener('webkitTransitionEnd', function () {
+          resolve();
+        }, false);
+      })
     }
     function openComments() {
       commentsHeight = 0;
@@ -246,7 +306,6 @@ $(function () {
         commentsHeight += item.clientHeight;
       })
       QCsection.style.maxHeight = `${commentsHeight}px`;
-      button.innerHTML = 'بستن';
     }
     window.closeComments = closeComments;
     window.openComments = openComments;
@@ -259,25 +318,66 @@ $(function () {
     })
 
     //*reply event
-    document.querySelectorAll('.mainPageSection.Qcomment i').forEach(item=>{
-      item.addEventListener("click", function(e) {
+    document.querySelectorAll('.mainPageSection.Qcomment section i').forEach(item => {
+      item.addEventListener("click", function (e) {
         console.log(e.target.parentElement.parentElement.dataset.id)
+        let clone = e.target.parentElement.parentElement.cloneNode(true);
+        modal.querySelector('.target').appendChild(clone);
+        modal.classList.add('active');
       })
     })
 
     //*button event handler
     function addCommentButtonEvt() {
-      document.querySelector('.mainPageSection.Qcomment button').addEventListener('click', function (e) {
-        if (e.target.classList.toggle('hidden')) {
-          openComments();
-        } else {
-          closeComments();
-        }
-        QCsection.classList.toggle('fast');
+      buttons[0].addEventListener('click', function (e) {
+        openComments();
+        buttons[1].classList.remove('close');
+      })
+      buttons[1].addEventListener('click', function () {
+        QCsection.classList.add('fast');
+        buttons[1].classList.add('close');
+        closeComments().then(() => {
+          QCsection.classList.remove('fast');
+        })
       })
     }
     function minimalComments() {
       document.querySelector('.mainPageSection.Qcomment').classList.add('minimal');
     }
-  }, 300);
+
+    //*form submit
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      validateSection(form).then(() => {
+        submitMsg.classList.add('show');
+      })
+    })
+
+    //*modal
+    overlay.addEventListener('click', function() {
+      modal.classList.remove('active');
+      modal.querySelector('.target').innerHTML = '';
+    })
+
+    //*modal submit
+    modal.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      validateSection(modal).then(()=>{
+        modal.querySelector('p.success').classList.add('show');
+      })
+    })
+
+    //*modal close button
+    modal.querySelector('i.fa-times').addEventListener('click', function() {
+      modal.classList.remove('active');
+      modal.querySelector('.target').innerHTML = '';
+    })
+
+    if (comments.length < 6) {
+      minimalComments();
+    } else {
+      closeComments();
+      addCommentButtonEvt();
+    }
+  }, 400);
 })()

@@ -3660,72 +3660,97 @@
             <header>
                 سوالتو بپرس!
             </header>
+
+            <div class="forms">
+                <div class="formTab">
+                    <span data-onclick="active" data-group="formTab">نظرات</span>
+                    <span class="active" data-onclick="active" data-group="formTab">سوالات</span>
+                </div>
+                <form class="send">
+                    <p class="success">
+                        <i class="far fa-check-circle"></i>
+                        سوال شما با موفقیت ثبت شد!
+                    </p>
+                    <div class="commentTitle">
+                        <label for="commentTitle">عنوان</label>
+                        <input id="commentTitle" type="text" data-validate='["notEmpty"]'>
+                        <span class="validationMsg"></span>
+                    </div>
+                    <div class="comment">
+                        <label for="comment">سوال خود را با ما درمیان بگذارید</label>
+                        <textarea id="comment" data-validate='["notEmpty"]'></textarea>
+                        <span class="validationMsg"></span>
+                    </div>
+                    <button type="submit">ارسال سوال</button>
+                </form>
+            </div>
+
             <div>
-                <section class="fast">
-                    <div class="question" data-id="2038a">
+                <section>
+                    <div class="question" data-id="2038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="answer" data-id="20a38a">
+                    <div class="question" data-id="20a38a" data-title="عنوان سوال">
+                        <div class="icon" data-user="علی حسینی"></div>
+                        <span>
+                            <span>07/010/1400</span> <span>15:29</span>
+                            مدت زمان برگزاری دوره چقدر است؟
+                            <i></i>
+                    </div>
+                    <div class="answer" data-id="20a38a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="answer" data-id="20a38a">
+                    <div class="question" data-id="205538a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="question" data-id="205538a">
+                    <div class="answer" data-id="2d6038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="answer" data-id="2d6038a">
+                    <div class="question" data-id="21a038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="question" data-id="21a038a">
+                    <div class="question" data-id="21a038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="question" data-id="21a038a">
+                    <div class="question" data-id="21a038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="question" data-id="21a038a">
+                    <div class="question" data-id="21a038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
                             آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
                             <i></i>
                     </div>
-                    <div class="question" data-id="21a038a">
-                        <div class="icon" data-user="علی حسینی"></div>
-                        <span>
-                            <span>07/010/1400</span> <span>15:29</span>
-                            آیا میشه توی دوره به صورت آنلاین شرکت کرد؟
-                            <i></i>
-                    </div>
-                    <div class="question" data-id="21a038a">
+                    <div class="question" data-id="21a038a" data-title="عنوان سوال">
                         <div class="icon" data-user="علی حسینی"></div>
                         <span>
                             <span>07/010/1400</span> <span>15:29</span>
@@ -3735,11 +3760,30 @@
 
                 </section>
             </div>
+
             <hr>
+
             <div class="buttons">
                 <button>موارد بیشتری رو ببین!</button>
                 <button class="close">بستن</button>
             </div>
+        </div>
+        <div class="replyModal">
+            <div class="overlay"></div>
+            <form class="content">
+                <i class="fas fa-times"></i>
+                <p class="success">
+                    <i class="far fa-check-circle"></i>
+                    پاسخ شما با موفقیت ثبت شد
+                </p>
+                <div class="target"></div>
+                <div class="reply">
+                    <label for="reply">پاسخ خود را ثبت کنید</label>
+                    <textarea id="reply" data-validate='["notEmpty"]'></textarea>
+                    <span class="validationMsg"></span>
+                </div>
+                <button type="submit">ارسال پاسخ</button>
+            </form>
         </div>
     </section>
 </section>
