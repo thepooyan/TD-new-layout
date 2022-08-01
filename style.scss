@@ -1578,12 +1578,13 @@ a#attention {
             background: url('./images/img/Asset\ 3.png') no-repeat;
             width: 5em;
             display: inline-block;
-            background-size: cover;
+            background-size: contain;
             position: absolute;
             bottom: 0;
             top: .2em;
             right: .2em;
             height: 5.64em;
+            background-position: center;
           }
 
           &::after {
@@ -1592,12 +1593,13 @@ a#attention {
             width: 4em;
             height: 3.4em;
             display: inline-block;
-            background-size: cover;
+            background-size: contain;
             position: absolute;
             top: 0;
             bottom: 0;
             margin: auto;
             left: 2em;
+            background-position: center;
           }
         }
 

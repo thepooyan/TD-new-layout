@@ -6,6 +6,7 @@
     .topBar {
       padding-right: 170px;
     }
+
     .headerContainer {
       grid-template-areas:
         "logo header calendar"
@@ -14,27 +15,33 @@
         "spaceRightSide content content"
         "sideMenu content content";
       grid-template-columns: 170px auto auto;
+
       .header {
         padding: 0;
         justify-content: center;
+
         .rest {
           flex-direction: column;
           gap: 20px;
         }
       }
+
       .space {
         display: none;
       }
+
       .spaceRightSide {
         span {
           width: 80%;
         }
       }
+
       .calendar {
         .FatLIne {
           transform: scale(1.5);
         }
       }
+
       nav.navBar {
         ul.mainNav {
           ul.CourseNav {
@@ -42,6 +49,7 @@
           }
         }
       }
+
       .slider {
         #slider {
           font-size: 14px;
@@ -49,13 +57,27 @@
       }
     }
   }
+
   .outlet {
     .mainPageSection {
       .courseSwiper {
         width: 635px;
       }
+
+      &.Qcomment {
+        .contain header {
+          &::before {
+            width: 4em;
+          }
+
+          &::after {
+            left: .5em;
+          }
+        }
+      }
     }
   }
+
   .footer {
     .rightTop {
       .layer {
@@ -63,16 +85,19 @@
           margin: 0;
         }
       }
+
       .inputwrapper {
         .icon {
           top: 3.15px;
         }
+
         .emailInput {
           width: 205px;
           padding: 7px 16px;
         }
       }
     }
+
     .rightBottom {
       .eNamad {
         width: 110px;
@@ -80,19 +105,22 @@
         left: 20px;
       }
     }
+
     .centerBottom {
       .wholeNav {
         .nav1 {
           gap: 12px;
           justify-content: space-between;
-          > .item {
-          }
+
+          >.item {}
         }
       }
     }
+
     .leftBottom {
       justify-content: center;
     }
+
     .rightBottom {
       justify-content: center;
     }
@@ -104,34 +132,43 @@
   .header {
     .topBar {
       padding-right: 25px;
+
       .center {
         width: 23%;
       }
     }
+
     .headerContainer {
       grid-template-areas:
         "logo header calendar"
         "title header calendar"
         "navBar navBar navBar"
         "sideMenu content content";
+
       .header {
         gap: 0;
+
         .rest .layer2 .item.four {
           display: none;
         }
+
         .Cooperation {
           display: none;
         }
       }
+
       .spaceRightSide {
         display: none;
       }
+
       nav.navBar {
         margin-bottom: 10px;
+
         ul.mainNav {
           justify-content: center;
         }
       }
+
       .slider {
         #slider {
           font-size: 10px;
@@ -139,6 +176,7 @@
       }
     }
   }
+
   .outlet {
     .mainPageSection {
       .flex {
@@ -147,28 +185,46 @@
         flex-wrap: wrap;
         gap: 60px;
       }
+
+      &.Qcomment {
+        .contain header {
+          &::after {
+            width: 2.5em;
+          }
+
+          &::before {
+            width: 2.7em;
+            height: 4.5em;
+          }
+        }
+      }
     }
   }
+
   .footer {
     .leftBottom {
       .telegraph {
         font-size: 15px;
       }
     }
+
     .rightTop {
       .layer {
         position: relative;
+
         .img {
           position: absolute;
           top: -60px;
         }
       }
+
       .inputwrapper {
         .emailInput {
           width: 170px;
         }
       }
     }
+
     .centerBottom {
       .wholeNav .nav1 .item {
         line-height: 21px;
@@ -182,14 +238,17 @@
   .header {
     .topBar {
       padding: 5px 10px;
+
       .right {
         gap: 0px;
       }
+
       .center {
         gap: 0px;
         justify-content: space-evenly;
       }
     }
+
     .headerContainer {
       grid-template-columns: auto auto;
       grid-template-areas:
@@ -198,24 +257,31 @@
         " navBar navBar"
         " content content";
       padding-left: 0;
+
       .logo {
         display: none;
       }
+
       .title {
         display: none;
       }
+
       .sideMenu {
         display: none;
       }
+
       nav.navBar {
         ul.mainNav {
           padding: 0;
           gap: 12px;
-          .item > a {
+
+          .item>a {
             font-size: 12px;
           }
+
           .item .CourseNav {
             width: 220px;
+
             .InnerNav {
               width: 300px;
             }
@@ -224,20 +290,66 @@
       }
     }
   }
+
   .atnaHost {
+
     &::before,
     &::after {
       width: 80px;
     }
+
     font-size: 29px;
   }
+
   .outlet {
     .mainPageSection {
       .courseSwiper {
         width: 307px;
       }
+
+      &.Qcomment {
+        .contain {
+
+          header {
+            padding: 1em;
+            text-align: left;
+            font-size: 4.5em;
+
+            &::after {
+              display: none;
+            }
+
+            &::before {
+              height: 3.5em;
+            }
+          }
+
+          .forms {
+            .formTab {
+              margin-right: 2em;
+            }
+            .send {
+              padding: 1em 6em;
+              padding-right: 6em;
+              padding-bottom: 1em;
+              padding-right: 2em;
+              padding-bottom: 2em;
+            }
+          }
+
+          .question, .answer {
+            > span {
+              max-width: unset;
+            }
+          }
+          > div section .answer + .answer.combine, > div section .question + .question.combine {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
+
   .footer {
     height: auto;
     grid-template-columns: 25% 25% 25% 25%;
@@ -246,10 +358,12 @@
       grid-column: 1 / 5;
       grid-row: 1/2;
     }
+
     .centerCenter {
       grid-column: 1/5;
       grid-row: 2/3;
     }
+
     .centerBottom {
       grid-column: 1/5;
       grid-row: 3/4;
@@ -257,44 +371,54 @@
 
       .wholeNav {
         width: 100%;
+
         .nav1 {
           margin: auto;
           height: auto;
         }
+
         .line {
           margin-top: 17px;
           margin-bottom: 13px;
         }
       }
     }
+
     .rightTop {
       grid-column: 1 / 3;
       grid-row: 4/5;
+
       .layer .img {
         position: static;
       }
     }
+
     .leftTop {
       grid-column: 3 / 5;
       grid-row: 4/5;
     }
+
     .rightCenter {
       grid-column: 1 / 3;
       grid-row: 5/6;
     }
+
     .leftCenter {
       grid-column: 3 / 5;
       grid-row: 5/6;
     }
+
     .rightBottom {
       grid-column: 1/5;
       grid-row: 6/7;
       margin-top: 45px;
+
       .eNamad {
         width: 110px;
         border-width: 5px;
       }
     }
+
     .leftBottom {
       display: none;
     }
@@ -310,35 +434,42 @@
           display: none;
         }
       }
+
       span.menu {
         display: block;
         font-size: 25px;
         position: relative;
         top: 3px;
+
         &:hover {
           cursor: pointer;
         }
       }
     }
+
     .headerContainer {
       .header {
         .rest {
           .layer2 {
             width: 130%;
+
             a.item span {
               font-size: 11px;
             }
           }
         }
+
         .signupButtonLayer {
           display: none;
         }
       }
+
       .calendar {
         .FatLIne {
           margin: 34px 25px;
         }
       }
+
       nav.navBar {
         // ul.mainNav .item {
         //   ul.CourseNav {
@@ -355,39 +486,52 @@
         // }
         display: none;
       }
+
       .slider {
         margin-top: 20px;
+
         #slider {
           font-size: 7.5px;
         }
       }
     }
   }
+
   .atnaHost {
     font-size: 24px;
+
     &::after,
     &::before {
       width: 48px;
     }
   }
+
   .footer {
     display: flex;
     flex-direction: column;
     height: auto;
     padding: 20px 7px;
 
-    $footerOrder: centerTop, centerCenter, rightTop, rightCenter, leftTop,
-      leftCenter, rightBottom;
+    $footerOrder: centerTop,
+    centerCenter,
+    rightTop,
+    rightCenter,
+    leftTop,
+    leftCenter,
+    rightBottom;
+
     @for $i from 1 through length($footerOrder) {
       $item: nth($footerOrder, $i);
+
       .#{$item} {
         order: $i;
       }
     }
 
-    > * {
+    >* {
       margin-bottom: 40px;
     }
+
     .leftTop,
     .rightTop,
     .centerTop,
@@ -398,27 +542,60 @@
     .leftBottom {
       display: none;
     }
+
     .centerBottom {
       display: none;
     }
+
     .rightTop {
       .layer {
         align-self: auto;
       }
     }
+
     .centerCenter {
       .layer2 {
         gap: 20px;
       }
+
       .hr {
         width: 100%;
       }
     }
+
     .rightBottom {
       .eNamad {
         position: static;
       }
     }
+  }
+
+  .outlet .mainPageSection.Qcomment {
+    .contain {
+      header {
+        @include flex(fs,c);
+        flex-direction: column;
+
+        &::before {
+          position: static;
+        }
+      }
+      .forms {
+        width: 98%;
+      }
+      div section {
+        .question, .answer {
+          padding-top: 4em;
+
+          &::before {
+            top: 2em;
+          }
+        }
+        .question + .question.combine, .answer + .answer.combine {
+          padding-top: 0;
+        }
+      }
+      }
   }
 }
 
@@ -427,18 +604,22 @@
   .header {
     padding: 0;
     background-color: white;
+
     .topBar {
       height: 40px;
+
       .left,
       .right,
       .center {
         display: none;
       }
     }
+
     .headerContainer {
       margin-top: 45px;
       border-top: 10px solid $greyDark-background;
       display: block;
+
       .logo {
         display: block;
         position: absolute;
@@ -446,6 +627,7 @@
         left: 0;
         right: 0;
         margin: auto;
+
         a.logo {
           max-width: 81px;
           max-height: 80px;
@@ -456,18 +638,22 @@
           border: 5px solid white;
         }
       }
+
       .header {
         margin-top: 20px;
         float: right;
+
         .signupButtonLayer {
           display: block;
           margin: 45px 0;
           margin-right: 10px;
         }
+
         .rest {
           display: none;
         }
       }
+
       .calendar {
         float: left;
         width: 150px;
@@ -490,38 +676,45 @@
           font-size: 11px;
           font-weight: bold;
         }
+
         .FatLIne {
           display: none;
         }
       }
+
       .slider {
         display: none;
       }
     }
   }
+
   .atnaHost {
     font-size: 17px;
     border-radius: 15px;
     margin: 40px 8px;
     margin-top: 190px;
     padding: 0 5px;
-    > span {
+
+    >span {
       padding: 0;
       font-size: 15px;
     }
+
     &::before,
     &::after {
       width: 32px;
       margin: 2px;
     }
   }
+
   #resItemBar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 8px;
     padding: 0 20px;
-    > a {
+
+    >a {
       padding: 5px;
       border: 2px solid #f9c21f;
       width: 30%;
@@ -538,6 +731,7 @@
   }
   .outlet {
     padding: 40px 0;
+
     .mainPageSection {
       .title {
         .pic {
@@ -545,11 +739,13 @@
           right: 30px;
         }
       }
+
       .flex {
         .boxWrapper {
           background: none;
           box-shadow: none;
           width: 100%;
+
           .box {
             padding: 0;
             background: none;
@@ -557,16 +753,19 @@
             flex-direction: column;
             width: 100%;
             height: auto;
+
             .coloredWrapper {
               position: static;
               order: 1;
             }
+
             .text {
               position: static;
               order: 2;
               font-size: 24px;
               padding-top: 10px;
             }
+
             .hover {
               opacity: 100%;
               order: 3;
@@ -580,7 +779,8 @@
               line-height: 27px;
               font-size: 18px;
               transform: scale(1);
-             }
+            }
+
             .image {
               order: 2;
               min-height: 60px;

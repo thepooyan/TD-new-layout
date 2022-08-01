@@ -49,6 +49,12 @@
   .outlet .mainPageSection .courseSwiper {
     width: 635px;
   }
+  .outlet .mainPageSection.Qcomment .contain header::before {
+    width: 4em;
+  }
+  .outlet .mainPageSection.Qcomment .contain header::after {
+    left: .5em;
+  }
   .footer .rightTop .layer .text {
     margin: 0;
   }
@@ -128,6 +134,13 @@
         flex-wrap: wrap;
     gap: 60px;
   }
+  .outlet .mainPageSection.Qcomment .contain header::after {
+    width: 2.5em;
+  }
+  .outlet .mainPageSection.Qcomment .contain header::before {
+    width: 2.7em;
+    height: 4.5em;
+  }
   .footer .leftBottom .telegraph {
     font-size: 15px;
   }
@@ -196,6 +209,33 @@
   }
   .outlet .mainPageSection .courseSwiper {
     width: 307px;
+  }
+  .outlet .mainPageSection.Qcomment .contain header {
+    padding: 1em;
+    text-align: left;
+    font-size: 4.5em;
+  }
+  .outlet .mainPageSection.Qcomment .contain header::after {
+    display: none;
+  }
+  .outlet .mainPageSection.Qcomment .contain header::before {
+    height: 3.5em;
+  }
+  .outlet .mainPageSection.Qcomment .contain .forms .formTab {
+    margin-right: 2em;
+  }
+  .outlet .mainPageSection.Qcomment .contain .forms .send {
+    padding: 1em 6em;
+    padding-right: 6em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+  }
+  .outlet .mainPageSection.Qcomment .contain .question > span, .outlet .mainPageSection.Qcomment .contain .answer > span {
+    max-width: unset;
+  }
+  .outlet .mainPageSection.Qcomment .contain > div section .answer + .answer.combine, .outlet .mainPageSection.Qcomment .contain > div section .question + .question.combine {
+    margin-left: 0;
   }
   .footer {
     height: auto;
@@ -406,6 +446,37 @@
   }
   .footer .rightBottom .eNamad {
     position: static;
+  }
+  .outlet .mainPageSection.Qcomment .contain header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: fs;
+        -ms-flex-pack: fs;
+            justify-content: fs;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    flex-direction: column;
+  }
+  .outlet .mainPageSection.Qcomment .contain header::before {
+    position: static;
+  }
+  .outlet .mainPageSection.Qcomment .contain .forms {
+    width: 98%;
+  }
+  .outlet .mainPageSection.Qcomment .contain div section .question, .outlet .mainPageSection.Qcomment .contain div section .answer {
+    padding-top: 4em;
+  }
+  .outlet .mainPageSection.Qcomment .contain div section .question::before, .outlet .mainPageSection.Qcomment .contain div section .answer::before {
+    top: 2em;
+  }
+  .outlet .mainPageSection.Qcomment .contain div section .question + .question.combine, .outlet .mainPageSection.Qcomment .contain div section .answer + .answer.combine {
+    padding-top: 0;
   }
 }
 

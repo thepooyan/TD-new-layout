@@ -320,7 +320,7 @@ $(function () {
     //*reply event
     document.querySelectorAll('.mainPageSection.Qcomment section i').forEach(item => {
       item.addEventListener("click", function (e) {
-        console.log(e.target.parentElement.parentElement.dataset.id)
+        //console.log(e.target.parentElement.parentElement.dataset.id)
         let clone = e.target.parentElement.parentElement.cloneNode(true);
         modal.querySelector('.target').appendChild(clone);
         modal.classList.add('active');
@@ -353,11 +353,18 @@ $(function () {
       })
     })
 
-    //*modal
-    overlay.addEventListener('click', function() {
+    
+    //*QC modal
+    //*close modal
+    function closeQCModal() {
       modal.classList.remove('active');
       modal.querySelector('.target').innerHTML = '';
-    })
+      modal.querySelector('p.success').classList.remove('show');
+      modal.querySelector('.reply textarea').value = '';
+      modal.querySelectorAll('.validationMsg').forEach(item=>{item.classList.remove('show')})
+    }
+    overlay.addEventListener('click', closeQCModal);
+    modal.querySelector('i.fa-times').addEventListener('click', closeQCModal);
 
     //*modal submit
     modal.querySelector('form').addEventListener('submit', function(e) {
@@ -365,12 +372,6 @@ $(function () {
       validateSection(modal).then(()=>{
         modal.querySelector('p.success').classList.add('show');
       })
-    })
-
-    //*modal close button
-    modal.querySelector('i.fa-times').addEventListener('click', function() {
-      modal.classList.remove('active');
-      modal.querySelector('.target').innerHTML = '';
     })
 
     if (comments.length < 6) {
