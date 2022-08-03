@@ -2189,6 +2189,21 @@ a#attention .courseName {
   transition: .5s;
 }
 
+.outlet .mainPageSection.Qcomment .contain > div section .answer .icon:not([data-admin]) {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.outlet .mainPageSection.Qcomment .contain > div section .answer .icon:not([data-admin])::before, .outlet .mainPageSection.Qcomment .contain > div section .answer .icon:not([data-admin])::after {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.outlet .mainPageSection.Qcomment .contain > div section .answer .icon:not([data-admin])::before {
+  right: -.5em;
+  left: unset;
+}
+
 .outlet .mainPageSection.Qcomment .contain > div section .answer {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;

@@ -1674,6 +1674,19 @@ a#attention {
             }
 
 
+            .answer .icon:not([data-admin]) {
+              transform: scaleX(-1);
+
+              &::before,
+              &::after {
+                transform: scaleX(-1);
+              }
+
+              &::before {
+                right: -.5em;
+                left: unset;
+              }
+            }
 
             .answer {
               flex-direction: row-reverse;
@@ -1795,6 +1808,7 @@ a#attention {
             .more {
               right: -13em;
             }
+
             .close {
               left: -13em;
               opacity: 100;
